@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        ">
+
+       <context:annotation-config />
+
+       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+              <property name="driverClassName">
+                     <value>com.mysql.jdbc.Driver</value>
+              </property>
+              <property name="url">
+                     <value>jdbc:mysql://172.16.2.38:3306/heika_new</value>
+              </property>
+              <property name="username">
+                     <value>heika_dev</value>
+              </property>
+              <property name="password">
+                     <value>heika_dev@qwe321</value>
+              </property>
+       </bean>
+
+       <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+              <property name="dataSource" ref="dataSource"/>
+              <property name="packagesToScan" value="com.heika.test.entities" />
+              <!--<property name="annotatedClasses">-->
+                     <!--<list>-->
+                            <!--<value>com.heika.test.entities.user.UserEntity</value>-->
+                            <!--<value>com.heika.test.entities.user.UserMaterialEntity</value>-->
+                            <!--<value>com.heika.test.entities.user.UserInfoEntity</value>-->
+                            <!--<value>com.heika.test.entities.user.UniversityInfoEntity</value>-->
+                            <!--<value>com.heika.test.entities.user.RegionEntity</value>-->
+                            <!--<value>com.heika.test.entities.user.WorkPositionInfoEntity</value>-->
+                            <!--<value>com.heika.test.entities.verify.VerifyUserStatusEntity</value>-->
+                     <!--</list>-->
+              <!--</property>-->
+              <property name="hibernateProperties">
+                     <props>
+                            <prop key="hibernate.show_sql">false</prop>
+                            <prop key="hibernate.format_sql">false</prop>
+                            <prop key="hibernate.use_sql_comments">false</prop>
+                            <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+                     </props>
+              </property>
+       </bean>
+
+       <bean id="transactionManager"
+             class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+              <property name="sessionFactory" ref="sessionFactory"/>
+       </bean>
+
+       <tx:annotation-driven transaction-manager="transactionManager"/>
+
+       <bean id="userMaterialService" class="com.heika.test.services.user.impl.UserMaterialImpl"/>
+       <bean id="userService" class="com.heika.test.services.user.impl.UserImpl"/>
+       <bean id="userInfoService" class="com.heika.test.services.user.impl.UserInfoImpl"/>
+       <bean id="universityService" class="com.heika.test.services.user.impl.UniversityInfoImpl"/>
+       <bean id="regionService" class="com.heika.test.services.user.impl.RegionImpl"/>
+       <bean id="workPositionInfoService" class="com.heika.test.services.user.impl.WorkPositionInfoImpl"/>
+       <bean id="verifyUserStatusService" class="com.heika.test.services.user.impl.VerifyUserStatusImpl"/>
+       <bean id="verifyRejectReasonService" class="com.heika.test.services.user.impl.VerifyRejectReasonImpl"/>
+       <bean id="cardProductService" class="com.heika.test.services.user.impl.CardProductImpl"/>
+
+       <bean id="userMaterialDao" class="com.heika.test.dao.user.UserMaterialDao"/>
+       <bean id="userDao" class="com.heika.test.dao.user.UserDao"/>
+       <bean id="userInfoDao" class="com.heika.test.dao.user.UserInfoDao"/>
+       <bean id="universityDao" class="com.heika.test.dao.user.UniversityInfoDao"/>
+       <bean id="regionDao" class="com.heika.test.dao.user.RegionDao"/>
+       <bean id="workPositionInfoDao" class="com.heika.test.dao.user.WorkPositionInfoDao"/>
+       <bean id="verifyUserStatusDao" class="com.heika.test.dao.verify.VerifyUserStatusDao"/>
+       <bean id="verifyRejectReasonDao" class="com.heika.test.dao.verify.VerifyRejectReasonDao"/>
+       <bean id="cardProductDao" class="com.heika.test.dao.card.CardProductDao"/>
+
+       <bean id="randomData" class="com.heika.test.utils.RandomData">
+              <!-- 设置随机数种子 -->
+              <!--<constructor-arg>-->
+                     <!--<value>1</value>-->
+              <!--</constructor-arg>-->
+       </bean>
+
+       <bean id="logger" class="com.heika.test.utils.LogHelper"/>
+</beans>

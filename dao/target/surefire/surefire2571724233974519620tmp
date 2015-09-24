@@ -1,0 +1,6 @@
+#surefire
+#Tue Sep 22 15:47:17 CST 2015
+user.dir=/home/peng/test-codes/heika-test/dao
+idea.version=14.1.4
+localRepository=/home/peng/.m2/repository
+basedir=/home/peng/test-codes/heika-test/dao
