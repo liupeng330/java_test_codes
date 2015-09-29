@@ -78,4 +78,22 @@ public class TreeNode<T>
     {
         return print(0);
     }
+
+    public static <U> List<TreeNode<U>> getAllLeafNode(TreeNode<U> root)
+    {
+        List<TreeNode<U>> leafNodes = new ArrayList<>();
+        if(!root.hasChild())
+        {
+            leafNodes.add(root);
+        }
+        else
+        {
+            for(TreeNode<U> childNode: root.getChilds())
+            {
+                leafNodes.addAll(TreeNode.getAllLeafNode(childNode));
+            }
+        }
+
+        return leafNodes;
+    }
 }

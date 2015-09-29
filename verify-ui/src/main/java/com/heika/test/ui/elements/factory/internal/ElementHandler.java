@@ -8,6 +8,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.NoSuchElementException;
 
 import static com.heika.test.ui.elements.factory.internal.ImplementedByProcessor.getWrapperClass;
 
@@ -37,7 +38,38 @@ public class ElementHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object object, Method method, Object[] objects) throws Throwable {
-        WebElement element = locator.findElement();
+        WebElement element = null;
+        if("waitForExist".equals(method.getName()))
+        {
+            int retry = (Integer )objects[0];
+            while (true)
+            {
+                try
+                {
+                    element = locator.findElement();
+                    return element;
+                }
+                catch (org.openqa.selenium.NoSuchElementException e)
+                {
+                    if(--retry <= 0)
+                    {
+                        throw e;
+                    }
+                    try
+                    {
+                        Thread.sleep(1000);
+                    }
+                    catch (InterruptedException ex)
+                    {
+                        throw new RuntimeException(ex);
+                    }
+                }
+            }
+        }
+        else
+        {
+            element = locator.findElement();
+        }
 
         if ("getWrappedElement".equals(method.getName())) {
             return element;

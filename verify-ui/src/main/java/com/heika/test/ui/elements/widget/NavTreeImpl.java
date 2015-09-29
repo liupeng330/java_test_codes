@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 
 import java.util.List;
 import com.heika.test.utils.TreeNode;
+import sun.reflect.generics.tree.Tree;
 
 /**
 <ul id="navTree" class="navStyle tree">
@@ -87,24 +88,18 @@ import com.heika.test.utils.TreeNode;
 */
 public class NavTreeImpl extends ElementImpl implements NavTree
 {
+    private TreeNode<WebElement> root;
     public NavTreeImpl(WebElement element)
     {
         super(element);
+        populateTree();
     }
 
-    @Override
-    public TreeNode<WebElement> getTree()
-    {
-        TreeNode<WebElement> root = new TreeNode<>(this.getWrappedElement());
-        getTree(root, true);
-        return root;
-    }
-
-    private void getTree(TreeNode<WebElement> root, boolean isRoot)
+    private TreeNode<WebElement> populateTree(TreeNode<WebElement> root, boolean isRoot)
     {
         if(root == null)
         {
-            return;
+            return root;
         }
         List<WebElement> all_li = null;
         if(isRoot)
@@ -120,15 +115,46 @@ public class NavTreeImpl extends ElementImpl implements NavTree
             }
             else
             {
-                return;
+                return root;
             }
         }
         for(WebElement element: all_li)
         {
             WebElement treeNodeSpan = element.findElement(By.className("tree-node"));
             TreeNode<WebElement> treeNode = new TreeNode<>(treeNodeSpan);
+            System.out.println(treeNodeSpan.getText());
             root.addNode(treeNode);
-            getTree(treeNode, false);
+            populateTree(treeNode, false);
         }
+        return root;
+    }
+
+    @Override
+    public void populateTree()
+    {
+        TreeNode<WebElement> treeRoot = new TreeNode<>(this.getWrappedElement());
+        populateTree(treeRoot, true);
+        this.root = treeRoot;
+    }
+
+    @Override
+    public void clickTreeNodeByTitle(String title)
+    {
+        List<TreeNode<WebElement>> allLeafNodes = TreeNode.getAllLeafNode(this.root);
+        for(TreeNode<WebElement> leafNode: allLeafNodes)
+        {
+            WebElement span = leafNode.getElement().findElement(By.className("tree-title"));
+            if(span.getText().equals(title))
+            {
+                span.click();
+                return;
+            }
+        }
+    }
+
+    @Override
+    public boolean existTitleInTree(String title)
+    {
+        return false;
     }
 }

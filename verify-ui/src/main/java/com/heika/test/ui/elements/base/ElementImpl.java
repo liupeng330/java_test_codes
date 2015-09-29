@@ -94,6 +94,9 @@ public class ElementImpl implements Element {
     }
 
     @Override
+    public void waitForExist(int retry) { }
+
+    @Override
     public void clear() {
         throw new NoSuchMethodError("Method clear is only available in the " + ElementImpl.class.getName() + "class.");
     }

@@ -15,4 +15,5 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * @return boolean true for an initialized WebElement, or false if we were somehow passed a null WebElement.
      */
     boolean elementWired();
+    void waitForExist(int retry);
 }
