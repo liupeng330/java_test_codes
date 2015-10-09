@@ -3,7 +3,7 @@
 <suite name="Suite1">
     <test name="Test1">
       <!--<parameter name="verify_base_url" value="http://172.16.2.111:9005/"/>-->
-      <parameter name="verify_base_url" value="http://172.16.2.38:15081/"/>
+      <parameter name="verify_base_url" value="http://172.16.2.111:9601/"/>
       <!--<parameter name="verify_base_url" value="http://172.16.2.111:8087/heika-verify/"/>-->
       <parameter name="verify_username" value="admin%40renrendai.com"/>
       <parameter name="verify_password" value="bH7Qsd8kPfEE2zdTwgZUVF2iYv5kVtBGAyWBzZjk50S2uaWgVMLtbAtTgIpu0D85X3VgFie%2F3W4HCHY088%2BCAVEO8PyW0nq57id29Aw5Mm0PA5KEf6Z18roUeGDfsTF0G5ifCwPRfC4P%2Bu0E7YUEEAikWHgevfqSYGtKub0uQvA%3D"/>

@@ -37,32 +37,29 @@ public class ElementHandler implements InvocationHandler {
     }
 
     @Override
-    public Object invoke(Object object, Method method, Object[] objects) throws Throwable {
+    public Object invoke(Object object, Method method, Object[] objects) throws Throwable
+    {
         WebElement element = null;
         if("waitForExist".equals(method.getName()))
         {
-            int retry = (Integer )objects[0];
+            Integer retry = (Integer)objects[objects.length-1];
             while (true)
             {
                 try
                 {
                     element = locator.findElement();
-                    return element;
+                    if("waitForExist".equals(method.getName()))
+                    {
+                        return element;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
                 catch (org.openqa.selenium.NoSuchElementException e)
                 {
-                    if(--retry <= 0)
-                    {
-                        throw e;
-                    }
-                    try
-                    {
-                        Thread.sleep(1000);
-                    }
-                    catch (InterruptedException ex)
-                    {
-                        throw new RuntimeException(ex);
-                    }
+                    retry = handleException(retry, e);
                 }
             }
         }
@@ -71,16 +68,37 @@ public class ElementHandler implements InvocationHandler {
             element = locator.findElement();
         }
 
-        if ("getWrappedElement".equals(method.getName())) {
+        if ("getWrappedElement".equals(method.getName()))
+        {
             return element;
         }
         Constructor<?> cons = wrappingType.getConstructor(WebElement.class);
         Object thing = cons.newInstance(element);
-        try {
+        try
+        {
             return method.invoke(wrappingType.cast(thing), objects);
-        } catch (InvocationTargetException e) {
+        }
+        catch (InvocationTargetException e)
+        {
             // Unwrap the underlying exception
             throw e.getCause();
+        }
+    }
+
+    private Integer handleException(Integer retry, Throwable e) throws Throwable
+    {
+        if(--retry <= 0)
+        {
+            throw e;
+        }
+        try
+        {
+            Thread.sleep(1000);
+            return retry;
+        }
+        catch (InterruptedException ex)
+        {
+            throw new RuntimeException(ex);
         }
     }
 }

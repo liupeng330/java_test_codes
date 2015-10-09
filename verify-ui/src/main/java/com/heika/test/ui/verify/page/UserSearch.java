@@ -1,28 +1,37 @@
 package com.heika.test.ui.verify.page;
 
-import com.heika.test.ui.elements.widget.NavTree;
-import com.heika.test.ui.elements.widget.NavTreeImpl;
+import com.heika.test.ui.elements.widget.Table;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class UserSearch extends PageBase
+public class UserSearch extends IFramePageBase
 {
-    @FindBy(how = How.ID, using = "navTree")
-    private NavTree navTree;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"tabs\"]/div[2]/div/div/div/div/div[2]/div[2]/div[2]/table")
+    private Table datagrid;
 
     public UserSearch(WebDriver driver)
     {
-        super(driver);
+        super(driver, driver.switchTo().frame(driver.findElement(By.tagName("iframe"))));
     }
 
-    public void switchTo(String name) throws Exception
+    public void clickButtonGetUserVerifyLog(int rowIndex) throws Exception
     {
-        navTree.waitForExist(10);
-        navTree.populateTree();
-        navTree.clickTreeNodeByTitle(name);
+        this.datagrid.waitForExist(10);
+        int attempt = 0;
+        while(attempt++ <2)
+        {
+            try
+            {
+                this.datagrid.getCellAtIndex(rowIndex, 8).findElement(By.tagName("a")).click();
+                return;
+            }
+            catch (org.openqa.selenium.StaleElementReferenceException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        throw new Exception("Fail to click 'get user verify log' button!!");
     }
 }

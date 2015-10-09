@@ -3,6 +3,7 @@ package com.heika.test.ui.elements.factory.api;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+import com.heika.test.ui.verify.page.IFramePageBase;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -21,6 +22,11 @@ public class ElementFactory {
      */
     public static <T> T initElements(WebDriver driver, Class<T> pageClassToProxy) {
         T page = instantiatePage(driver, pageClassToProxy);
+
+        if(page instanceof IFramePageBase)
+        {
+            driver = ((IFramePageBase) page).getIFrameDriver();
+        }
         return initElements(driver, page);
     }
 
