@@ -36,6 +36,8 @@ public class TestLogin
         pageBase.switchTo("用户查询");
 
         UserSearch userSearch = ElementFactory.initElements(webDriver, UserSearch.class);
-        userSearch.clickButtonGetUserVerifyLog(0);
+        userSearch.click_getUserDetail_button(0);
+        //userSearch.click_getUserVerifyLog_button("张三");
+        //userSearch.click_getUserDetail_button(0);
     }
 }

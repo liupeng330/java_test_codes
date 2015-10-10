@@ -72,16 +72,36 @@ public class ElementHandler implements InvocationHandler {
         {
             return element;
         }
-        Constructor<?> cons = wrappingType.getConstructor(WebElement.class);
-        Object thing = cons.newInstance(element);
-        try
+        Constructor<?> cons = wrappingType.getConstructor(WebElement.class, ElementLocator.class);
+
+        int defaultRetryTimes = 10;
+        while(true)
         {
-            return method.invoke(wrappingType.cast(thing), objects);
-        }
-        catch (InvocationTargetException e)
-        {
-            // Unwrap the underlying exception
-            throw e.getCause();
+            Object thing = cons.newInstance(element, locator);
+            try
+            {
+                return method.invoke(wrappingType.cast(thing), objects);
+            }
+            catch (InvocationTargetException e)
+            {
+                if (e.getCause() instanceof org.openqa.selenium.StaleElementReferenceException)
+                {
+                    if(--defaultRetryTimes > 0)
+                    {
+                        System.out.println("Element got stale!! Need to relocate again!!");
+                        element = locator.findElement();
+                    }
+                    else
+                    {
+                        System.out.println("Fail to retry to relocate element!");
+                        throw e.getCause();
+                    }
+                }
+                else
+                {
+                    throw e.getCause();
+                }
+            }
         }
     }
 

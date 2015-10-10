@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import com.heika.test.ui.elements.base.Element;
 import com.heika.test.ui.elements.base.ImplementedBy;
 
+import java.util.List;
+
 /**
  * Table functionality.
  */
@@ -29,4 +31,6 @@ public interface Table extends Element {
      * @return the WebElement of the cell at the specified index
      */
     WebElement getCellAtIndex(int rowIdx, int colIdx);
+
+    List<WebElement> getRows();
 }

@@ -2,6 +2,7 @@ package com.heika.test.ui.elements.widget;
 
 import com.heika.test.ui.elements.base.ElementImpl;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.pagefactory.ElementLocator;
 
 /**
  * Wrapper class like Select that wraps basic checkbox functionality.
@@ -15,6 +16,10 @@ public class CheckBoxImpl extends ElementImpl implements CheckBox {
      */
     public CheckBoxImpl(WebElement element) {
         super(element);
+    }
+
+    public CheckBoxImpl(WebElement element, ElementLocator locator) {
+        super(element, locator);
     }
 
     public void toggle() {

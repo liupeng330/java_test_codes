@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.internal.Locatable;
+import org.openqa.selenium.support.pagefactory.ElementLocator;
 
 /**
  * An implementation of the Element interface. Delegates its work to an underlying WebElement instance for
@@ -12,15 +13,28 @@ import org.openqa.selenium.internal.Locatable;
  */
 public class ElementImpl implements Element {
 
-    private final WebElement element;
+    private WebElement element;
+    private ElementLocator locator;
 
     /**
      * Creates a Element for a given WebElement.
      *
      * @param element element to wrap up
      */
-    public ElementImpl(final WebElement element) {
+    public ElementImpl(WebElement element)
+    {
         this.element = element;
+    }
+
+    public ElementImpl(WebElement element, ElementLocator locator)
+    {
+        this.element = element;
+        this.locator = locator;
+    }
+
+    protected ElementLocator getLocator()
+    {
+        return this.locator;
     }
 
     @Override
@@ -59,8 +73,41 @@ public class ElementImpl implements Element {
     }
 
     @Override
+    public WebElement findElement(By by) {
+        try
+        {
+            return element.findElement(by);
+        }
+        catch (org.openqa.selenium.StaleElementReferenceException e)
+        {
+            if(this.locator != null)
+            {
+                //Relocate when element got staled
+                this.element = locator.findElement();
+                //and using it to find its child element again
+                return element.findElement(by);
+            }
+            throw e;
+        }
+    }
+
+    @Override
     public List<WebElement> findElements(By by) {
-        return element.findElements(by);
+        try
+        {
+            return element.findElements(by);
+        }
+        catch (org.openqa.selenium.StaleElementReferenceException e)
+        {
+            if(this.locator != null)
+            {
+                //Relocate when element got staled
+                this.element = locator.findElement();
+                //and using it to find its child element again
+                return element.findElements(by);
+            }
+            throw e;
+        }
     }
 
     @Override
@@ -76,11 +123,6 @@ public class ElementImpl implements Element {
     @Override
     public boolean isSelected() {
         return element.isSelected();
-    }
-
-    @Override
-    public WebElement findElement(By by) {
-        return element.findElement(by);
     }
 
     @Override

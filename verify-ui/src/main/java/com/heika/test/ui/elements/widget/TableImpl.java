@@ -10,6 +10,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import com.heika.test.ui.elements.base.ElementImpl;
+import org.openqa.selenium.support.pagefactory.ElementLocator;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -24,6 +25,11 @@ public class TableImpl extends ElementImpl implements Table {
 	 */
 	public TableImpl(WebElement element) {
 		super(element);
+	}
+
+	public TableImpl(WebElement element, ElementLocator locator)
+	{
+		super(element, locator);
 	}
 
 	@Override
@@ -68,7 +74,8 @@ public class TableImpl extends ElementImpl implements Table {
 	 * 
 	 * @return list of row WebElements
 	 */
-	private List<WebElement> getRows() {
+	@Override
+	public List<WebElement> getRows() {
 		List<WebElement> rows = new ArrayList<WebElement>();
 		rows.addAll(findElements(By.cssSelector("tbody tr")));
 		return rows;

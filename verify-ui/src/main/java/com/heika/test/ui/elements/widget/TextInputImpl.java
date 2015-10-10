@@ -2,6 +2,7 @@ package com.heika.test.ui.elements.widget;
 
 import org.openqa.selenium.WebElement;
 import com.heika.test.ui.elements.base.ElementImpl;
+import org.openqa.selenium.support.pagefactory.ElementLocator;
 
 /**
  * TextInput  wrapper.
@@ -12,8 +13,14 @@ public class TextInputImpl extends ElementImpl implements TextInput {
      *
      * @param element element to wrap up
      */
-    public TextInputImpl(WebElement element) {
+    public TextInputImpl(WebElement element)
+    {
         super(element);
+    }
+
+    public TextInputImpl(WebElement element, ElementLocator locator)
+    {
+        super(element, locator);
     }
 
     @Override

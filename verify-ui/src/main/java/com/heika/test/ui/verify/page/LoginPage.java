@@ -2,6 +2,7 @@ package com.heika.test.ui.verify.page;
 
 import com.heika.test.ui.elements.widget.Button;
 import com.heika.test.ui.elements.widget.TextInput;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;

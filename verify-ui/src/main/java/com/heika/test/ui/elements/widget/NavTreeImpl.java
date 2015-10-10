@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 
 import java.util.List;
 import com.heika.test.utils.TreeNode;
+import org.openqa.selenium.support.pagefactory.ElementLocator;
 import sun.reflect.generics.tree.Tree;
 
 /**
@@ -92,6 +93,12 @@ public class NavTreeImpl extends ElementImpl implements NavTree
     public NavTreeImpl(WebElement element)
     {
         super(element);
+        populateTree();
+    }
+
+    public NavTreeImpl(WebElement element, ElementLocator locator)
+    {
+        super(element, locator);
         populateTree();
     }
 

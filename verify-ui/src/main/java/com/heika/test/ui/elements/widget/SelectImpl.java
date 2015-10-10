@@ -9,6 +9,7 @@ import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import com.heika.test.ui.elements.base.ElementImpl;
+import org.openqa.selenium.support.pagefactory.ElementLocator;
 
 /**
  * Wrapper around a WebElement for the Select class in Selenium.
@@ -23,6 +24,11 @@ public class SelectImpl extends ElementImpl implements Select {
      */
     public SelectImpl(WebElement element) {
         super(element);
+        this.innerSelect = new org.openqa.selenium.support.ui.Select(element);
+    }
+
+    public SelectImpl(WebElement element, ElementLocator locator) {
+        super(element, locator);
         this.innerSelect = new org.openqa.selenium.support.ui.Select(element);
     }
 
