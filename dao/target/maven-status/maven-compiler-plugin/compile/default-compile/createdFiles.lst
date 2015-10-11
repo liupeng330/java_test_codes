@@ -5,7 +5,7 @@ com/heika/test/dao/user/WorkPositionInfoDao.class
 com/heika/test/dao/user/RegionDao.class
 com/heika/test/dao/base/BaseDao.class
 com/heika/test/dao/user/UniversityInfoDao.class
-com/heika/test/dao/verify/VerifyUserStatusDao.class
 com/heika/test/dao/user/UserMaterialDao.class
-com/heika/test/dao/user/UserInfoDao.class
+com/heika/test/dao/verify/VerifyUserStatusDao.class
 com/heika/test/dao/user/UserDao.class
+com/heika/test/dao/user/UserInfoDao.class

@@ -1,6 +1,7 @@
 package com.heika.test.verify.cases.UI;
 
 import com.heika.test.ui.elements.factory.api.ElementFactory;
+import com.heika.test.ui.verify.page.LeftPage;
 import com.heika.test.ui.verify.page.LoginPage;
 import com.heika.test.ui.elements.widget.NavTreeImpl;
 import com.heika.test.ui.verify.page.PageBase;
@@ -32,8 +33,8 @@ public class TestLogin
         LoginPage loginPage = ElementFactory.initElements(webDriver, LoginPage.class);
         loginPage.Login(userName, password);
 
-        PageBase pageBase = ElementFactory.initElements(webDriver, PageBase.class);
-        pageBase.switchTo("用户查询");
+        LeftPage navTree = ElementFactory.initElements(webDriver, LeftPage.class);
+        navTree.switchTo("用户查询");
 
         UserSearch userSearch = ElementFactory.initElements(webDriver, UserSearch.class);
         userSearch.click_getUserDetail_button(0);

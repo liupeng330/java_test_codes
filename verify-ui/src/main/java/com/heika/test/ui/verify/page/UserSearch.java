@@ -1,20 +1,14 @@
 package com.heika.test.ui.verify.page;
 
-import com.heika.test.ui.elements.widget.Button;
-import com.heika.test.ui.elements.widget.ButtonImpl;
 import com.heika.test.ui.elements.widget.Table;
-import com.sun.istack.internal.Nullable;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.function.Predicate;
 
 public class UserSearch extends IFramePageBase
 {
@@ -61,7 +55,7 @@ public class UserSearch extends IFramePageBase
         retryForStaleElement(()->
         {
             WebElement button = this.datagrid.getCellAtIndex(rowIndex, colIndex).findElement(By.tagName("a"));
-            webDriverWait.until(ExpectedConditions.elementToBeClickable(button));
+            getWebDriverWait().until(ExpectedConditions.elementToBeClickable(button));
             button.click();
         });
     }

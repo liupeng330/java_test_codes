@@ -2,16 +2,10 @@ package com.heika.test.ui.elements.widget;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
-
-import com.sun.istack.internal.Nullable;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import com.heika.test.ui.elements.base.ElementImpl;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Table wrapper.
@@ -80,5 +74,4 @@ public class TableImpl extends ElementImpl implements Table {
 		rows.addAll(findElements(By.cssSelector("tbody tr")));
 		return rows;
 	}
-
 }

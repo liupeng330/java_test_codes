@@ -1,18 +1,14 @@
 package com.heika.test.ui.verify.page;
 
-import com.heika.test.ui.elements.widget.NavTree;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class PageBase
-{
-    @FindBy(how = How.ID, using = "navTree")
-    protected NavTree navTree;
+import java.util.concurrent.Callable;
 
-    protected WebDriver webDriver;
-    protected WebDriverWait webDriverWait;
+public abstract class PageBase
+{
+    private WebDriver webDriver;
+    private WebDriverWait webDriverWait;
 
     public PageBase(WebDriver driver)
     {
@@ -20,11 +16,14 @@ public class PageBase
         this.webDriverWait = new WebDriverWait(driver, 10);
     }
 
-    public void switchTo(String name) throws Exception
+    protected WebDriver getWebDriver()
     {
-        navTree.waitForExist(10);
-        navTree.populateTree();
-        navTree.clickTreeNodeByTitle(name);
+        return this.webDriver;
+    }
+
+    protected WebDriverWait getWebDriverWait()
+    {
+        return this.webDriverWait;
     }
 
     public void retryForStaleElement(Runnable run)
@@ -46,5 +45,26 @@ public class PageBase
                 System.out.println("Element got staled, try again!!");
             }
         }
+    }
+
+    public <T> T retryForStaleElement(Callable<T> call) throws Exception
+    {
+        int retry = 2;
+        while(true)
+        {
+            try
+            {
+                return call.call();
+            }
+            catch (org.openqa.selenium.StaleElementReferenceException e)
+            {
+                if(--retry < 0)
+                {
+                    throw e;
+                }
+                System.out.println("Element got staled, try again!!");
+            }
+        }
+
     }
 }
