@@ -1,7 +1,6 @@
 package com.heika.test.ui.verify.page;
 
 import com.heika.test.ui.elements.widget.NavTree;
-import com.sun.deploy.net.proxy.WebProxyAutoDetection;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -26,5 +25,26 @@ public class PageBase
         navTree.waitForExist(10);
         navTree.populateTree();
         navTree.clickTreeNodeByTitle(name);
+    }
+
+    public void retryForStaleElement(Runnable run)
+    {
+        int retry = 2;
+        while(true)
+        {
+            try
+            {
+                run.run();
+                return;
+            }
+            catch (org.openqa.selenium.StaleElementReferenceException e)
+            {
+                if(--retry < 0)
+                {
+                    throw e;
+                }
+                System.out.println("Element got staled, try again!!");
+            }
+        }
     }
 }

@@ -58,25 +58,11 @@ public class UserSearch extends IFramePageBase
     private void clickButton(int rowIndex, int colIndex) throws Exception
     {
         this.datagrid.waitForExist(10);
-        int retry = 2;
-        while(true)
+        retryForStaleElement(()->
         {
-            try
-            {
-                WebElement element = this.datagrid.getCellAtIndex(rowIndex, colIndex);
-                WebElement button = element.findElement(By.tagName("a"));
-                new WebDriverWait(webDriver, 10).until(ExpectedConditions.elementToBeClickable(button));
-                button.click();
-                return;
-            }
-            catch (org.openqa.selenium.StaleElementReferenceException e)
-            {
-                if(--retry < 0)
-                {
-                    throw e;
-                }
-                System.out.println("Element got staled, try again!!");
-            }
-        }
+            WebElement button = this.datagrid.getCellAtIndex(rowIndex, colIndex).findElement(By.tagName("a"));
+            webDriverWait.until(ExpectedConditions.elementToBeClickable(button));
+            button.click();
+        });
     }
 }
