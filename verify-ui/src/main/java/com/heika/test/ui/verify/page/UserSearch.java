@@ -1,5 +1,7 @@
 package com.heika.test.ui.verify.page;
 
+import com.heika.test.ui.elements.widget.DivPanelMessageWindow;
+import com.heika.test.ui.elements.widget.DivPanelMessageWindowImpl;
 import com.heika.test.ui.elements.widget.DivPanelWindow;
 import com.heika.test.ui.elements.widget.Table;
 import com.heika.test.utils.LogHelper;
@@ -83,6 +85,9 @@ public class UserSearch extends IFramePageBase
 	@FindBy(how = How.XPATH, using = "//div[(@class='panel window' or @class='panel window easyui-fluid') and not(contains(@style,'display: none'))]")
 	private DivPanelWindow userVeirfyLogPanleWindow;
 
+	@FindBy(how = How.XPATH, using = "//div[(@class='panel window messager-window') and not(contains(@style,'display: none'))]")
+	private DivPanelMessageWindow messageWindow;
+
     public UserSearch(WebDriver driver)
     {
         super(driver, driver.switchTo().frame(driver.findElement(By.tagName("iframe"))));
@@ -122,28 +127,55 @@ public class UserSearch extends IFramePageBase
     {
         this.datagrid.waitForExist(10);
         retryForStaleElement(() ->
-        {
-            List<WebElement> rows = this.datagrid.getRows();
-            LogHelper.log(rows.size() + "");
-            for (WebElement row : rows)
-            {
-                if(row.findElement(By.xpath("./td[@field='" + type + "']")).getText().trim().equals(value))
-                {
-                    row.findElement(By.xpath("./td[@field='" + field + "']")).click();
-                    return;
-                }
-            }
-        });
+		{
+			List<WebElement> rows = this.datagrid.getRows();
+			LogHelper.log(rows.size() + "");
+			for (WebElement row : rows)
+			{
+				if (row.findElement(By.xpath("./td[@field='" + type + "']")).getText().trim().equals(value))
+				{
+					row.findElement(By.xpath("./td[@field='" + field + "']")).click();
+					return;
+				}
+			}
+		});
     }
 
     private void clickButton(int rowIndex, int colIndex) throws Exception
     {
         this.datagrid.waitForExist(10);
-        retryForStaleElement(()->
-        {
-            WebElement button = this.datagrid.getCellAtIndex(rowIndex, colIndex).findElement(By.tagName("a"));
-            getWebDriverWait().until(ExpectedConditions.elementToBeClickable(button));
-            button.click();
-        });
+        retryForStaleElement(() ->
+		{
+			WebElement button = this.datagrid.getCellAtIndex(rowIndex, colIndex).findElement(By.tagName("a"));
+			getWebDriverWait().until(ExpectedConditions.elementToBeClickable(button));
+			button.click();
+		});
     }
+
+	//最大化“审核流水明细”窗口
+	public void maxUserVerifyLogWindow()
+	{
+		this.operateUserVerifyLogPanelWindow(() -> this.userVeirfyLogPanleWindow.maxWindow());
+	}
+
+	//关闭“审核流水明细“窗口
+	public void closeUserVerifyLogWindow()
+	{
+		this.operateUserVerifyLogPanelWindow(() -> this.userVeirfyLogPanleWindow.closeWindow());
+	}
+
+	//恢复“审核流水明细“窗口
+	public void restoreUserVerifyLogWindow()
+	{
+		this.operateUserVerifyLogPanelWindow(() -> this.userVeirfyLogPanleWindow.restoreWindow());
+	}
+
+	private void operateUserVerifyLogPanelWindow(Runnable run)
+	{
+		this.userVeirfyLogPanleWindow.waitForExist(10);
+		if(this.userVeirfyLogPanleWindow.getWindowTitle().trim().equals("审核流水明细"))
+		{
+			run.run();
+		}
+	}
 }

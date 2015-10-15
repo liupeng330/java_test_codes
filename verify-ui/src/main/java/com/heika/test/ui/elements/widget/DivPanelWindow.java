@@ -1,6 +1,10 @@
 package com.heika.test.ui.elements.widget;
 
-public interface DivPanelWindow
+import com.heika.test.ui.elements.base.Element;
+import com.heika.test.ui.elements.base.ImplementedBy;
+
+@ImplementedBy(DivPanelWindowImpl.class)
+public interface DivPanelWindow extends Element
 {
     void maxWindow();
     void closeWindow();

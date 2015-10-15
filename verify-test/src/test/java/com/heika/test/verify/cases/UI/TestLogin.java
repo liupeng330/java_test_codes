@@ -29,7 +29,13 @@ public class TestLogin
         navTree.switchTo("用户查询");
 
         UserSearch userSearch = ElementFactory.initElements(webDriver, UserSearch.class);
-        //userSearch.click_getUserVerifyLog_button("测试16");
-        userSearch.click_getUserDetail_button("测试16");
+        userSearch.click_getUserVerifyLog_button("测试16");
+        //userSearch.click_getUserDetail_button("测试16");
+        Thread.sleep(1000);
+        userSearch.maxUserVerifyLogWindow();
+        Thread.sleep(1000);
+        userSearch.restoreUserVerifyLogWindow();
+        Thread.sleep(1000);
+        userSearch.closeUserVerifyLogWindow();
     }
 }
