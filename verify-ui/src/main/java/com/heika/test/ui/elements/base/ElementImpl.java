@@ -2,6 +2,7 @@ package com.heika.test.ui.elements.base;
 
 import java.util.List;
 
+import com.heika.test.utils.LogHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.internal.Locatable;
@@ -82,6 +83,7 @@ public class ElementImpl implements Element {
         {
             if(this.locator != null)
             {
+                LogHelper.log("页面元素已腐败，重新获取！！");
                 //Relocate when element got staled
                 this.element = locator.findElement();
                 //and using it to find its child element again
@@ -101,6 +103,7 @@ public class ElementImpl implements Element {
         {
             if(this.locator != null)
             {
+                LogHelper.log("页面元素已腐败，重新获取！！");
                 //Relocate when element got staled
                 this.element = locator.findElement();
                 //and using it to find its child element again

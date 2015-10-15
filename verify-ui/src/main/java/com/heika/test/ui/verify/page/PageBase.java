@@ -1,5 +1,6 @@
 package com.heika.test.ui.verify.page;
 
+import com.heika.test.utils.LogHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -42,7 +43,7 @@ public abstract class PageBase
                 {
                     throw e;
                 }
-                System.out.println("Element got staled, try again!!");
+                LogHelper.log("页面元素腐败，需要重新获取！！");
             }
         }
     }
@@ -62,9 +63,8 @@ public abstract class PageBase
                 {
                     throw e;
                 }
-                System.out.println("Element got staled, try again!!");
+                LogHelper.log("页面元素腐败，需要重新获取！！");
             }
         }
-
     }
 }

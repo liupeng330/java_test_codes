@@ -49,21 +49,21 @@ public class UserImpl implements UserService
     @Override
     public Integer addUser(UserEntity userEntity)
     {
-        logHelper.log("Creating User entry: " + userEntity.toString());
+        logHelper.log("创建UserEntry: " + userEntity.toString());
         return (Integer)userDao.save(userEntity);
     }
 
     @Override
     public void deleteUser(Integer id)
     {
-        logHelper.log("Deleting User entry: userId=" + id);
+        logHelper.log("删除UseEntry: userId=" + id);
         userDao.delete(UserEntity.class, id);
     }
 
     @Override
     public UserEntity getUser(Integer id)
     {
-        logHelper.log("Getting User entry: userId=" + id);
+        logHelper.log("获取UserEntry: userId=" + id);
         return userDao.get(UserEntity.class, id);
     }
 

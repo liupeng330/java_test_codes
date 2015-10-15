@@ -1,6 +1,7 @@
 package com.heika.test.ui.elements.factory.internal;
 
 import com.heika.test.ui.elements.base.Element;
+import com.heika.test.utils.LogHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 
@@ -88,12 +89,12 @@ public class ElementHandler implements InvocationHandler {
                 {
                     if(--defaultRetryTimes > 0)
                     {
-                        System.out.println("Element got stale!! Need to relocate again!!");
+                        LogHelper.log("页面元素腐败，需要重新获取！！");
                         element = locator.findElement();
                     }
                     else
                     {
-                        System.out.println("Fail to retry to relocate element!");
+                        LogHelper.log("重新获取页面元素失败！！");
                         throw e.getCause();
                     }
                 }

@@ -12,79 +12,89 @@ import com.heika.test.utils.TreeNode;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 import sun.reflect.generics.tree.Tree;
 
-/**
+/*
 <ul id="navTree" class="navStyle tree">
-<li>
-<div id="_easyui_tree_1" class="tree-node">
-<span class="tree-hit tree-expanded"></span>
-<span class="tree-icon tree-folder tree-folder-open "></span>
-<span class="tree-title">用户查询</span>
-</div>
-<ul style="display:block">
-<li>
-<div id="_easyui_tree_2" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">用户查询</span>
-</div></li>
-<li>
-<div id="_easyui_tree_3" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">PDF征信报告</span>
-</div></li>
-</ul></li>
-<li>
-<div id="_easyui_tree_4" class="tree-node">
-<span class="tree-hit tree-expanded"></span>
-<span class="tree-icon tree-folder tree-folder-open "></span>
-<span class="tree-title">调查</span>
-</div>
-<ul style="display:block">
-<li>
-<div id="_easyui_tree_5" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">普通用户</span>
-</div></li>
-<li>
-<div id="_easyui_tree_6" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">BD渠道用户</span>
-</div></li>
-</ul></li>
-<li>
-<div id="_easyui_tree_7" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">一审</span>
-</div></li>
-<li>
-<div id="_easyui_tree_8" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">二审</span>
-</div></li>
-<li>
-<div id="_easyui_tree_9" class="tree-node">
-<span class="tree-hit tree-expanded"></span>
-<span class="tree-icon tree-folder tree-folder-open "></span>
-<span class="tree-title">权限管理</span>
-</div>
-<ul style="display:block">
-<li>
-<div id="_easyui_tree_10" class="tree-node">
-<span class="tree-indent"></span>
-<span class="tree-indent"></span>
-<span class="tree-icon tree-file "></span>
-<span class="tree-title">用户列表</span>
-</div></li>
-</ul></li>
+	<li>
+		<div id="_easyui_tree_1" class="tree-node">
+			<span class="tree-hit tree-expanded"></span>
+			<span class="tree-icon tree-folder tree-folder-open "></span>
+			<span class="tree-title">用户查询</span>
+		</div>
+		<ul style="display:block">
+			<li>
+				<div id="_easyui_tree_2" class="tree-node">
+					<span class="tree-indent"></span>
+					<span class="tree-indent"></span>
+					<span class="tree-icon tree-file "></span>
+					<span class="tree-title">用户查询</span>
+				</div>
+			</li>
+			<li>
+				<div id="_easyui_tree_3" class="tree-node">
+					<span class="tree-indent"></span>
+					<span class="tree-indent"></span>
+					<span class="tree-icon tree-file "></span>
+					<span class="tree-title">PDF征信报告</span>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<div id="_easyui_tree_4" class="tree-node">
+			<span class="tree-hit tree-expanded"></span>
+			<span class="tree-icon tree-folder tree-folder-open "></span>
+			<span class="tree-title">调查</span>
+		</div>
+		<ul style="display:block">
+			<li>
+				<div id="_easyui_tree_5" class="tree-node">
+					<span class="tree-indent"></span>
+					<span class="tree-indent"></span>
+					<span class="tree-icon tree-file "></span>
+					<span class="tree-title">普通用户</span>
+				</div>
+			</li>
+			<li>
+				<div id="_easyui_tree_6" class="tree-node">
+					<span class="tree-indent"></span>
+					<span class="tree-indent"></span>
+					<span class="tree-icon tree-file "></span>
+					<span class="tree-title">BD渠道用户</span>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<div id="_easyui_tree_7" class="tree-node">
+			<span class="tree-indent"></span>
+			<span class="tree-icon tree-file "></span>
+			<span class="tree-title">一审</span>
+		</div>
+	</li>
+	<li>
+		<div id="_easyui_tree_8" class="tree-node">
+			<span class="tree-indent"></span>
+			<span class="tree-icon tree-file "></span>
+			<span class="tree-title">二审</span>
+		</div>
+	</li>
+	<li>
+		<div id="_easyui_tree_9" class="tree-node">
+			<span class="tree-hit tree-expanded"></span>
+			<span class="tree-icon tree-folder tree-folder-open "></span>
+			<span class="tree-title">权限管理</span>
+		</div>
+		<ul style="display:block">
+			<li>
+				<div id="_easyui_tree_10" class="tree-node">
+					<span class="tree-indent"></span>
+					<span class="tree-indent"></span>
+					<span class="tree-icon tree-file "></span>
+					<span class="tree-title">用户列表</span>
+				</div>
+			</li>
+		</ul>
+	</li>
 </ul>
 */
 public class NavTreeImpl extends ElementImpl implements NavTree
@@ -129,7 +139,6 @@ public class NavTreeImpl extends ElementImpl implements NavTree
         {
             WebElement treeNodeSpan = element.findElement(By.className("tree-node"));
             TreeNode<WebElement> treeNode = new TreeNode<>(treeNodeSpan);
-            System.out.println(treeNodeSpan.getText());
             root.addNode(treeNode);
             populateTree(treeNode, false);
         }
