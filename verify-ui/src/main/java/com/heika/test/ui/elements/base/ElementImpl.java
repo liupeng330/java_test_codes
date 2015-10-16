@@ -139,7 +139,7 @@ public class ElementImpl implements Element {
     }
 
     @Override
-    public void waitForExist(int retry) { }
+    public void waitForExist() { }
 
     @Override
     public void clear() {

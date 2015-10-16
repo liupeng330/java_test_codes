@@ -1,9 +1,6 @@
 package com.heika.test.ui.verify.page;
 
-import com.heika.test.ui.elements.widget.DivPanelMessageWindow;
-import com.heika.test.ui.elements.widget.DivPanelMessageWindowImpl;
-import com.heika.test.ui.elements.widget.DivPanelWindow;
-import com.heika.test.ui.elements.widget.Table;
+import com.heika.test.ui.elements.widget.*;
 import com.heika.test.utils.LogHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -88,10 +85,24 @@ public class UserSearch extends IFramePageBase
 	@FindBy(how = How.XPATH, using = "//div[(@class='panel window messager-window') and not(contains(@style,'display: none'))]")
 	private DivPanelMessageWindow messageWindow;
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"waitSearch\"]/div/div[1]/span")
+	private Span searchTypeSpan;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='panel combo-p' and not(contains(@style,'display: none'))]")
+	private DropDownList searchTypeDropDownList;
+
     public UserSearch(WebDriver driver)
     {
         super(driver, driver.switchTo().frame(driver.findElement(By.tagName("iframe"))));
     }
+
+	public void setSearchType(String type)
+	{
+		this.searchTypeSpan.waitForExist();
+		this.searchTypeSpan.click();
+		this.searchTypeDropDownList.waitForExist();
+		this.searchTypeDropDownList.selectByText(type);
+	}
 
     //按姓名点击“审核流水”按钮
     public void click_getUserVerifyLog_button(String realName) throws Exception
@@ -123,9 +134,21 @@ public class UserSearch extends IFramePageBase
         clickButton(rowIndex, 10);
     }
 
+	public void clickOkButtonForMessageWindow()
+	{
+		this.messageWindow.waitForExist();
+		this.messageWindow.clickOK();
+	}
+
+	public String getTextForMessageWindow()
+	{
+		this.messageWindow.waitForExist();
+		return this.messageWindow.getMessage();
+	}
+
     private void ClickButton(String type, String value, String field)
     {
-        this.datagrid.waitForExist(10);
+        this.datagrid.waitForExist();
         retryForStaleElement(() ->
 		{
 			List<WebElement> rows = this.datagrid.getRows();
@@ -143,7 +166,7 @@ public class UserSearch extends IFramePageBase
 
     private void clickButton(int rowIndex, int colIndex) throws Exception
     {
-        this.datagrid.waitForExist(10);
+        this.datagrid.waitForExist();
         retryForStaleElement(() ->
 		{
 			WebElement button = this.datagrid.getCellAtIndex(rowIndex, colIndex).findElement(By.tagName("a"));
@@ -172,7 +195,7 @@ public class UserSearch extends IFramePageBase
 
 	private void operateUserVerifyLogPanelWindow(Runnable run)
 	{
-		this.userVeirfyLogPanleWindow.waitForExist(10);
+		this.userVeirfyLogPanleWindow.waitForExist();
 		if(this.userVeirfyLogPanleWindow.getWindowTitle().trim().equals("审核流水明细"))
 		{
 			run.run();

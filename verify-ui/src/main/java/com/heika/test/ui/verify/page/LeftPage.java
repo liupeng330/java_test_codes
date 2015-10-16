@@ -17,7 +17,7 @@ public class LeftPage extends PageBase
 
     public void switchTo(String name) throws Exception
     {
-        navTree.waitForExist(10);
+        navTree.waitForExist();
         navTree.populateTree();
         navTree.clickTreeNodeByTitle(name);
     }

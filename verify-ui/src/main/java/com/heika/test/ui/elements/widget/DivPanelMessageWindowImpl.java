@@ -22,13 +22,26 @@ public class DivPanelMessageWindowImpl extends ElementImpl implements DivPanelMe
     @Override
     public void clickOK()
     {
-        List<WebElement> buttons = this.getWrappedElement().findElement(By.className("messager-button")).findElements(By.tagName("a"));
+        clickButton("确认");
     }
 
     @Override
     public void clickCancel()
     {
+        clickButton("取消");
+    }
 
+    private void clickButton(String buttonText)
+    {
+        List<WebElement> buttons = this.getWrappedElement().findElement(By.className("messager-button")).findElements(By.tagName("a"));
+        for(WebElement button: buttons)
+        {
+            if(button.getText().trim().equals(buttonText))
+            {
+                button.click();
+                return;
+            }
+        }
     }
 
     @Override

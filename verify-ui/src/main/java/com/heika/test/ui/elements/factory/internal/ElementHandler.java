@@ -43,7 +43,7 @@ public class ElementHandler implements InvocationHandler {
         WebElement element = null;
         if("waitForExist".equals(method.getName()))
         {
-            Integer retry = (Integer)objects[objects.length-1];
+            Integer retry = 10;
             while (true)
             {
                 try
