@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import javax.xml.soap.Text;
 import java.util.List;
 
 /*
@@ -88,20 +89,45 @@ public class UserSearch extends IFramePageBase
 	@FindBy(how = How.XPATH, using = "//*[@id=\"waitSearch\"]/div/div[1]/span")
 	private Span searchTypeSpan;
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"waitSearch\"]/div/div[2]/span")
+	private Span searchStatusSpan;
+
 	@FindBy(how = How.XPATH, using = "//div[@class='panel combo-p' and not(contains(@style,'display: none'))]")
-	private DropDownList searchTypeDropDownList;
+	private DropDownList dropDownList;
+
+	@FindBy(how = How.ID, using = "oText")
+	private TextInput searchTextInput;
+
+	@FindBy(how = How.ID, using = "oSubmit")
+	private Button searchButton;
 
     public UserSearch(WebDriver driver)
     {
         super(driver, driver.switchTo().frame(driver.findElement(By.tagName("iframe"))));
     }
 
+	public void search(String type, String status, String searchContent)
+	{
+		setSearchType(type);
+		setStatusType(status);
+		this.searchTextInput.set(searchContent);
+		this.searchButton.click();
+	}
+
 	public void setSearchType(String type)
 	{
 		this.searchTypeSpan.waitForExist();
 		this.searchTypeSpan.click();
-		this.searchTypeDropDownList.waitForExist();
-		this.searchTypeDropDownList.selectByText(type);
+		this.dropDownList.waitForExist();
+		this.dropDownList.selectByText(type);
+	}
+
+	public void setStatusType(String status)
+	{
+		this.searchStatusSpan.waitForExist();
+		this.searchStatusSpan.click();
+		this.dropDownList.waitForExist();
+		this.dropDownList.selectByText(status);
 	}
 
     //按姓名点击“审核流水”按钮

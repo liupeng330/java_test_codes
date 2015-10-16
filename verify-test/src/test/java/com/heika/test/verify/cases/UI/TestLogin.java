@@ -18,7 +18,7 @@ public class TestLogin
     {
         WebDriver webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
-        webDriver.get("http://172.16.2.111:9601/login/index.html");
+        webDriver.get("http://172.16.2.38:15081/login.html");
 
         LoginPage loginPage = ElementFactory.initElements(webDriver, LoginPage.class);
         LogHelper.log("登陆审核系统");
@@ -29,6 +29,6 @@ public class TestLogin
         navTree.switchTo("用户查询");
 
         UserSearch userSearch = ElementFactory.initElements(webDriver, UserSearch.class);
-        userSearch.setSearchType("身份证");
+        userSearch.search("身份证", "补件", "3708831");
     }
 }
