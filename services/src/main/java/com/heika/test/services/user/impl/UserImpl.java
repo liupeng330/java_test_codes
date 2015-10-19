@@ -2,23 +2,34 @@ package com.heika.test.services.user.impl;
 
 import com.heika.test.common.Channel;
 import com.heika.test.common.UserType;
+import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.dao.user.UserDao;
+import com.heika.test.dao.verify.VerifyUserStatusDao;
 import com.heika.test.entities.user.UserEntity;
 import com.heika.test.entities.user.UserMaterialEntity;
+import com.heika.test.entities.verify.VerifyUserStatusEntity;
+import com.heika.test.models.user.User;
 import com.heika.test.services.user.UserService;
 import com.heika.test.services.user.WorkPositionInfoService;
+import com.heika.test.utils.JsonParser;
 import com.heika.test.utils.LogHelper;
 import com.heika.test.utils.RandomData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 @Transactional
 public class UserImpl implements UserService
 {
     @Autowired
     UserDao userDao;
+
+    @Autowired
+    VerifyUserStatusDao verifyUserStatusDao;
 
     @Autowired
     LogHelper logHelper;
@@ -84,5 +95,45 @@ public class UserImpl implements UserService
         userEntity.setUpdateTime(randomData.nextTimeStamp(2));
 
         return userEntity;
+    }
+
+    @Override
+    public Integer getTotalCountForSearchUser()
+    {
+        //Get all user from `user` table
+        List<UserEntity> allUsers = userDao.getCommonUsers();
+        List<Integer> userIds = new ArrayList<>();
+        allUsers.forEach(i->userIds.add(i.getUserId()));
+
+        //Using uesr_id from `user` table to search in `verify_user_status` table
+        return verifyUserStatusDao.getByUserIds(userIds).size();
+    }
+
+    @Override
+    public List<User> getUsersFromResponse(String responseBody)
+    {
+        List<LinkedHashMap<String, String>> data = new JsonParser().jsonGetHashMapList(responseBody, "$.data.rows");
+        List<User> users = new ArrayList<>();
+        if (data == null)
+        {
+            return null;
+        }
+        for (LinkedHashMap<String, String> map : data)
+        {
+            User user = new User();
+            if(map.get("userType") != null) user.setUser_type(map.get("userType"));
+            if(map.get("nickName") != null) user.setNick_name(map.get("nickName"));
+            if(map.get("mobile") != null) user.setMobile(map.get("mobile"));
+            if(map.get("userId") != null)
+            {
+                Object userId = map.get("userId");
+                user.setUser_id(userId.toString());
+            }
+            if(map.get("realName") != null) user.setReal_name(map.get("realName"));
+            if(map.get("idNo") != null) user.setId_no(map.get("idNo"));
+            if(map.get("verifyUserStatus") != null) user.setVerify_user_status(map.get("verifyUserStatus"));
+            users.add(user);
+        }
+        return users;
     }
 }

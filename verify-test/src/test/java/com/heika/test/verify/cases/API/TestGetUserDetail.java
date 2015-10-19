@@ -1,7 +1,7 @@
 package com.heika.test.verify.cases.API;
 
 import com.github.kevinsawicki.http.HttpRequest;
-import com.heika.test.verify.models.UserDetail;
+import com.heika.test.models.user.UserDetail;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Parameters;

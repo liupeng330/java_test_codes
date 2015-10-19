@@ -29,6 +29,6 @@ public class TestLogin
         navTree.switchTo("用户查询");
 
         UserSearch userSearch = ElementFactory.initElements(webDriver, UserSearch.class);
-        userSearch.search("身份证", "补件", "3708831");
+        userSearch.search("身份证", "补件", "2305241981");
     }
 }

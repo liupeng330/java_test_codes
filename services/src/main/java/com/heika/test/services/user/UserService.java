@@ -3,8 +3,10 @@ package com.heika.test.services.user;
 import com.heika.test.common.Channel;
 import com.heika.test.common.UserType;
 import com.heika.test.entities.user.UserEntity;
+import com.heika.test.models.user.User;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 public interface UserService
 {
@@ -14,4 +16,7 @@ public interface UserService
     void deleteUser(Integer id);
     UserEntity getUser(Integer id);
     UserEntity nextUser();
+
+    Integer getTotalCountForSearchUser();
+    List<User> getUsersFromResponse(String responseBody);
 }

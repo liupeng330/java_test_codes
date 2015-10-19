@@ -3,8 +3,10 @@ package com.heika.test.verify.cases.API;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.heika.test.verify.models.PageInfo;
-import com.heika.test.verify.models.User;
+import com.heika.test.models.common.PageInfo;
+import com.heika.test.models.user.User;
+import com.heika.test.services.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,11 +21,12 @@ public class TestSearchUser extends TestBase
         return new Object[][] {{10}, {20}, {50}, {100}, {200}};
     }
 
-    @Test(groups = {"verify"}, description = "审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息", timeOut = 60000, dataProvider = "pageSize")
+    @Test(groups = {"verify-debug"}, description = "审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息", timeOut = 60000, dataProvider = "pageSize")
     public void searchUser_by_pageNum(int pageSize) throws SQLException
     {
         //1. Get total element
-        Integer expectedTotalElements = User.getTotalCount(this.sqlHelper);
+        //Integer expectedTotalElements = User.getTotalCount(this.sqlHelper);
+        Integer expectedTotalElements = userService.getTotalCountForSearchUser();
 
         //2. Calculate totalPage
         Integer expectedTotalPage = (expectedTotalElements/pageSize) + 1;
@@ -49,7 +52,7 @@ public class TestSearchUser extends TestBase
             org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
             String response = request.body();
             Reporter.log(String.format("The element count for page num %s, page size %s\n", i, pageSize), true);
-            List<User> usersFromResponse = User.getUsersFromResponse(response);
+            List<User> usersFromResponse = userService.getUsersFromResponse(response);
             org.testng.Assert.assertNotNull(
                     usersFromResponse,
                     "Fail to get user list from response JSON, response content: " + response);
@@ -170,7 +173,7 @@ public class TestSearchUser extends TestBase
         org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
 
         //Get data from response
-        List<User> usersFromResponse = User.getUsersFromResponse(request.body());
+        List<User> usersFromResponse = userService.getUsersFromResponse(request.body());
 
         //Get data from mysql
         List<User> usersFromDB = User.getUsersFromDB(type, key, verifyStatus, this.sqlHelper);

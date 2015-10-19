@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 public class BaseDaoHibernate4<T> implements BaseDao<T>
 {
@@ -32,12 +33,22 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
 
     public T get(Class<T> entityClass, String columnName, Serializable columnValue)
     {
-        List<T> ret = this.find("from " + entityClass.getSimpleName() + " en where en." + columnName + "="  +columnValue);
+        List<T> ret = getList(entityClass, columnName, columnValue);
         if(ret != null && ret.size() > 0)
         {
             return ret.get(0);
         }
         return null;
+    }
+
+    public List<T> getList(Class<T> entityClass, String columnName, Serializable columnValue)
+    {
+        return this.find("from " + entityClass.getSimpleName() + " en where en." + columnName + "=?", columnValue.toString());
+    }
+
+    public <U> List<T> get(Class<T> entityClass, String columnName, List<U> columnValues)
+    {
+        return this.findByList("from " + entityClass.getSimpleName() + " en where en." + columnName + " in (:lst)", "lst", columnValues);
     }
 
     //保存实体
@@ -113,8 +124,14 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
         //为包含占位符的HQL语句设置参数
         for(int i = 0, len = params.length; i< len; i++)
         {
-            query.setParameter(i + "", params[i]);
+            query.setParameter(i, params[i]);
         }
         return (List<T>)query.list();
+    }
+
+    protected <U> List<T> findByList(String hql, String paramName, List<U> list)
+    {
+        Query query = getSessionFactory().getCurrentSession().createQuery(hql);
+        return (List<T>)query.setParameterList(paramName, list).list();
     }
 }
