@@ -178,11 +178,6 @@ public class User
         this.verify_user_status = verify_user_status;
     }
 
-    private static final String getTotalQuery =
-            "select count(*) as total\n" +
-            "from `user` u ,`verify_user_status` vus\n" +
-            "where u.user_id = vus.user_id and u.user_type = 'COMMON';";
-
     private static final String searchUserTemplate =
             "select ui.id_no, u.mobile, u.nick_name, ui.real_name, u.user_id, u.channel, vus.verify_user_status\n" +
             "from `user` u \n" +

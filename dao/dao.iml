@@ -30,6 +30,7 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.6" level="project" />
     <orderEntry type="module" module-name="entities" />
+    <orderEntry type="module" module-name="common" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.9.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.inject:guice:no_aop:4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.inject:javax.inject:1" level="project" />

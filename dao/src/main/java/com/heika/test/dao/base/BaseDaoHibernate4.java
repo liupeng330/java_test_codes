@@ -46,7 +46,7 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
         return this.find("from " + entityClass.getSimpleName() + " en where en." + columnName + "=?", columnValue.toString());
     }
 
-    public <U> List<T> get(Class<T> entityClass, String columnName, List<U> columnValues)
+    public <U> List<T> getList(Class<T> entityClass, String columnName, List<U> columnValues)
     {
         return this.findByList("from " + entityClass.getSimpleName() + " en where en." + columnName + " in (:lst)", "lst", columnValues);
     }

@@ -1,9 +1,11 @@
 package com.heika.test.services.user.impl;
 
 import com.heika.test.common.Channel;
+import com.heika.test.common.SearchUserType;
 import com.heika.test.common.UserType;
 import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.dao.user.UserDao;
+import com.heika.test.dao.user.UserInfoDao;
 import com.heika.test.dao.verify.VerifyUserStatusDao;
 import com.heika.test.entities.user.UserEntity;
 import com.heika.test.entities.user.UserMaterialEntity;
@@ -13,6 +15,7 @@ import com.heika.test.services.user.UserService;
 import com.heika.test.services.user.WorkPositionInfoService;
 import com.heika.test.utils.JsonParser;
 import com.heika.test.utils.LogHelper;
+import com.heika.test.utils.MappingWordUtil;
 import com.heika.test.utils.RandomData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +24,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 @Transactional
 public class UserImpl implements UserService
@@ -30,6 +34,9 @@ public class UserImpl implements UserService
 
     @Autowired
     VerifyUserStatusDao verifyUserStatusDao;
+
+    @Autowired
+    UserInfoDao userInfoDao;
 
     @Autowired
     LogHelper logHelper;
@@ -95,6 +102,52 @@ public class UserImpl implements UserService
         userEntity.setUpdateTime(randomData.nextTimeStamp(2));
 
         return userEntity;
+    }
+
+    @Override
+    public List<User> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status)
+    {
+        //从VerifyUserStatus表根据传入的status获取user_id与verify_user_status
+        Map<Integer, VerifyUserStatus> userIdsInVerifyUserStatusTable;
+        if (status == null)
+        {
+            userIdsInVerifyUserStatusTable = verifyUserStatusDao.getAllUserIdsAndStatusMap();
+        }
+        else
+        {
+            userIdsInVerifyUserStatusTable = verifyUserStatusDao.getAllUserIdsAndStatusMapByStatus(status);
+        }
+
+        if(userIdsInVerifyUserStatusTable == null || userIdsInVerifyUserStatusTable.size() == 0)  return null;
+
+        //根据VerifyUserStatus的user_id,与传入的type为手机号与昵称时,查询user表
+        List<UserEntity> userEntities = new ArrayList<>();
+        switch (type)
+        {
+            case MOBILE:
+                userEntities = userDao.getByUserIdsAndMobilePreSearch(
+                        new ArrayList(userIdsInVerifyUserStatusTable.keySet()),
+                        searchContent);
+                break;
+            case NICKNAME:
+                userEntities = userDao.getByUserIdsAndNickNamePreSearch(
+                        new ArrayList(userIdsInVerifyUserStatusTable.keySet()),
+                        searchContent);
+                break;
+        }
+
+        List<User> ret = new ArrayList<>();
+        for(int i=0; i<userEntities.size(); i++)
+        {
+            User user = new User();
+            user.setChannel(userEntities.get(i).getChannel());
+            user.setMobile(userEntities.get(i).getMobile());
+            user.setUser_id(userEntities.get(i).getUserId().toString());
+            user.setVerify_user_status(userIdsInVerifyUserStatusTable.get(userEntities.get(i).getUserId()).toString());
+
+            ret.add(user);
+        }
+        return null;
     }
 
     @Override
