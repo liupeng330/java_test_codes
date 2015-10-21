@@ -43,7 +43,7 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
 
     public List<T> getList(Class<T> entityClass, String columnName, Serializable columnValue)
     {
-        return this.find("from " + entityClass.getSimpleName() + " en where en." + columnName + "=?", columnValue.toString());
+        return this.find("from " + entityClass.getSimpleName() + " en where en." + columnName + "=?", columnValue);
     }
 
     public <U> List<T> getList(Class<T> entityClass, String columnName, List<U> columnValues)
@@ -121,6 +121,11 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
         //创建查询
         Query query = getSessionFactory().getCurrentSession()
                 .createQuery(hql);
+        return find(query, params);
+    }
+
+    private List<T> find(Query query, Object... params)
+    {
         //为包含占位符的HQL语句设置参数
         for(int i = 0, len = params.length; i< len; i++)
         {
@@ -131,7 +136,12 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
 
     protected <U> List<T> findByList(String hql, String paramName, List<U> list)
     {
+        return this.getListQuery(hql, paramName, list).list();
+    }
+
+    private <U> Query getListQuery(String hql, String paramName, List<U> list)
+    {
         Query query = getSessionFactory().getCurrentSession().createQuery(hql);
-        return (List<T>)query.setParameterList(paramName, list).list();
+        return query.setParameterList(paramName, list);
     }
 }

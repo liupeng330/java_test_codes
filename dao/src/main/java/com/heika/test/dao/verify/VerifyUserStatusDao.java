@@ -3,9 +3,7 @@ package com.heika.test.dao.verify;
 import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.verify.VerifyUserStatusEntity;
-import org.omg.CORBA.INTERNAL;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,9 +20,19 @@ public class VerifyUserStatusDao extends BaseDaoHibernate4<VerifyUserStatusEntit
         return this.get(VerifyUserStatusEntity.class, "userId", userId);
     }
 
+    public List<VerifyUserStatusEntity> getAll()
+    {
+        return this.findAll(VerifyUserStatusEntity.class);
+    }
+
     public List<VerifyUserStatusEntity> getByUserIds(List<Integer> userIds)
     {
         return this.getList(VerifyUserStatusEntity.class, "userId", userIds);
+    }
+
+    public List<VerifyUserStatusEntity> getByStatus(VerifyUserStatus status)
+    {
+        return this.getList(VerifyUserStatusEntity.class, "verifyUserStatus", status.name());
     }
 
     public Map<Integer, VerifyUserStatus> getAllUserIdsAndStatusMap()

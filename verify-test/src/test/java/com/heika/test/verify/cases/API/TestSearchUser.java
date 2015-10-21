@@ -1,6 +1,7 @@
 package com.heika.test.verify.cases.API;
 
 import java.sql.SQLException;
+import java.util.Collections;
 import java.util.List;
 
 import com.heika.test.common.SearchUserType;
@@ -163,7 +164,7 @@ public class TestSearchUser extends TestBase
         };
     }
 
-    @Test(groups = {"verify-debug"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000)
+    @Test(groups = {"verify-debug"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000 * 10)
     public void searchUser_by_verifyStatus(String type, String key, String verifyStatus) throws SQLException
     {
         //Sending request
@@ -178,11 +179,22 @@ public class TestSearchUser extends TestBase
         List<User> usersFromResponse = userService.getUsersFromResponse(request.body());
 
         //Get data from mysql
-        //List<User> usersFromDB = User.getUsersFromDB(type, key, verifyStatus, this.sqlHelper);
-        //List<User> usersFromDB = userService.getUsersFromDB(SearchUserType.MOBILE, "18812", VerifyUserStatus.FIRST_SEND_BACK);
-        List<User> usersFromDB = userService.getUsersFromDB(SearchUserType.MOBILE, "18812", null);
+        SearchUserType searchUserType = null;
+        if(type != "")
+        {
+            searchUserType = Enum.valueOf(SearchUserType.class, type);
+        }
+
+        VerifyUserStatus status = null;
+        if(verifyStatus != "")
+        {
+            status = Enum.valueOf(VerifyUserStatus.class, verifyStatus);
+        }
+        List<User> usersFromDB = userService.getUsersFromDB(searchUserType, key, status);
 
         //Compare them
+        Collections.sort(usersFromResponse);
+        Collections.sort(usersFromDB);
         org.testng.Assert.assertEquals(usersFromDB, usersFromResponse, "Diff for user detail objects!!");
     }
 }

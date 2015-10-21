@@ -23,5 +23,11 @@ public enum UserType
     {
         @Override
         public String toString() { return "特殊用户"; }
+    },
+    //3
+    TEST
+    {
+        @Override
+        public String toString() { return "测试用户"; }
     }
 }

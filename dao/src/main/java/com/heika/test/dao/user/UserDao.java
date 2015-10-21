@@ -2,6 +2,7 @@ package com.heika.test.dao.user;
 
 import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.user.UserEntity;
+import org.hibernate.Query;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,29 +19,12 @@ public class UserDao extends BaseDaoHibernate4<UserEntity>
         return this.getList(UserEntity.class, "userId", userIds);
     }
 
-    public List<UserEntity> getByUserIdsAndMobilePreSearch(List<Integer> userIds, String mobile)
+    public List<UserEntity> getCommonUsersByUserIds(List<Integer> userIds)
     {
-        List<UserEntity> searchByMobile= new ArrayList<>();
-        this.getByUserIds(userIds).forEach(i->
-                {
-                    if(i.getMobile().startsWith(mobile) && i.getUserType().equals("COMMON"))
-                    {
-                        searchByMobile.add(i);
-                    }
-                });
-        return searchByMobile;
-    }
-
-    public List<UserEntity> getByUserIdsAndNickNamePreSearch(List<Integer> userIds, String nickName)
-    {
-        List<UserEntity> searchByNickName = new ArrayList<>();
-        this.getByUserIds(userIds).forEach(i->
-        {
-            if(i.getNickName().startsWith(nickName) && i.getUserType().equals("COMMON"))
-            {
-                searchByNickName.add(i);
-            }
-        });
-        return searchByNickName;
+        return getSessionFactory().getCurrentSession()
+                .createQuery("from " + UserEntity.class.getSimpleName() + " en where en.userId in (:lst) and en.userType = :type")
+                .setParameterList("lst", userIds)
+                .setParameter("type", "COMMON")
+                .list();
     }
 }

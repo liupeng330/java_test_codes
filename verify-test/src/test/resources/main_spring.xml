@@ -79,6 +79,8 @@
        <bean id="verifyUserStatusDao" class="com.heika.test.dao.verify.VerifyUserStatusDao"/>
        <bean id="verifyRejectReasonDao" class="com.heika.test.dao.verify.VerifyRejectReasonDao"/>
        <bean id="cardProductDao" class="com.heika.test.dao.card.CardProductDao"/>
+       <bean id="verifyUserDao" class="com.heika.test.dao.verify.VerifyUserDao"/>
+       <bean id="verifyUserStatusLogDao" class="com.heika.test.dao.verify.VerifyUserStatusLogDao"/>
 
        <bean id="randomData" class="com.heika.test.utils.RandomData">
               <!-- 设置随机数种子 -->

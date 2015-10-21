@@ -6,10 +6,15 @@ import com.heika.test.common.UserType;
 import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.dao.user.UserDao;
 import com.heika.test.dao.user.UserInfoDao;
+import com.heika.test.dao.verify.VerifyUserDao;
 import com.heika.test.dao.verify.VerifyUserStatusDao;
+import com.heika.test.dao.verify.VerifyUserStatusLogDao;
 import com.heika.test.entities.user.UserEntity;
+import com.heika.test.entities.user.UserInfoEntity;
 import com.heika.test.entities.user.UserMaterialEntity;
+import com.heika.test.entities.verify.VerifyUserEntity;
 import com.heika.test.entities.verify.VerifyUserStatusEntity;
+import com.heika.test.entities.verify.VerifyUserStatusLogEntity;
 import com.heika.test.models.user.User;
 import com.heika.test.services.user.UserService;
 import com.heika.test.services.user.WorkPositionInfoService;
@@ -33,10 +38,16 @@ public class UserImpl implements UserService
     UserDao userDao;
 
     @Autowired
+    UserInfoDao userInfoDao;
+
+    @Autowired
+    VerifyUserDao verifyUserDao;
+
+    @Autowired
     VerifyUserStatusDao verifyUserStatusDao;
 
     @Autowired
-    UserInfoDao userInfoDao;
+    VerifyUserStatusLogDao verifyUserStatusLogDao;
 
     @Autowired
     LogHelper logHelper;
@@ -104,50 +115,79 @@ public class UserImpl implements UserService
         return userEntity;
     }
 
-    @Override
-    public List<User> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status)
+    private List<User> getAllUsersFromDB(VerifyUserStatus status)
     {
         //从VerifyUserStatus表根据传入的status获取user_id与verify_user_status
-        Map<Integer, VerifyUserStatus> userIdsInVerifyUserStatusTable;
-        if (status == null)
-        {
-            userIdsInVerifyUserStatusTable = verifyUserStatusDao.getAllUserIdsAndStatusMap();
-        }
-        else
-        {
-            userIdsInVerifyUserStatusTable = verifyUserStatusDao.getAllUserIdsAndStatusMapByStatus(status);
-        }
+        List<VerifyUserStatusEntity> verifyUserStatusEntities = status==null ? verifyUserStatusDao.getAll():verifyUserStatusDao.getByStatus(status);
+        if(verifyUserStatusEntities == null || verifyUserStatusEntities.size() == 0)  return null;
 
-        if(userIdsInVerifyUserStatusTable == null || userIdsInVerifyUserStatusTable.size() == 0)  return null;
+        List<Integer> userIds = new ArrayList<>();
+        verifyUserStatusEntities.forEach(i->userIds.add(i.getUserId()));
 
-        //根据VerifyUserStatus的user_id,与传入的type为手机号与昵称时,查询user表
-        List<UserEntity> userEntities = new ArrayList<>();
-        switch (type)
-        {
-            case MOBILE:
-                userEntities = userDao.getByUserIdsAndMobilePreSearch(
-                        new ArrayList(userIdsInVerifyUserStatusTable.keySet()),
-                        searchContent);
-                break;
-            case NICKNAME:
-                userEntities = userDao.getByUserIdsAndNickNamePreSearch(
-                        new ArrayList(userIdsInVerifyUserStatusTable.keySet()),
-                        searchContent);
-                break;
-        }
+        //根据VerifyUserStatus表的userId找到所有对应的user表中的信息
+        List<UserEntity> userEntities = userDao.getCommonUsersByUserIds(userIds);
 
         List<User> ret = new ArrayList<>();
-        for(int i=0; i<userEntities.size(); i++)
+        for(int i=0; i < userEntities.size(); i++)
         {
             User user = new User();
-            user.setChannel(userEntities.get(i).getChannel());
-            user.setMobile(userEntities.get(i).getMobile());
-            user.setUser_id(userEntities.get(i).getUserId().toString());
-            user.setVerify_user_status(userIdsInVerifyUserStatusTable.get(userEntities.get(i).getUserId()).toString());
+            UserEntity userEntity = userEntities.get(i);
+            Integer userId = userEntity.getUserId();
+
+            user.setUser_id(userId.toString());
+            user.setMobile(userEntity.getMobile());
+            user.setNick_name(userEntity.getNickName());
+            user.setUser_type(Enum.valueOf(UserType.class,
+                    userEntity.getUserType()).toString());
+
+            VerifyUserStatusEntity verifyUserStatusEntity = verifyUserStatusDao.getByUserId(userId);
+            user.setVerify_user_status(Enum.valueOf(VerifyUserStatus.class,
+                    verifyUserStatusEntity.getVerifyUserStatus()).toString());
+
+            UserInfoEntity userInfoEntity = userInfoDao.getByUserId(userId);
+            if(userInfoEntity != null)
+            {
+                user.setId_no(userInfoEntity.getIdNo());
+                user.setReal_name(userInfoEntity.getRealName());
+            }
+
+            VerifyUserStatusLogEntity latestLog = verifyUserStatusLogDao.getLatestEntityByUserId(userId);
+            if(!user.getVerify_user_status().equals(VerifyUserStatus.UNCOMMIT.toString()) && latestLog != null)
+            {
+                if(latestLog.getVerifyUserId() != null) user.setOperater(verifyUserDao.getByVerifyUserId(latestLog.getVerifyUserId()).getRealName());
+                if(latestLog.getCreateTime() != null) user.setOperateTime(latestLog.getCreateTime().getTime() + "");
+            }
 
             ret.add(user);
         }
-        return null;
+
+        return ret;
+    }
+
+    @Override
+    public List<User> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status)
+    {
+        List<User> allUsers = getAllUsersFromDB(status);
+
+        if(type == null)
+        {
+            return allUsers;
+        }
+
+        //开始按输入参数过滤
+        switch (type)
+        {
+            case MOBILE:
+                return User.filteredByMobile(allUsers, searchContent);
+            case NICKNAME:
+                return User.filteredByNickName(allUsers, searchContent);
+            case IDCARD:
+                return User.filteredByIDCard(allUsers, searchContent);
+            case USERNAME:
+                return User.filteredByUserName(allUsers, searchContent);
+            default:
+                throw new RuntimeException("Fail to search by type " + type.name());
+        }
     }
 
     @Override
