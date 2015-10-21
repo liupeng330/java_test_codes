@@ -1,27 +1,19 @@
 package com.heika.test.models.user;
 
-import com.heika.test.utils.JsonParser;
-import com.heika.test.utils.MappingWordUtil;
-import com.heika.test.utils.MysqlHelper;
-import org.testng.Reporter;
-
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 public class User implements Comparable<User>
 {
-    private String user_id = "";
-    private String nick_name = "";
-    private String real_name = "";
-    private String mobile = "";
-    private String id_no = "";
-    private String user_type = "";
-    private String verify_user_status = "";
-    private String operater = "";
-    private String operateTime = "";
+    private String user_id;
+    private String nick_name;
+    private String real_name;
+    private String mobile;
+    private String id_no;
+    private String user_type;
+    private String verify_user_status;
+    private String operater;
+    private String operateTime;
 
     public String getUser_id()
     {
@@ -209,6 +201,21 @@ public class User implements Comparable<User>
             }
         });
         return filteredUsers;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format("userId=%s\n" +
+                "nickName=%s\n" +
+                "realName=%s\n" +
+                "mobile=%s\n" +
+                "idNo=%s\n" +
+                "userType=%s\n" +
+                "verifyUserStatus=%s\n" +
+                "operator=%s\n" +
+                "operateTime=%s\n",
+                user_id, nick_name, real_name, mobile, id_no, user_type, verify_user_status, operater, operateTime);
     }
 
 //    public static List<User> getUsersFromDB(String type, String key, String verifyStatus, MysqlHelper helper) throws SQLException

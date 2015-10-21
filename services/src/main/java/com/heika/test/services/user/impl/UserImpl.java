@@ -1,9 +1,6 @@
 package com.heika.test.services.user.impl;
 
-import com.heika.test.common.Channel;
-import com.heika.test.common.SearchUserType;
-import com.heika.test.common.UserType;
-import com.heika.test.common.VerifyUserStatus;
+import com.heika.test.common.*;
 import com.heika.test.dao.user.UserDao;
 import com.heika.test.dao.user.UserInfoDao;
 import com.heika.test.dao.verify.VerifyUserDao;
@@ -119,7 +116,10 @@ public class UserImpl implements UserService
     {
         //从VerifyUserStatus表根据传入的status获取user_id与verify_user_status
         List<VerifyUserStatusEntity> verifyUserStatusEntities = status==null ? verifyUserStatusDao.getAll():verifyUserStatusDao.getByStatus(status);
-        if(verifyUserStatusEntities == null || verifyUserStatusEntities.size() == 0)  return null;
+        if(verifyUserStatusEntities == null || verifyUserStatusEntities.size() == 0)
+        {
+            return new ArrayList<>();
+        }
 
         List<Integer> userIds = new ArrayList<>();
         verifyUserStatusEntities.forEach(i->userIds.add(i.getUserId()));
@@ -137,8 +137,8 @@ public class UserImpl implements UserService
             user.setUser_id(userId.toString());
             user.setMobile(userEntity.getMobile());
             user.setNick_name(userEntity.getNickName());
-            user.setUser_type(Enum.valueOf(UserType.class,
-                    userEntity.getUserType()).toString());
+            user.setUser_type(Enum.valueOf(UserTypeForSearch.class,
+                    userEntity.getChannel()).toString());
 
             VerifyUserStatusEntity verifyUserStatusEntity = verifyUserStatusDao.getByUserId(userId);
             user.setVerify_user_status(Enum.valueOf(VerifyUserStatus.class,
@@ -219,12 +219,20 @@ public class UserImpl implements UserService
             if(map.get("mobile") != null) user.setMobile(map.get("mobile"));
             if(map.get("userId") != null)
             {
-                Object userId = map.get("userId");
-                user.setUser_id(userId.toString());
+                Object tmp = map.get("userId");
+                user.setUser_id(tmp.toString());
+
             }
             if(map.get("realName") != null) user.setReal_name(map.get("realName"));
             if(map.get("idNo") != null) user.setId_no(map.get("idNo"));
             if(map.get("verifyUserStatus") != null) user.setVerify_user_status(map.get("verifyUserStatus"));
+            if(map.get("operater") != null) user.setOperater(map.get("operater"));
+            if(map.get("operateTime") != null)
+            {
+                Object tmp = map.get("operateTime");
+                user.setOperateTime(tmp.toString());
+            }
+
             users.add(user);
         }
         return users;
