@@ -3,10 +3,12 @@ package com.heika.test.dao.user;
 import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.user.UserEntity;
 import com.heika.test.entities.user.UserInfoEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class UserInfoDao extends BaseDaoHibernate4<UserInfoEntity>
 {
     public void deleteByUserId(Integer userId)

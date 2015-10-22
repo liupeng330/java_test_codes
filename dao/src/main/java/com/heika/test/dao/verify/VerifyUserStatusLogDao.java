@@ -3,7 +3,9 @@ package com.heika.test.dao.verify;
 import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.verify.VerifyUserStatusLogEntity;
 import org.hibernate.Query;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class VerifyUserStatusLogDao extends BaseDaoHibernate4<VerifyUserStatusLogEntity>
 {
     public VerifyUserStatusLogEntity getLatestEntityByUserId(Integer userId)

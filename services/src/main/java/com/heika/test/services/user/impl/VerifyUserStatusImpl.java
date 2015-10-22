@@ -8,9 +8,11 @@ import com.heika.test.services.user.VerifyRejectReasonService;
 import com.heika.test.services.user.VerifyUserStatusService;
 import com.heika.test.utils.RandomData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
+@Service
 public class VerifyUserStatusImpl implements VerifyUserStatusService
 {
     @Autowired

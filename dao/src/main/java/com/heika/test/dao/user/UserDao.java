@@ -3,10 +3,12 @@ package com.heika.test.dao.user;
 import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.user.UserEntity;
 import org.hibernate.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class UserDao extends BaseDaoHibernate4<UserEntity>
 {
     public List<UserEntity> getCommonUsers()

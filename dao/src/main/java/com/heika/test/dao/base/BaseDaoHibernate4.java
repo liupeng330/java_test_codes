@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-public class BaseDaoHibernate4<T> implements BaseDao<T>
+public abstract class BaseDaoHibernate4<T> implements BaseDao<T>
 {
     //DAO组件进行持久化操作底层依赖的SessionFactory组件
     @Autowired

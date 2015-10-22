@@ -4,12 +4,14 @@ import com.heika.test.dao.user.RegionDao;
 import com.heika.test.entities.user.RegionEntity;
 import com.heika.test.services.user.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Transactional
+@Service
 public class RegionImpl implements RegionService
 {
     @Autowired

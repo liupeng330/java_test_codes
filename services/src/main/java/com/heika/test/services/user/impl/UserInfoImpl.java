@@ -9,11 +9,13 @@ import com.heika.test.services.user.UserInfoService;
 import com.heika.test.services.user.WorkPositionInfoService;
 import com.heika.test.utils.RandomData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 
 @Transactional
+@Service
 public class UserInfoImpl implements UserInfoService
 {
     @Autowired

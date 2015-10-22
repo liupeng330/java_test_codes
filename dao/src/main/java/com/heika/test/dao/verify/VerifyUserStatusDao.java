@@ -3,11 +3,13 @@ package com.heika.test.dao.verify;
 import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.verify.VerifyUserStatusEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class VerifyUserStatusDao extends BaseDaoHibernate4<VerifyUserStatusEntity>
 {
     public void deleteByUserId(Integer userId)
