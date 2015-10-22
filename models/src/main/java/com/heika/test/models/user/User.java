@@ -105,13 +105,6 @@ public class User implements Comparable<User>
         this.operateTime = operateTime;
     }
 
-//    private static final String searchUserTemplate =
-//            "select ui.id_no, u.mobile, u.nick_name, ui.real_name, u.user_id, u.channel, vus.verify_user_status\n" +
-//            "from `user` u \n" +
-//            "inner join `verify_user_status` vus on u.user_id=vus.user_id\n" +
-//            "left join `user_info` ui on u.user_id=ui.user_id\n" +
-//            "where u.user_type='COMMON'\n";
-
     @Override
     public int compareTo(User o)
     {
@@ -156,7 +149,7 @@ public class User implements Comparable<User>
         List<User> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if(i.getMobile().startsWith(mobile))
+            if(i.getMobile() != null && i.getMobile().startsWith(mobile))
             {
                 filteredUsers.add(i);
             }
@@ -169,7 +162,7 @@ public class User implements Comparable<User>
         List<User> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if (i.getNick_name().startsWith(nickName))
+            if (i.getNick_name() != null && i.getNick_name().startsWith(nickName))
             {
                 filteredUsers.add(i);
             }
@@ -182,7 +175,7 @@ public class User implements Comparable<User>
         List<User> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if(i.getId_no().startsWith(idCard))
+            if(i.getId_no() != null && i.getId_no().startsWith(idCard))
             {
                 filteredUsers.add(i);
             }
@@ -195,7 +188,7 @@ public class User implements Comparable<User>
         List<User> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if (i.getReal_name().startsWith(userName))
+            if (i.getReal_name() != null && i.getReal_name().startsWith(userName))
             {
                 filteredUsers.add(i);
             }
@@ -217,60 +210,4 @@ public class User implements Comparable<User>
                 "operateTime=%s\n",
                 user_id, nick_name, real_name, mobile, id_no, user_type, verify_user_status, operater, operateTime);
     }
-
-//    public static List<User> getUsersFromDB(String type, String key, String verifyStatus, MysqlHelper helper) throws SQLException
-//    {
-//        StringBuilder query = new StringBuilder(searchUserTemplate);
-//        if(type != "" && key != "")
-//        {
-//            switch(type)
-//            {
-//                case "NICKNAME":
-//                    type = "nick_name";
-//                    break;
-//                case "MOBILE":
-//                    type = "mobile";
-//                    break;
-//                case "IDCARD":
-//                    type = "id_no";
-//                    break;
-//                case "USERNAME":
-//                    type = "real_name";
-//                    break;
-//            }
-//            query.append(String.format("AND %s='%s'\n", type, key));
-//        }
-//
-//        if(verifyStatus != "")
-//        {
-//            query.append(String.format("AND vus.verify_user_status='%s'\n", verifyStatus));
-//        }
-//
-//        query.append(
-//                "order by u.register_time desc,\n" +
-//                        "u.user_id asc;");
-//        Reporter.log("Query for searchuser API: " + query.toString());
-//        String usersFromSQL = helper.Query(query.toString());
-//        List<LinkedHashMap<String, String>> data = new JsonParser().jsonGetHashMapList(usersFromSQL, "$.data");
-//        List<User> users = new ArrayList<>();
-//        for (LinkedHashMap<String, String> map : data)
-//        {
-//            User user = new User();
-//            if(map.get("channel") != null)
-//            {
-//                user.setUser_type(MappingWordUtil.getCN(map.get("channel")));
-//            }
-//            if(map.get("nick_name") != null) user.setNick_name(map.get("nick_name"));
-//            if(map.get("mobile") != null) user.setMobile(map.get("mobile"));
-//            if(map.get("user_id") != null) user.setUser_id(map.get("user_id"));
-//            if(map.get("real_name") != null) user.setReal_name(map.get("real_name"));
-//            if(map.get("id_no") != null) user.setId_no(map.get("id_no"));
-//            if (map.get("verify_user_status") != null)
-//            {
-//                user.setVerify_user_status(MappingWordUtil.getCN(map.get("verify_user_status")));
-//            }
-//            users.add(user);
-//        }
-//        return users;
-//    }
 }

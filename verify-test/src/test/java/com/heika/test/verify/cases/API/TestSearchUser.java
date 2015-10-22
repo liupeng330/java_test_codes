@@ -167,13 +167,6 @@ public class TestSearchUser extends TestBase
     @Test(groups = {"verify-debug"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000 * 10)
     public void searchUser_by_verifyStatus(String type, String key, String verifyStatus) throws SQLException
     {
-//    @Test(groups = {"verify-debug"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", timeOut = 60000 * 10)
-//    public void searchUser_by_verifyStatus() throws SQLException
-//    {
-//        String type = "";
-//        String key = "";
-//        String verifyStatus = "INQUIREING";
-
         //Sending request
         String postBody = String.format("pageNum=1&pageSize=999&type=%s&key=%s&verifyStatuses=%s", type, key, verifyStatus);
         Reporter.log("Sending request with following params: " + postBody, true);

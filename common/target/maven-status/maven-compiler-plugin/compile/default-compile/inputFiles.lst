@@ -1,12 +1,13 @@
+/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/Channel.java
+/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/CompanyType.java
+/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/ChildStatus.java
+/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/UserTypeForSearch.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/CompanyIndustry.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/Gender.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/SearchUserType.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/Graduation.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/VerifyUserStatus.java
-/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/Channel.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/MaterialType.java
-/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/CompanyType.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/UserType.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/MarriageStatus.java
 /home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/CompanyScale.java
-/home/peng/test-codes/heika-test/common/src/main/java/com/heika/test/common/ChildStatus.java
