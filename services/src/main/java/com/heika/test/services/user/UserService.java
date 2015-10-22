@@ -5,7 +5,7 @@ import com.heika.test.common.SearchUserType;
 import com.heika.test.common.UserType;
 import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.entities.user.UserEntity;
-import com.heika.test.models.user.User;
+import com.heika.test.models.user.UserSearchResult;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -19,7 +19,7 @@ public interface UserService
     UserEntity getUser(Integer id);
     UserEntity nextUser();
 
-    List<User> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status);
+    List<UserSearchResult> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status);
     Integer getTotalCountForSearchUser();
-    List<User> getUsersFromResponse(String responseBody);
+    List<UserSearchResult> getUsersFromResponse(String responseBody);
 }

@@ -8,16 +8,12 @@ import com.heika.test.dao.verify.VerifyUserStatusDao;
 import com.heika.test.dao.verify.VerifyUserStatusLogDao;
 import com.heika.test.entities.user.UserEntity;
 import com.heika.test.entities.user.UserInfoEntity;
-import com.heika.test.entities.user.UserMaterialEntity;
-import com.heika.test.entities.verify.VerifyUserEntity;
 import com.heika.test.entities.verify.VerifyUserStatusEntity;
 import com.heika.test.entities.verify.VerifyUserStatusLogEntity;
-import com.heika.test.models.user.User;
+import com.heika.test.models.user.UserSearchResult;
 import com.heika.test.services.user.UserService;
-import com.heika.test.services.user.WorkPositionInfoService;
 import com.heika.test.utils.JsonParser;
 import com.heika.test.utils.LogHelper;
-import com.heika.test.utils.MappingWordUtil;
 import com.heika.test.utils.RandomData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +23,6 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 @Transactional
 @Service
@@ -114,7 +109,7 @@ public class UserImpl implements UserService
         return userEntity;
     }
 
-    private List<User> getAllUsersFromDB(VerifyUserStatus status)
+    private List<UserSearchResult> getAllUsersFromDB(VerifyUserStatus status)
     {
         //从VerifyUserStatus表根据传入的status获取user_id与verify_user_status
         List<VerifyUserStatusEntity> verifyUserStatusEntities = status==null ? verifyUserStatusDao.getAll():verifyUserStatusDao.getByStatus(status);
@@ -129,10 +124,10 @@ public class UserImpl implements UserService
         //根据VerifyUserStatus表的userId找到所有对应的user表中的信息
         List<UserEntity> userEntities = userDao.getCommonUsersByUserIds(userIds);
 
-        List<User> ret = new ArrayList<>();
+        List<UserSearchResult> ret = new ArrayList<>();
         for(int i=0; i < userEntities.size(); i++)
         {
-            User user = new User();
+            UserSearchResult user = new UserSearchResult();
             UserEntity userEntity = userEntities.get(i);
             Integer userId = userEntity.getUserId();
 
@@ -167,9 +162,9 @@ public class UserImpl implements UserService
     }
 
     @Override
-    public List<User> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status)
+    public List<UserSearchResult> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status)
     {
-        List<User> allUsers = getAllUsersFromDB(status);
+        List<UserSearchResult> allUsers = getAllUsersFromDB(status);
 
         if(type == null)
         {
@@ -180,13 +175,13 @@ public class UserImpl implements UserService
         switch (type)
         {
             case MOBILE:
-                return User.filteredByMobile(allUsers, searchContent);
+                return UserSearchResult.filteredByMobile(allUsers, searchContent);
             case NICKNAME:
-                return User.filteredByNickName(allUsers, searchContent);
+                return UserSearchResult.filteredByNickName(allUsers, searchContent);
             case IDCARD:
-                return User.filteredByIDCard(allUsers, searchContent);
+                return UserSearchResult.filteredByIDCard(allUsers, searchContent);
             case USERNAME:
-                return User.filteredByUserName(allUsers, searchContent);
+                return UserSearchResult.filteredByUserName(allUsers, searchContent);
             default:
                 throw new RuntimeException("Fail to search by type " + type.name());
         }
@@ -205,17 +200,17 @@ public class UserImpl implements UserService
     }
 
     @Override
-    public List<User> getUsersFromResponse(String responseBody)
+    public List<UserSearchResult> getUsersFromResponse(String responseBody)
     {
         List<LinkedHashMap<String, String>> data = new JsonParser().jsonGetHashMapList(responseBody, "$.data.rows");
-        List<User> users = new ArrayList<>();
+        List<UserSearchResult> users = new ArrayList<>();
         if (data == null)
         {
             return null;
         }
         for (LinkedHashMap<String, String> map : data)
         {
-            User user = new User();
+            UserSearchResult user = new UserSearchResult();
             if(map.get("userType") != null) user.setUser_type(map.get("userType"));
             if(map.get("nickName") != null) user.setNick_name(map.get("nickName"));
             if(map.get("mobile") != null) user.setMobile(map.get("mobile"));

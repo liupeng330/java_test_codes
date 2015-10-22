@@ -7,9 +7,7 @@ import java.util.List;
 import com.heika.test.common.SearchUserType;
 import com.heika.test.common.VerifyUserStatus;
 import com.heika.test.models.common.PageInfo;
-import com.heika.test.models.user.User;
-import com.heika.test.services.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.heika.test.models.user.UserSearchResult;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,7 +26,7 @@ public class TestSearchUser extends TestBase
     public void searchUser_by_pageNum(int pageSize) throws SQLException
     {
         //1. Get total element
-        //Integer expectedTotalElements = User.getTotalCount(this.sqlHelper);
+        //Integer expectedTotalElements = UserSearchResult.getTotalCount(this.sqlHelper);
         Integer expectedTotalElements = userService.getTotalCountForSearchUser();
 
         //2. Calculate totalPage
@@ -55,7 +53,7 @@ public class TestSearchUser extends TestBase
             org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
             String response = request.body();
             Reporter.log(String.format("The element count for page num %s, page size %s\n", i, pageSize), true);
-            List<User> usersFromResponse = userService.getUsersFromResponse(response);
+            List<UserSearchResult> usersFromResponse = userService.getUsersFromResponse(response);
             org.testng.Assert.assertNotNull(
                     usersFromResponse,
                     "Fail to get user list from response JSON, response content: " + response);
@@ -176,7 +174,7 @@ public class TestSearchUser extends TestBase
         org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
 
         //Get data from response
-        List<User> usersFromResponse = userService.getUsersFromResponse(request.body());
+        List<UserSearchResult> usersFromResponse = userService.getUsersFromResponse(request.body());
 
         //Get data from mysql
         if(key == "")
@@ -195,7 +193,7 @@ public class TestSearchUser extends TestBase
         {
             status = Enum.valueOf(VerifyUserStatus.class, verifyStatus);
         }
-        List<User> usersFromDB = userService.getUsersFromDB(searchUserType, key, status);
+        List<UserSearchResult> usersFromDB = userService.getUsersFromDB(searchUserType, key, status);
 
         //Compare them
         Collections.sort(usersFromResponse);
