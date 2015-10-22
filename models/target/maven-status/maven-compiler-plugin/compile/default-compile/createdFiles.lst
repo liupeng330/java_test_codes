@@ -1,0 +1,4 @@
+com/heika/test/models/user/UserDetail.class
+com/heika/test/models/common/PageInfo.class
+com/heika/test/models/verify/VerifyLog.class
+com/heika/test/models/user/UserSearchResult.class
