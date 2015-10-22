@@ -18,8 +18,4 @@ public interface UserService
     void deleteUser(Integer id);
     UserEntity getUser(Integer id);
     UserEntity nextUser();
-
-    List<UserSearchResult> getUsersFromDB(SearchUserType type, String searchContent, VerifyUserStatus status);
-    Integer getTotalCountForSearchUser();
-    List<UserSearchResult> getUsersFromResponse(String responseBody);
 }

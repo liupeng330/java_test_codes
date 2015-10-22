@@ -1,6 +1,7 @@
 package com.heika.test.verify.cases.API;
 
 import java.sql.SQLException;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.github.kevinsawicki.http.HttpRequest;
+import org.apache.commons.lang3.StringUtils;
 
 public class TestSearchUser extends TestBase
 {
@@ -27,7 +29,7 @@ public class TestSearchUser extends TestBase
     {
         //1. Get total element
         //Integer expectedTotalElements = UserSearchResult.getTotalCount(this.sqlHelper);
-        Integer expectedTotalElements = userService.getTotalCountForSearchUser();
+        Integer expectedTotalElements = userSearchService.getTotalCountForSearchUser();
 
         //2. Calculate totalPage
         Integer expectedTotalPage = (expectedTotalElements/pageSize) + 1;
@@ -53,7 +55,7 @@ public class TestSearchUser extends TestBase
             org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
             String response = request.body();
             Reporter.log(String.format("The element count for page num %s, page size %s\n", i, pageSize), true);
-            List<UserSearchResult> usersFromResponse = userService.getUsersFromResponse(response);
+            List<UserSearchResult> usersFromResponse = userSearchService.getUsersFromResponse(response);
             org.testng.Assert.assertNotNull(
                     usersFromResponse,
                     "Fail to get user list from response JSON, response content: " + response);
@@ -174,26 +176,26 @@ public class TestSearchUser extends TestBase
         org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
 
         //Get data from response
-        List<UserSearchResult> usersFromResponse = userService.getUsersFromResponse(request.body());
+        List<UserSearchResult> usersFromResponse = userSearchService.getUsersFromResponse(request.body());
 
         //Get data from mysql
-        if(key == "")
+        if(StringUtils.isEmpty(key))
         {
             type = "";
         }
 
         SearchUserType searchUserType = null;
-        if(type != "")
+        if(StringUtils.isNotEmpty(type))
         {
             searchUserType = Enum.valueOf(SearchUserType.class, type);
         }
 
         VerifyUserStatus status = null;
-        if(verifyStatus != "")
+        if(StringUtils.isNotEmpty(verifyStatus))
         {
             status = Enum.valueOf(VerifyUserStatus.class, verifyStatus);
         }
-        List<UserSearchResult> usersFromDB = userService.getUsersFromDB(searchUserType, key, status);
+        List<UserSearchResult> usersFromDB = userSearchService.getUsersFromDB(searchUserType, key, status);
 
         //Compare them
         Collections.sort(usersFromResponse);
