@@ -2,6 +2,10 @@ package com.heika.test.models.user;
 
 import com.heika.test.entities.verify.VerifyStrategyOutputEntity;
 import com.heika.test.entities.verify.VerifyUserStatusEntity;
+import com.heika.test.models.verify.FirstVerifyNote;
+import com.heika.test.models.verify.InvestigateNoteInfo;
+import com.heika.test.models.verify.SecondVerifyNote;
+import com.heika.test.models.verify.Strategy;
 import org.hibernate.Session;
 
 import java.math.BigDecimal;
@@ -127,6 +131,7 @@ public class UserDetail
         VerifyStrategyOutputEntity verifyStrategyOutputEntity = new VerifyStrategyOutputEntity();
 
         //Parse investigateNoteInfo
+        HashMap<String, Object> data = new JsonParser().jsonGetHashMap(response, "$.data");
         HashMap<String, Object> investigateNoteInfos = new JsonParser().jsonGetHashMap(response, "$.data.investigateNoteInfo");
         if (investigateNoteInfos.get("investigateNote") != null)
             verifyUserStatusEntity.setInvestigateNote(investigateNoteInfos.get("investigateNote").toString());

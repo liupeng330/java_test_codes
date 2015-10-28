@@ -11,4 +11,14 @@ public class VerifyUserDao extends BaseDaoHibernate4<VerifyUserEntity>
     {
         return this.get(VerifyUserEntity.class, "id", verifyUserId);
     }
+
+    public String getUserNameByVerifyUserId(Integer verifyUserId)
+    {
+        VerifyUserEntity ret = getByVerifyUserId(verifyUserId);
+        if(ret != null)
+        {
+            return ret.getRealName();
+        }
+        return null;
+    }
 }

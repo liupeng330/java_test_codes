@@ -164,7 +164,7 @@ public class TestSearchUser extends TestBase
         };
     }
 
-    @Test(groups = {"verify-debug"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000 * 10)
+    @Test(groups = {"verify"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000 * 10)
     public void searchUser_by_verifyStatus(String type, String key, String verifyStatus) throws SQLException
     {
         //Sending request

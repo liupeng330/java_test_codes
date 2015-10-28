@@ -50,4 +50,14 @@ public class JsonUtil {
     public static final String String2JSONString(String str) {
             return "{result:'success',data:"+str+"}";
     }
+
+    public static String parseDataFromResponse(String response)
+    {
+        JSONObject obj = new JSONObject(response);
+        if(obj != null)
+        {
+            return obj.get("data").toString();
+        }
+        return null;
+    }
 }

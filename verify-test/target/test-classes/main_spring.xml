@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        ">
+
+       <context:annotation-config />
+
+       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+              <property name="driverClassName">
+                     <value>com.mysql.jdbc.Driver</value>
+              </property>
+              <property name="url">
+                     <value>jdbc:mysql://172.16.2.38:3306/heika_new</value>
+              </property>
+              <property name="username">
+                     <value>heika_dev</value>
+              </property>
+              <property name="password">
+                     <value>heika_dev@qwe321</value>
+              </property>
+       </bean>
+
+       <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+              <property name="dataSource" ref="dataSource"/>
+              <property name="packagesToScan" value="com.heika.test.entities" />
+              <property name="hibernateProperties">
+                     <props>
+                            <prop key="hibernate.show_sql">false</prop>
+                            <prop key="hibernate.format_sql">false</prop>
+                            <prop key="hibernate.use_sql_comments">false</prop>
+                            <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+                     </props>
+              </property>
+       </bean>
+
+       <bean id="transactionManager"
+             class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+              <property name="sessionFactory" ref="sessionFactory"/>
+       </bean>
+
+       <tx:annotation-driven transaction-manager="transactionManager"/>
+       <context:component-scan base-package="com.heika.test.services" />
+       <context:component-scan base-package="com.heika.test.dao" />
+
+       <bean id="userSearchService" class="com.heika.test.services.user.impl.UserSearchImpl"/>
+       <bean id="randomData" class="com.heika.test.utils.RandomData">
+              <!-- 设置随机数种子 -->
+              <!--<constructor-arg>-->
+                     <!--<value>1</value>-->
+              <!--</constructor-arg>-->
+       </bean>
+
+       <bean id="logger" class="com.heika.test.utils.LogHelper"/>
+</beans>

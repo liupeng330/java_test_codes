@@ -10,7 +10,7 @@ public class JsonParser
 {
 	public String jsonGet(String match, String string)
 	{
-		return JsonPath.read(string,match, String.class);
+		return JsonPath.read(string, match, String.class);
 	}
 
     public <K, V> List<LinkedHashMap<K, V>> jsonGetHashMapList(String match, String string)
