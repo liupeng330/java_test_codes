@@ -9,7 +9,7 @@ public class UserDetailResult
 {
     private InvestigateNoteInfo investigateNoteInfo;
     private FirstVerifyNote firstVerifyNote;
-    private SecondVerifyNote secondVerifyNote;
+    private SecondVerifyNote secondVerify;
     private Strategy strategy;
     private String youxinBlackListEnum;
 
@@ -33,14 +33,14 @@ public class UserDetailResult
         this.firstVerifyNote = firstVerifyNote;
     }
 
-    public SecondVerifyNote getSecondVerifyNote()
+    public SecondVerifyNote getSecondVerify()
     {
-        return secondVerifyNote;
+        return secondVerify;
     }
 
-    public void setSecondVerifyNote(SecondVerifyNote secondVerifyNote)
+    public void setSecondVerify(SecondVerifyNote secondVerify)
     {
-        this.secondVerifyNote = secondVerifyNote;
+        this.secondVerify = secondVerify;
     }
 
     public Strategy getStrategy()
@@ -61,5 +61,26 @@ public class UserDetailResult
     public void setYouxinBlackListEnum(String youxinBlackListEnum)
     {
         this.youxinBlackListEnum = youxinBlackListEnum;
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserDetailResult that = (UserDetailResult) o;
+
+        if (investigateNoteInfo != null ? !investigateNoteInfo.equals(that.investigateNoteInfo) : that.investigateNoteInfo != null)
+            return false;
+        if (firstVerifyNote != null ? !firstVerifyNote.equals(that.firstVerifyNote) : that.firstVerifyNote != null)
+            return false;
+        if (secondVerify != null ? !secondVerify.equals(that.secondVerify) : that.secondVerify != null)
+            return false;
+        if (strategy != null ? !strategy.equals(that.strategy) : that.strategy != null)
+            return false;
+        if (youxinBlackListEnum != null ? !youxinBlackListEnum.equals(that.youxinBlackListEnum) : that.youxinBlackListEnum != null)
+            return false;
+
+        return true;
     }
 }

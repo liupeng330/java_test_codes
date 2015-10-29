@@ -1,7 +1,9 @@
 package com.heika.test.verify.cases.API;
 
 import com.github.kevinsawicki.http.HttpRequest;
-import com.heika.test.models.user.UserDetail;
+import com.heika.test.models.user.UserDetailResult;
+import com.heika.test.utils.LogHelper;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -13,7 +15,8 @@ public class TestGetUserDetail extends TestBase
     public void getUserDetailInfo(String userId)
     {
         //Getting data from DB
-//        UserDetail detailFromDB = UserDetail.getFromDB(Integer.parseInt(userId));
+        UserDetailResult detailFromDB = this.userDetailResultService.getUserDetailResultFromDB(Integer.parseInt(userId));
+        LogHelper.log("Get userDetail from DB: " + detailFromDB.toString());
 
         //Getting data from response
         HttpRequest request = HttpRequest.get(this.baseURL + "user/getUserDetail?userId=" + userId);
@@ -21,9 +24,10 @@ public class TestGetUserDetail extends TestBase
         org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
         String responseBody = request.body();
         Reporter.log("Response: " + responseBody, true);
-        UserDetail detailFromResponse = UserDetail.getFromResponse(responseBody);
+        UserDetailResult detailFromResponse = this.userDetailResultService.getUserDetailResultFromResponse(responseBody);
+        LogHelper.log("Get userDetail from response: " + detailFromResponse.toString());
 
         //Compare them
-//        Assert.assertEquals(detailFromResponse, detailFromDB, "There are differences between user detail info from response and from DB");
+        Assert.assertEquals(detailFromResponse, detailFromDB, "There are differences between user detail info from response and from DB");
     }
 }

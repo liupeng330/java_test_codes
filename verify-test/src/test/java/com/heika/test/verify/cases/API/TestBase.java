@@ -1,12 +1,14 @@
 package com.heika.test.verify.cases.API;
 
 import com.github.kevinsawicki.http.HttpRequest;
+import com.heika.test.services.user.UserDetailResultService;
 import com.heika.test.services.user.UserSearchService;
 import com.heika.test.services.user.UserService;
 import com.heika.test.services.user.impl.UserImpl;
 import com.heika.test.utils.MysqlHelper;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.testng.annotations.*;
 
 import java.net.URLEncoder;
@@ -17,6 +19,8 @@ public class TestBase
     protected String baseURL;
     protected MysqlHelper sqlHelper;
     protected UserSearchService userSearchService;
+    protected UserDetailResultService userDetailResultService;
+
 
     @Parameters({"verify_base_url", "verify_username", "verify_password", "sql_connection", "sql_username", "sql_passwd"})
     @BeforeClass(groups = {"verify-debug"})
@@ -24,6 +28,7 @@ public class TestBase
     {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("main_spring.xml");
         this.userSearchService = (UserSearchService)ctx.getBean("userSearchService");
+        this.userDetailResultService = (UserDetailResultService)ctx.getBean("userDetailResultService");
 
         HttpRequest request = HttpRequest.post(baseURL + "login/login").
                 send(String.format("username=%s&password=%s", URLEncoder.encode(userName, "UTF-8"), password));

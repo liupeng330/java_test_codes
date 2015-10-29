@@ -45,7 +45,7 @@ public class UserDetailResultImpl implements UserDetailResultService
         //从verifyUserStatus表中获取调查信息
         InvestigateNoteInfo investigateNoteInfo = new InvestigateNoteInfo();
         investigateNoteInfo.setInvestigateNote(verifyUserStatusEntity.getInvestigateNote());
-        investigateNoteInfo.setInvestigateTime(verifyUserStatusEntity.getInvestigateTime().toString());
+        investigateNoteInfo.setInvestigateTime(String.valueOf(verifyUserStatusEntity.getInvestigateTime().getTime()));
         Integer verifyUserId = null;
         if((verifyUserId = verifyUserStatusEntity.getInvestigateUserId()) != null)
         {
@@ -57,7 +57,7 @@ public class UserDetailResultImpl implements UserDetailResultService
         FirstVerifyNote firstVerifyNote = new FirstVerifyNote();
         firstVerifyNote.setFirstVerifyAmount(verifyUserStatusEntity.getFirstVerifyAmount().toString());
         firstVerifyNote.setFirstVerifyNote(verifyUserStatusEntity.getFirstVerifyNote());
-        firstVerifyNote.setFirstVerifyTime(verifyUserStatusEntity.getFirstVerifyTime().toString());
+        firstVerifyNote.setFirstVerifyTime(String.valueOf(verifyUserStatusEntity.getFirstVerifyTime().getTime()));
 
         Integer cardProductId = null;
         if((cardProductId = verifyUserStatusEntity.getFirstVerifyCardProductId()) != null)
@@ -75,16 +75,16 @@ public class UserDetailResultImpl implements UserDetailResultService
         SecondVerifyNote secondVerifyNote = new SecondVerifyNote();
         secondVerifyNote.setSecondVerifyAmount(verifyUserStatusEntity.getSecondVerifyAmount().toString());
         secondVerifyNote.setSecondVerifyNote(verifyUserStatusEntity.getSecondVerifyNote());
-        secondVerifyNote.setSecondVerifyTime(verifyUserStatusEntity.getSecondVerifyTime().toString());
+        secondVerifyNote.setSecondVerifyTime(String.valueOf(verifyUserStatusEntity.getSecondVerifyTime().getTime()));
         if((cardProductId = verifyUserStatusEntity.getSecondVerifyCardProductId()) != null)
         {
-            firstVerifyNote.setFirstVerifyCardProductName(cardProductDao.getCardNameById(cardProductId));
+            secondVerifyNote.setSecondVerifyCardProductName(cardProductDao.getCardNameById(cardProductId));
         }
         if((verifyUserId = verifyUserStatusEntity.getSecondVerifyUserId()) != null)
         {
-            firstVerifyNote.setFirstVerifyUserName(verifyUserDao.getUserNameByVerifyUserId(verifyUserId));
+            secondVerifyNote.setSecondVerifyUserName(verifyUserDao.getUserNameByVerifyUserId(verifyUserId));
         }
-        userDetailResult.setSecondVerifyNote(secondVerifyNote);
+        userDetailResult.setSecondVerify(secondVerifyNote);
 
         //从verifyUserStatus表中获取策略引擎结果
         Strategy strategyResult = new Strategy();
@@ -92,7 +92,7 @@ public class UserDetailResultImpl implements UserDetailResultService
         if(verifyStrategyOutputEntity != null)
         {
             strategyResult.setAmount(verifyStrategyOutputEntity.getAmount().toString());
-            strategyResult.setIsOld(verifyStrategyOutputEntity.getIsRrdUser().toString());
+            strategyResult.setIsOld(verifyStrategyOutputEntity.getIsRrdUser() ? "1" : "0;");
             if((cardProductId = verifyStrategyOutputEntity.getCardProductId()) != null)
             {
                 strategyResult.setCardProductId(cardProductDao.getCardNameById(cardProductId));
@@ -103,11 +103,12 @@ public class UserDetailResultImpl implements UserDetailResultService
                 StrategyResultEnum ret = Enum.valueOf(StrategyResultEnum.class, result);
                 if(ret != null)
                 {
-                    strategyResult.setResult(ret.name());
+                    strategyResult.setResult(ret.toString());
                 }
             }
         }
         userDetailResult.setStrategy(strategyResult);
+        userDetailResult.setYouxinBlackListEnum(verifyUserStatusEntity.getInYouxinBackList());
 
         return userDetailResult;
     }
