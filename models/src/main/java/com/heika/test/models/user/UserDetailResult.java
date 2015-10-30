@@ -83,4 +83,15 @@ public class UserDetailResult
 
         return true;
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("investigateNoteInfo=%s\n" +
+                        "firstVerifyNote=%s\n" +
+                        "secondVerify=%s\n" +
+                        "strategy=%s\n" +
+                        "youxinBlackListEnum=%s\n",
+                investigateNoteInfo, firstVerifyNote, secondVerify, strategy, youxinBlackListEnum);
+    }
 }

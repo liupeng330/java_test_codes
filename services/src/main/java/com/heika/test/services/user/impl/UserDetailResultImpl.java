@@ -91,12 +91,7 @@ public class UserDetailResultImpl implements UserDetailResultService
         VerifyStrategyOutputEntity verifyStrategyOutputEntity = verifyStrategyOutputDao.getByUserId(userId);
         if(verifyStrategyOutputEntity != null)
         {
-            strategyResult.setAmount(verifyStrategyOutputEntity.getAmount().toString());
             strategyResult.setIsOld(verifyStrategyOutputEntity.getIsRrdUser() ? "1" : "0;");
-            if((cardProductId = verifyStrategyOutputEntity.getCardProductId()) != null)
-            {
-                strategyResult.setCardProductId(cardProductDao.getCardNameById(cardProductId));
-            }
             String result = null;
             if((result = verifyStrategyOutputEntity.getResult()) != null)
             {
@@ -104,6 +99,14 @@ public class UserDetailResultImpl implements UserDetailResultService
                 if(ret != null)
                 {
                     strategyResult.setResult(ret.toString());
+                    if(ret == StrategyResultEnum.APPROVE)
+                    {
+                        strategyResult.setAmount(verifyStrategyOutputEntity.getAmount().toString());
+                        if((cardProductId = verifyStrategyOutputEntity.getCardProductId()) != null)
+                        {
+                            strategyResult.setCardProductId(cardProductDao.getCardNameById(cardProductId));
+                        }
+                    }
                 }
             }
         }
