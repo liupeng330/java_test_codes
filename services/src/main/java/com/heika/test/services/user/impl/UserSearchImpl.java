@@ -1,5 +1,7 @@
 package com.heika.test.services.user.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.heika.test.common.SearchUserType;
 import com.heika.test.common.UserTypeForSearch;
 import com.heika.test.common.VerifyUserStatus;
@@ -15,6 +17,9 @@ import com.heika.test.entities.verify.VerifyUserStatusLogEntity;
 import com.heika.test.models.user.UserSearchResult;
 import com.heika.test.services.user.UserSearchService;
 import com.heika.test.utils.JsonParser;
+import com.heika.test.utils.JsonUtil;
+import org.apache.commons.lang3.StringUtils;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -64,25 +69,25 @@ public class UserSearchImpl implements UserSearchService
             UserEntity userEntity = userEntities.get(i);
             Integer userId = userEntity.getUserId();
 
-            user.setUser_id(userId.toString());
+            user.setUserId(userId.toString());
             user.setMobile(userEntity.getMobile());
-            user.setNick_name(userEntity.getNickName());
-            user.setUser_type(Enum.valueOf(UserTypeForSearch.class,
+            user.setNickName(userEntity.getNickName());
+            user.setUserType(Enum.valueOf(UserTypeForSearch.class,
                     userEntity.getChannel()).toString());
 
             VerifyUserStatusEntity verifyUserStatusEntity = verifyUserStatusDao.getByUserId(userId);
-            user.setVerify_user_status(Enum.valueOf(VerifyUserStatus.class,
+            user.setVerifyUserStatus(Enum.valueOf(VerifyUserStatus.class,
                     verifyUserStatusEntity.getVerifyUserStatus()).toString());
 
             UserInfoEntity userInfoEntity = userInfoDao.getByUserId(userId);
             if(userInfoEntity != null)
             {
-                user.setId_no(userInfoEntity.getIdNo());
-                user.setReal_name(userInfoEntity.getRealName());
+                user.setIdNo(userInfoEntity.getIdNo());
+                user.setRealName(userInfoEntity.getRealName());
             }
 
             VerifyUserStatusLogEntity latestLog = verifyUserStatusLogDao.getLatestEntityByUserId(userId);
-            if(!user.getVerify_user_status().equals(VerifyUserStatus.UNCOMMIT.toString()) && latestLog != null)
+            if(!user.getVerifyUserStatus().equals(VerifyUserStatus.UNCOMMIT.toString()) && latestLog != null)
             {
                 if(latestLog.getVerifyUserId() != null) user.setOperater(verifyUserDao.getByVerifyUserId(latestLog.getVerifyUserId()).getRealName());
                 if(latestLog.getCreateTime() != null) user.setOperateTime(latestLog.getCreateTime().getTime() + "");
@@ -135,36 +140,17 @@ public class UserSearchImpl implements UserSearchService
     @Override
     public List<UserSearchResult> getUsersFromResponse(String responseBody)
     {
-        List<LinkedHashMap<String, String>> data = new JsonParser().jsonGetHashMapList(responseBody, "$.data.rows");
-        List<UserSearchResult> users = new ArrayList<>();
-        if (data == null)
+        String parsedJson = JsonUtil.parseDataFromResponse(responseBody);
+        JSONObject obj = new JSONObject(parsedJson);
+        if(obj != null)
         {
-            return null;
+            parsedJson = obj.get("rows").toString();
         }
-        for (LinkedHashMap<String, String> map : data)
+        List<UserSearchResult> ret = null;
+        if(StringUtils.isNoneEmpty(parsedJson))
         {
-            UserSearchResult user = new UserSearchResult();
-            if(map.get("userType") != null) user.setUser_type(map.get("userType"));
-            if(map.get("nickName") != null) user.setNick_name(map.get("nickName"));
-            if(map.get("mobile") != null) user.setMobile(map.get("mobile"));
-            if(map.get("userId") != null)
-            {
-                Object tmp = map.get("userId");
-                user.setUser_id(tmp.toString());
-
-            }
-            if(map.get("realName") != null) user.setReal_name(map.get("realName"));
-            if(map.get("idNo") != null) user.setId_no(map.get("idNo"));
-            if(map.get("verifyUserStatus") != null) user.setVerify_user_status(map.get("verifyUserStatus"));
-            if(map.get("operater") != null) user.setOperater(map.get("operater"));
-            if(map.get("operateTime") != null)
-            {
-                Object tmp = map.get("operateTime");
-                user.setOperateTime(tmp.toString());
-            }
-
-            users.add(user);
+            ret = JSON.parseObject(parsedJson, new TypeReference<List<UserSearchResult>>(){});
         }
-        return users;
+        return ret;
     }
 }

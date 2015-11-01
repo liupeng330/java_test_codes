@@ -5,24 +5,24 @@ import java.util.List;
 
 public class UserSearchResult implements Comparable<UserSearchResult>
 {
-    private String user_id;
-    private String nick_name;
-    private String real_name;
+    private String userId;
+    private String nickName;
+    private String realName;
     private String mobile;
-    private String id_no;
-    private String user_type;
-    private String verify_user_status;
+    private String idNo;
+    private String userType;
+    private String verifyUserStatus;
     private String operater;
     private String operateTime;
 
-    public String getUser_id()
+    public String getUserId()
     {
-        return user_id;
+        return userId;
     }
 
-    public void setUser_id(String user_id)
+    public void setUserId(String userId)
     {
-        this.user_id = user_id;
+        this.userId = userId;
     }
 
     public String getMobile()
@@ -35,54 +35,54 @@ public class UserSearchResult implements Comparable<UserSearchResult>
         this.mobile = mobile;
     }
 
-    public String getNick_name()
+    public String getNickName()
     {
-        return nick_name;
+        return nickName;
     }
 
-    public void setNick_name(String nick_name)
+    public void setNickName(String nickName)
     {
-        this.nick_name = nick_name;
+        this.nickName = nickName;
     }
 
-    public String getUser_type()
+    public String getUserType()
     {
-        return user_type;
+        return userType;
     }
 
-    public void setUser_type(String user_type)
+    public void setUserType(String userType)
     {
-        this.user_type = user_type;
+        this.userType = userType;
     }
 
-    public String getReal_name()
+    public String getRealName()
     {
-        return real_name;
+        return realName;
     }
 
-    public void setReal_name(String real_name)
+    public void setRealName(String realName)
     {
-        this.real_name = real_name;
+        this.realName = realName;
     }
 
-    public String getId_no()
+    public String getIdNo()
     {
-        return id_no;
+        return idNo;
     }
 
-    public void setId_no(String id_no)
+    public void setIdNo(String idNo)
     {
-        this.id_no = id_no;
+        this.idNo = idNo;
     }
 
-    public String getVerify_user_status()
+    public String getVerifyUserStatus()
     {
-        return verify_user_status;
+        return verifyUserStatus;
     }
 
-    public void setVerify_user_status(String verify_user_status)
+    public void setVerifyUserStatus(String verifyUserStatus)
     {
-        this.verify_user_status = verify_user_status;
+        this.verifyUserStatus = verifyUserStatus;
     }
 
     public String getOperater()
@@ -108,8 +108,8 @@ public class UserSearchResult implements Comparable<UserSearchResult>
     @Override
     public int compareTo(UserSearchResult o)
     {
-        Integer userId1 = Integer.parseInt(this.getUser_id());
-        Integer userId2 = Integer.parseInt(o.getUser_id());
+        Integer userId1 = Integer.parseInt(this.getUserId());
+        Integer userId2 = Integer.parseInt(o.getUserId());
         return userId1.compareTo(userId2);
     }
 
@@ -126,19 +126,19 @@ public class UserSearchResult implements Comparable<UserSearchResult>
         }
         UserSearchResult that = (UserSearchResult) others;
 
-        if (id_no != null ? !id_no.equals(that.id_no) : that.id_no != null)
+        if (idNo != null ? !idNo.equals(that.idNo) : that.idNo != null)
             return false;
         if (mobile != null ? !mobile.equals(that.mobile) : that.mobile != null)
             return false;
-        if (nick_name != null ? !nick_name.equals(that.nick_name) : that.nick_name != null)
+        if (nickName != null ? !nickName.equals(that.nickName) : that.nickName != null)
             return false;
-        if (real_name != null ? !real_name.equals(that.real_name) : that.real_name != null)
+        if (realName != null ? !realName.equals(that.realName) : that.realName != null)
             return false;
-        if (user_id != null ? !user_id.equals(that.user_id) : that.user_id != null)
+        if (userId != null ? !userId.equals(that.userId) : that.userId != null)
             return false;
-        if (user_type != null ? !user_type.equals(that.user_type) : that.user_type != null)
+        if (userType != null ? !userType.equals(that.userType) : that.userType != null)
             return false;
-        if (verify_user_status != null ? !verify_user_status.equals(that.verify_user_status) : that.verify_user_status != null)
+        if (verifyUserStatus != null ? !verifyUserStatus.equals(that.verifyUserStatus) : that.verifyUserStatus != null)
             return false;
 
         return true;
@@ -162,7 +162,7 @@ public class UserSearchResult implements Comparable<UserSearchResult>
         List<UserSearchResult> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if (i.getNick_name() != null && i.getNick_name().startsWith(nickName))
+            if (i.getNickName() != null && i.getNickName().startsWith(nickName))
             {
                 filteredUsers.add(i);
             }
@@ -175,7 +175,7 @@ public class UserSearchResult implements Comparable<UserSearchResult>
         List<UserSearchResult> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if(i.getId_no() != null && i.getId_no().startsWith(idCard))
+            if(i.getIdNo() != null && i.getIdNo().startsWith(idCard))
             {
                 filteredUsers.add(i);
             }
@@ -188,7 +188,7 @@ public class UserSearchResult implements Comparable<UserSearchResult>
         List<UserSearchResult> filteredUsers = new ArrayList<>();
         allUsers.forEach(i->
         {
-            if (i.getReal_name() != null && i.getReal_name().startsWith(userName))
+            if (i.getRealName() != null && i.getRealName().startsWith(userName))
             {
                 filteredUsers.add(i);
             }
@@ -208,6 +208,6 @@ public class UserSearchResult implements Comparable<UserSearchResult>
                 "verifyUserStatus=%s\n" +
                 "operator=%s\n" +
                 "operateTime=%s\n",
-                user_id, nick_name, real_name, mobile, id_no, user_type, verify_user_status, operater, operateTime);
+                userId, nickName, realName, mobile, idNo, userType, verifyUserStatus, operater, operateTime);
     }
 }

@@ -1,6 +1,9 @@
 package com.heika.test.models.common;
 
+import com.alibaba.fastjson.JSON;
 import com.heika.test.utils.JsonParser;
+import com.heika.test.utils.JsonUtil;
+import org.json.JSONObject;
 
 public class PageInfo
 {
@@ -9,13 +12,14 @@ public class PageInfo
     private String totalElements;
     private String totalPage;
 
-    public PageInfo(String responseBody)
+    public PageInfo(){}
+
+    public static PageInfo CreateInstance(String responseBody)
     {
-        JsonParser parser = new JsonParser();
-        this.pageNum = parser.jsonGet(responseBody, "$.data.pageInfo.pageNum");
-        this.pageSize = parser.jsonGet(responseBody, "$.data.pageInfo.pageSize");
-        this.totalElements = parser.jsonGet(responseBody, "$.data.pageInfo.totalElements");
-        this.totalPage = parser.jsonGet(responseBody, "$.data.pageInfo.totalPage");
+        String parsedJson = JsonUtil.parseDataFromResponse(responseBody);
+        JSONObject obj = new JSONObject(parsedJson);
+        parsedJson = obj.get("pageInfo").toString();
+        return JSON.parseObject(parsedJson, PageInfo.class);
     }
 
     public String getPageNum()

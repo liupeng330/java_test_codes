@@ -24,11 +24,10 @@ public class TestSearchUser extends TestBase
         return new Object[][] {{10}, {20}, {50}, {100}, {200}};
     }
 
-    @Test(groups = {"verify"}, description = "审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息", timeOut = 60000, dataProvider = "pageSize")
+    @Test(groups = {"verify-debug"}, description = "审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息", timeOut = 60000, dataProvider = "pageSize")
     public void searchUser_by_pageNum(int pageSize) throws SQLException
     {
         //1. Get total element
-        //Integer expectedTotalElements = UserSearchResult.getTotalCount(this.sqlHelper);
         Integer expectedTotalElements = userSearchService.getTotalCountForSearchUser();
 
         //2. Calculate totalPage
@@ -42,7 +41,8 @@ public class TestSearchUser extends TestBase
         org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
 
         //4. Compare page info
-        PageInfo pageInfo = new PageInfo(request.body());
+        //PageInfo pageInfo = new PageInfo(request.body());
+        PageInfo pageInfo = PageInfo.CreateInstance(request.body());
         org.testng.Assert.assertEquals(expectedTotalPage.toString(), pageInfo.getTotalPage(),"The totalPage is incorrect!");
         org.testng.Assert.assertEquals(expectedTotalElements.toString(), pageInfo.getTotalElements(), "The totalElement is incorrect!");
 
@@ -164,7 +164,7 @@ public class TestSearchUser extends TestBase
         };
     }
 
-    @Test(groups = {"verify"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000 * 10)
+    @Test(groups = {"verify-debug"}, description = "审核后台，按照type、key与verifyStatus进行用户信息的查询", dataProvider = "verifyStatus", timeOut = 60000 * 10)
     public void searchUser_by_verifyStatus(String type, String key, String verifyStatus) throws SQLException
     {
         //Sending request
