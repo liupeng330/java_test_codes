@@ -1,0 +1,3101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="96" passed="96">
+  <reporter-output>
+    <line>
+      <![CDATA[[Testing] [2015-11-03 11:53:58] [Get userDetail from DB: investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+]]]>
+    </line>
+    <line>
+      <![CDATA[Response: {"data":{"firstVerifyNote":{"firstVerifyAmount":"1.00","firstVerifyCardProductName":"黑卡五星","firstVerifyNote":"1","firstVerifyTime":1440586843000,"firstVerifyUserName":"超级管理员"},"investigateNoteInfo":{"investigateNote":"CES","investigateTime":1440060901000,"investigateUserName":"超级管理员"},"secondVerify":{"secondVerifyAmount":"20000.00","secondVerifyCardProductName":"黑卡五星","secondVerifyNote":"42452","secondVerifyTime":1440642093000,"secondVerifyUserName":"超级管理员"},"strategy":{"amount":"16000.00","cardProductId":"黑卡一星","isOld":"1","result":"通过审批"},"userInfo":{"InvestigateNote":"CES","address":"Hmmm haha","addressInvResult":"VALID","childStatus":"ONE","childStatusInvResult":"VALID","company":"Hjj","companyInvResult":"VALID","graduateYear":"2007","graduateYearInvResult":"VALID","graduation":"UNDERGRADUATE","graduationInvResult":"VALID","hasCar":"1","hasCarInvResult":"VALID","hasHouse":"0","hasHouseInvResult":"VALID","hasReverseIdCardBackPath":"0","hasReverseIdCardFrontPath":"0","hasReverseIdCardPhotoPath":"0","idCardBackPath":"/fd3acc59-d23e-4632-9d0d-e2d1b9a56923.jpg","idCardFrontPath":"/ed5192df-5b2c-4c32-92c7-8d60959c0724.jpg","idCardNo":"320303198810055633","marriageStatus":"WIDOWED","marriageStatusInvResult":"VALID","monthlySalary":"6000","monthlySalaryInvResult":"VALID","monthlySalaryRefine":"6500","pbcReportInvResult":"VALID","phoneInvResult":"VALID","realName":"罗肜","realNameInvResult":"VALID","realNameVerifyStatus":"1","university":"其他大学","universityInvResult":"VALID","urgentMobile":"13718250181","urgentMobileInvResult":"VALID","urgentName":"Uik","urgentNameInvResult":"VALID","urgentRelation":"Know","urgentRelationInvResult":"VALID","workPhoneInvResult":"VALID","workPosition":"高级总监","workPositionInvResult":"VALID"},"youxinBlackListEnum":"NOT_IN_BLACK_LIST"},"message":"","status":0}]]>
+    </line>
+    <line>
+      <![CDATA[[Testing] [2015-11-03 11:53:58] [Get userDetail from response: investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+]]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 1, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 2, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 3, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 4, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 5, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 6, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 7, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 8, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 9, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 10, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 11, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 12, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 13, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 14, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 15, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 16, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 17, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 18, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 19, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 20, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 21, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 22, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 23, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 24, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 25, page size 10
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 1, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 2, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 3, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 4, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 5, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 6, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 7, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 8, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 9, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 10, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 11, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 12, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 13, page size 20
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 1, page size 50
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 2, page size 50
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 3, page size 50
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 4, page size 50
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 5, page size 50
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 1, page size 100
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 2, page size 100
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 3, page size 100
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 1, page size 200
+]]>
+    </line>
+    <line>
+      <![CDATA[The element count for page num 2, page size 200
+]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=final_test31&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13612100001&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=王大1&verifyStatuses=UNCOMMIT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_111&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200111&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试111&verifyStatuses=INQUIREING]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_80&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200080&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试80&verifyStatuses=VERIFY_FAIL]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_92&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200092&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试92&verifyStatuses=INQUIRE_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_88&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200088&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试88&verifyStatuses=FIRST_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_85&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200085&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试85&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_48&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200048&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试48&verifyStatuses=SECOND_SEND_BACK]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_20&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200020&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试20&verifyStatuses=VERIFY_REJECT]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_69&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200069&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试69&verifyStatuses=VERIFY_SUCCESS]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=shenshuo111&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=15911027605&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=610830198212012014&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=史良万&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=]]>
+    </line>
+    <line>
+      <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="27128" started-at="2015-11-03T03:53:52Z" finished-at="2015-11-03T03:54:19Z">
+    <groups>
+      <group name="verify">
+        <method signature="TestGetUserDetail.getUserDetailInfo(java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestGetUserDetail@7ca48474]" name="getUserDetailInfo" class="com.heika.test.verify.cases.API.TestGetUserDetail"/>
+        <method signature="TestGetUserVerifyLog.getUserVerifyLog(java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestGetUserVerifyLog@6ea12c19]" name="getUserVerifyLog" class="com.heika.test.verify.cases.API.TestGetUserVerifyLog"/>
+        <method signature="TestSearchUser.searchUser_by_pageNum(int)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_pageNum" class="com.heika.test.verify.cases.API.TestSearchUser"/>
+        <method signature="TestSearchUser.searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" class="com.heika.test.verify.cases.API.TestSearchUser"/>
+      </group> <!-- verify -->
+    </groups>
+    <test name="Test1" duration-ms="27128" started-at="2015-11-03T03:53:52Z" finished-at="2015-11-03T03:54:19Z">
+      <class name="com.heika.test.verify.cases.API.TestGetUserVerifyLog">
+        <test-method status="PASS" signature="init(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestGetUserVerifyLog@6ea12c19]" name="init" is-config="true" duration-ms="421" started-at="2015-11-03T11:53:58Z" finished-at="2015-11-03T11:53:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://172.16.2.38:15081/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@renrendai.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[bH7Qsd8kPfEE2zdTwgZUVF2iYv5kVtBGAyWBzZjk50S2uaWgVMLtbAtTgIpu0D85X3VgFie%2F3W4HCHY088%2BCAVEO8PyW0nq57id29Aw5Mm0PA5KEf6Z18roUeGDfsTF0G5ifCwPRfC4P%2Bu0E7YUEEAikWHgevfqSYGtKub0uQvA%3D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jdbc:mysql://172.16.2.38:3306/heika_new]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[heika_dev]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[heika_dev@qwe321]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getUserVerifyLog(java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestGetUserVerifyLog@6ea12c19]" name="getUserVerifyLog" duration-ms="74" started-at="2015-11-03T11:53:58Z" description="审核后台，用户查询页面下获取用户流水的接口测试。 接口： user/getUserVerifyLog" finished-at="2015-11-03T11:53:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100034582]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserVerifyLog -->
+      </class> <!-- com.heika.test.verify.cases.API.TestGetUserVerifyLog -->
+      <class name="com.heika.test.verify.cases.API.TestSearchUser">
+        <test-method status="PASS" signature="init(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="init" is-config="true" duration-ms="409" started-at="2015-11-03T11:53:59Z" finished-at="2015-11-03T11:53:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://172.16.2.38:15081/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@renrendai.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[bH7Qsd8kPfEE2zdTwgZUVF2iYv5kVtBGAyWBzZjk50S2uaWgVMLtbAtTgIpu0D85X3VgFie%2F3W4HCHY088%2BCAVEO8PyW0nq57id29Aw5Mm0PA5KEf6Z18roUeGDfsTF0G5ifCwPRfC4P%2Bu0E7YUEEAikWHgevfqSYGtKub0uQvA%3D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jdbc:mysql://172.16.2.38:3306/heika_new]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[heika_dev]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[heika_dev@qwe321]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="searchUser_by_pageNum(int)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_pageNum" duration-ms="739" started-at="2015-11-03T11:53:59Z" description="审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息" data-provider="pageSize" finished-at="2015-11-03T11:54:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The element count for page num 1, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 2, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 3, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 4, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 5, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 6, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 7, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 8, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 9, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 10, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 11, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 12, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 13, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 14, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 15, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 16, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 17, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 18, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 19, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 20, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 21, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 22, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 23, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 24, page size 10
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 25, page size 10
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_pageNum -->
+        <test-method status="PASS" signature="searchUser_by_pageNum(int)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_pageNum" duration-ms="459" started-at="2015-11-03T11:54:00Z" description="审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息" data-provider="pageSize" finished-at="2015-11-03T11:54:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The element count for page num 1, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 2, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 3, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 4, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 5, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 6, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 7, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 8, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 9, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 10, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 11, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 12, page size 20
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 13, page size 20
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_pageNum -->
+        <test-method status="PASS" signature="searchUser_by_pageNum(int)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_pageNum" duration-ms="364" started-at="2015-11-03T11:54:00Z" description="审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息" data-provider="pageSize" finished-at="2015-11-03T11:54:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The element count for page num 1, page size 50
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 2, page size 50
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 3, page size 50
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 4, page size 50
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 5, page size 50
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_pageNum -->
+        <test-method status="PASS" signature="searchUser_by_pageNum(int)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_pageNum" duration-ms="380" started-at="2015-11-03T11:54:00Z" description="审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息" data-provider="pageSize" finished-at="2015-11-03T11:54:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The element count for page num 1, page size 100
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 2, page size 100
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 3, page size 100
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_pageNum -->
+        <test-method status="PASS" signature="searchUser_by_pageNum(int)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_pageNum" duration-ms="405" started-at="2015-11-03T11:54:01Z" description="审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息" data-provider="pageSize" finished-at="2015-11-03T11:54:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The element count for page num 1, page size 200
+]]>
+            </line>
+            <line>
+              <![CDATA[The element count for page num 2, page size 200
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_pageNum -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="639" started-at="2015-11-03T11:54:01Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="16" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="112" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="44" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="41" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="38" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="112" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="309" started-at="2015-11-03T11:54:02Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="451" started-at="2015-11-03T11:54:03Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="421" started-at="2015-11-03T11:54:03Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="433" started-at="2015-11-03T11:54:03Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="439" started-at="2015-11-03T11:54:04Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="17" started-at="2015-11-03T11:54:04Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:04Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="15" started-at="2015-11-03T11:54:04Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:04Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="93" started-at="2015-11-03T11:54:04Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="96" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="95" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="97" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="38" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="39" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="38" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="40" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="35" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="34" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="33" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="34" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="35" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="36" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="36" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="37" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="15" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="15" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="99" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="107" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="102" started-at="2015-11-03T11:54:05Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="105" started-at="2015-11-03T11:54:06Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="289" started-at="2015-11-03T11:54:06Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="284" started-at="2015-11-03T11:54:06Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="286" started-at="2015-11-03T11:54:06Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="293" started-at="2015-11-03T11:54:07Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="345" started-at="2015-11-03T11:54:07Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[final_test31]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=final_test31&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="355" started-at="2015-11-03T11:54:07Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13612100001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13612100001&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="358" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="392" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[王大1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UNCOMMIT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=王大1&verifyStatuses=UNCOMMIT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="16" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_111]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_111&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200111]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200111&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="15" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="19" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试111]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIREING]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试111&verifyStatuses=INQUIREING]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="63" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_80]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_80&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="61" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200080]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200080&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="64" started-at="2015-11-03T11:54:08Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="60" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试80]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试80&verifyStatuses=VERIFY_FAIL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="28" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_92]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_92&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="26" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200092]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200092&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="29" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="30" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试92]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INQUIRE_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试92&verifyStatuses=INQUIRE_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="26" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_88]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_88&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="27" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200088]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200088&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="30" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="26" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试88]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试88&verifyStatuses=FIRST_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="26" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_85]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_85&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="27" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200085]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200085&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="28" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="26" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试85]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FIRST_VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试85&verifyStatuses=FIRST_VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_48]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_48&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200048]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200048&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="15" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="14" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试48]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SECOND_SEND_BACK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试48&verifyStatuses=SECOND_SEND_BACK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="71" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_20]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_20&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="68" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200020&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="69" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="70" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试20]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_REJECT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试20&verifyStatuses=VERIFY_REJECT]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="211" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rrd_69]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_69&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="180" started-at="2015-11-03T11:54:09Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13812200069]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200069&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="199" started-at="2015-11-03T11:54:10Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[620600198111148628]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="192" started-at="2015-11-03T11:54:10Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[测试69]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[VERIFY_SUCCESS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试69&verifyStatuses=VERIFY_SUCCESS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1024" started-at="2015-11-03T11:54:10Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shenshuo111]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=shenshuo111&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1018" started-at="2015-11-03T11:54:11Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15911027605]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=15911027605&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1019" started-at="2015-11-03T11:54:12Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[610830198212012014]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=610830198212012014&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1017" started-at="2015-11-03T11:54:13Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[史良万]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=史良万&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1246" started-at="2015-11-03T11:54:14Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NICKNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1234" started-at="2015-11-03T11:54:15Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MOBILE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1241" started-at="2015-11-03T11:54:17Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IDCARD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+        <test-method status="PASS" signature="searchUser_by_verifyStatus(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestSearchUser@6a024a67]" name="searchUser_by_verifyStatus" duration-ms="1240" started-at="2015-11-03T11:54:18Z" description="审核后台，按照type、key与verifyStatus进行用户信息的查询" data-provider="verifyStatus" finished-at="2015-11-03T11:54:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[USERNAME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchUser_by_verifyStatus -->
+      </class> <!-- com.heika.test.verify.cases.API.TestSearchUser -->
+      <class name="com.heika.test.verify.cases.API.TestGetUserDetail">
+        <test-method status="PASS" signature="init(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestGetUserDetail@7ca48474]" name="init" is-config="true" duration-ms="5029" started-at="2015-11-03T11:53:52Z" finished-at="2015-11-03T11:53:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://172.16.2.38:15081/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@renrendai.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[bH7Qsd8kPfEE2zdTwgZUVF2iYv5kVtBGAyWBzZjk50S2uaWgVMLtbAtTgIpu0D85X3VgFie%2F3W4HCHY088%2BCAVEO8PyW0nq57id29Aw5Mm0PA5KEf6Z18roUeGDfsTF0G5ifCwPRfC4P%2Bu0E7YUEEAikWHgevfqSYGtKub0uQvA%3D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jdbc:mysql://172.16.2.38:3306/heika_new]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[heika_dev]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[heika_dev@qwe321]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getUserDetailInfo(java.lang.String)[pri:0, instance:com.heika.test.verify.cases.API.TestGetUserDetail@7ca48474]" name="getUserDetailInfo" duration-ms="1003" started-at="2015-11-03T11:53:57Z" description="审核后台，获取用户详情接口测试。接口： /user/getUserDetail" finished-at="2015-11-03T11:53:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100034758]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[[Testing] [2015-11-03 11:53:58] [Get userDetail from DB: investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+]]]>
+            </line>
+            <line>
+              <![CDATA[Response: {"data":{"firstVerifyNote":{"firstVerifyAmount":"1.00","firstVerifyCardProductName":"黑卡五星","firstVerifyNote":"1","firstVerifyTime":1440586843000,"firstVerifyUserName":"超级管理员"},"investigateNoteInfo":{"investigateNote":"CES","investigateTime":1440060901000,"investigateUserName":"超级管理员"},"secondVerify":{"secondVerifyAmount":"20000.00","secondVerifyCardProductName":"黑卡五星","secondVerifyNote":"42452","secondVerifyTime":1440642093000,"secondVerifyUserName":"超级管理员"},"strategy":{"amount":"16000.00","cardProductId":"黑卡一星","isOld":"1","result":"通过审批"},"userInfo":{"InvestigateNote":"CES","address":"Hmmm haha","addressInvResult":"VALID","childStatus":"ONE","childStatusInvResult":"VALID","company":"Hjj","companyInvResult":"VALID","graduateYear":"2007","graduateYearInvResult":"VALID","graduation":"UNDERGRADUATE","graduationInvResult":"VALID","hasCar":"1","hasCarInvResult":"VALID","hasHouse":"0","hasHouseInvResult":"VALID","hasReverseIdCardBackPath":"0","hasReverseIdCardFrontPath":"0","hasReverseIdCardPhotoPath":"0","idCardBackPath":"/fd3acc59-d23e-4632-9d0d-e2d1b9a56923.jpg","idCardFrontPath":"/ed5192df-5b2c-4c32-92c7-8d60959c0724.jpg","idCardNo":"320303198810055633","marriageStatus":"WIDOWED","marriageStatusInvResult":"VALID","monthlySalary":"6000","monthlySalaryInvResult":"VALID","monthlySalaryRefine":"6500","pbcReportInvResult":"VALID","phoneInvResult":"VALID","realName":"罗肜","realNameInvResult":"VALID","realNameVerifyStatus":"1","university":"其他大学","universityInvResult":"VALID","urgentMobile":"13718250181","urgentMobileInvResult":"VALID","urgentName":"Uik","urgentNameInvResult":"VALID","urgentRelation":"Know","urgentRelationInvResult":"VALID","workPhoneInvResult":"VALID","workPosition":"高级总监","workPositionInvResult":"VALID"},"youxinBlackListEnum":"NOT_IN_BLACK_LIST"},"message":"","status":0}]]>
+            </line>
+            <line>
+              <![CDATA[[Testing] [2015-11-03 11:53:58] [Get userDetail from response: investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getUserDetailInfo -->
+      </class> <!-- com.heika.test.verify.cases.API.TestGetUserDetail -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite1 -->
+</testng-results>

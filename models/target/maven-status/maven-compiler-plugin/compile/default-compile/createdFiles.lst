@@ -1,0 +1,8 @@
+com/heika/test/models/common/PageInfo.class
+com/heika/test/models/user/UserSearchResult.class
+com/heika/test/models/verify/VerifyLogResult.class
+com/heika/test/models/user/UserDetailResult.class
+com/heika/test/models/verify/Strategy.class
+com/heika/test/models/verify/FirstVerifyNote.class
+com/heika/test/models/verify/SecondVerifyNote.class
+com/heika/test/models/verify/InvestigateNoteInfo.class

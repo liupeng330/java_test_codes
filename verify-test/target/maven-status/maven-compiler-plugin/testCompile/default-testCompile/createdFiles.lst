@@ -1,0 +1,6 @@
+com/heika/test/verify/cases/API/TestBase.class
+com/heika/test/verify/cases/API/TestGetUserDetail.class
+com/heika/test/verify/cases/API/TestGetUserVerifyLog.class
+com/heika/test/verify/cases/API/TestSearchUser.class
+com/heika/test/verify/cases/UI/TestLogin.class
+com/heika/test/verify/my_test/TestUserMaterial.class
