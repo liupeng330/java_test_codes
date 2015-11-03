@@ -22,4 +22,13 @@ public class VerifyUserStatusLogDao extends BaseDaoHibernate4<VerifyUserStatusLo
         List<VerifyUserStatusLogEntity> result = query.list();
         return result == null || result.isEmpty() ? null : result.get(0);
     }
+
+    public List<VerifyUserStatusLogEntity> getLogByUserId(Integer userId)
+    {
+        Query query = this.getSessionFactory()
+                .getCurrentSession()
+                .createQuery("from " + VerifyUserStatusLogEntity.class.getSimpleName() + " v where v.userId = :userId order by v.createTime")
+                .setParameter("userId", userId);
+        return query.list();
+    }
 }

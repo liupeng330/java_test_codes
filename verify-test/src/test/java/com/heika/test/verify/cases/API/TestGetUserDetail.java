@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class TestGetUserDetail extends TestBase
 {
     @Parameters({"verify_getUserDetail"})
-    @Test(groups= {"verify-debug"}, description = "审核后台，获取用户详情接口测试。接口： /user/getUserDetail")
+    @Test(groups= {"verify"}, description = "审核后台，获取用户详情接口测试。接口： /user/getUserDetail")
     public void getUserDetailInfo(String userId)
     {
         //Getting data from DB

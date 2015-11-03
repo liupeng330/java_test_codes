@@ -2,17 +2,8 @@ package com.heika.test.services.user.impl;
 
 import com.heika.test.common.*;
 import com.heika.test.dao.user.UserDao;
-import com.heika.test.dao.user.UserInfoDao;
-import com.heika.test.dao.verify.VerifyUserDao;
-import com.heika.test.dao.verify.VerifyUserStatusDao;
-import com.heika.test.dao.verify.VerifyUserStatusLogDao;
 import com.heika.test.entities.user.UserEntity;
-import com.heika.test.entities.user.UserInfoEntity;
-import com.heika.test.entities.verify.VerifyUserStatusEntity;
-import com.heika.test.entities.verify.VerifyUserStatusLogEntity;
-import com.heika.test.models.user.UserSearchResult;
 import com.heika.test.services.user.UserService;
-import com.heika.test.utils.JsonParser;
 import com.heika.test.utils.LogHelper;
 import com.heika.test.utils.RandomData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
 
 @Transactional
 @Service

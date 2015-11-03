@@ -28,7 +28,7 @@
         <run>
           <!--<include name="verify"/>-->
           <!--<include name="UI"/>-->
-          <include name="verify-debug"/>
+          <include name="verify"/>
         </run>
       </groups>
       <packages>

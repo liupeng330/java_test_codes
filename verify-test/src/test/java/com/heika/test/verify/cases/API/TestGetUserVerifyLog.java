@@ -1,7 +1,7 @@
 package com.heika.test.verify.cases.API;
 
 import com.github.kevinsawicki.http.HttpRequest;
-import com.heika.test.models.verify.VerifyLog;
+import com.heika.test.models.verify.VerifyLogResult;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -16,14 +16,14 @@ public class TestGetUserVerifyLog extends TestBase
         Integer id = Integer.parseInt(userId);
 
         //Getting data from DB
-        List ret_DB = VerifyLog.getFromDB(id);
+        List<VerifyLogResult> ret_DB = this.verifyLogResultService.getVerifyLogResultFromDB(id);
 
         //Getting data from response
         HttpRequest request = HttpRequest.post(baseURL + "/user/getUserVerifyLog")
                 .header("cookie", this.session)
                 .send("userId=" + id);
         org.testng.Assert.assertEquals(200, request.code(), "Response code is not 200!!");
-        List ret_response = VerifyLog.getFromResponse(request.body(), "$.data.userVerifyLog");
+        List<VerifyLogResult> ret_response = this.verifyLogResultService.getVerifyLogResultFromResponse(request.body());
 
         //Compare them
         org.testng.Assert.assertEquals(ret_DB, ret_response, "Diff for verify log list!!");

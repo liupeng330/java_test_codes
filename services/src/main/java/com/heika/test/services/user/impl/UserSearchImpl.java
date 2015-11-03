@@ -16,7 +16,6 @@ import com.heika.test.entities.verify.VerifyUserStatusEntity;
 import com.heika.test.entities.verify.VerifyUserStatusLogEntity;
 import com.heika.test.models.user.UserSearchResult;
 import com.heika.test.services.user.UserSearchService;
-import com.heika.test.utils.JsonParser;
 import com.heika.test.utils.JsonUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
@@ -25,7 +24,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 @Transactional
