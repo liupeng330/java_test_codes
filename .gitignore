@@ -1,0 +1,15 @@
+.classpath
+.settings
+.project
+.build
+.idea
+
+*.class
+*.DS_Store
+*.lock
+*.swp
+*.eml
+*.iml
+
+target
+bin
