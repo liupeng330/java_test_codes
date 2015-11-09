@@ -1,7 +1,9 @@
 package com.heika.test.ui.verify.page;
 
+import com.heika.test.models.user.UserSearchResult;
 import com.heika.test.ui.elements.widget.*;
 import com.heika.test.utils.LogHelper;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +12,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import javax.xml.soap.Text;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -172,13 +175,59 @@ public class UserSearch extends IFramePageBase
 		return this.messageWindow.getMessage();
 	}
 
+	public List<UserSearchResult> parseObjectsFromDataGrid(Integer userId)
+	{
+		List<UserSearchResult> results = new ArrayList<>();
+		this.datagrid.waitForExist();
+		retryForStaleElement(() ->
+		{
+			List<WebElement> rows = this.datagrid.getRows();
+			for (WebElement row : rows)
+			{
+				UserSearchResult result = new UserSearchResult();
+				if(userId != null)
+				{
+					result.setUserId(String.valueOf(userId));
+				}
+				result.setNickName(getFieldValue(row, "nickName"));
+				result.setRealName(getFieldValue(row, "realName"));
+				result.setMobile(getFieldValue(row, "mobile"));
+				result.setIdNo(getFieldValue(row, "idNo"));
+				result.setUserType(getFieldValue(row, "userType"));
+				result.setVerifyUserStatus(getFieldValue(row, "verifyUserStatus"));
+				if(StringUtils.isNotBlank(getFieldValue(row, "operater")))
+				{
+					result.setOperater(getFieldValue(row, "operater"));
+				}
+				if(StringUtils.isNotBlank(getFieldValue(row, "operateTime")))
+				{
+					result.setOperateTime(getFieldValue(row, "operateTime"));
+				}
+
+				results.add(result);
+			}
+		});
+
+		return results;
+	}
+
+	private String getFieldValue(WebElement row, String field)
+	{
+		return row.findElement(By.xpath("./td[@field='" + field + "']")).getText().trim();
+	}
+
+	public int getRowCount()
+	{
+		this.datagrid.waitForExist();
+		return this.datagrid.getRows().size();
+	}
+
     private void ClickButton(String type, String value, String field)
     {
         this.datagrid.waitForExist();
         retryForStaleElement(() ->
 		{
 			List<WebElement> rows = this.datagrid.getRows();
-			LogHelper.log(rows.size() + "");
 			for (WebElement row : rows)
 			{
 				if (row.findElement(By.xpath("./td[@field='" + type + "']")).getText().trim().equals(value))

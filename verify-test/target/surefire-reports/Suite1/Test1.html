@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>96/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>95/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 03 11:53:52 CST 2015</td>
+<td>Started on:</td><td>Tue Nov 03 18:05:35 CST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27128 ms)</td>
+<tr><td>Total time:</td><td>29 seconds (29167 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>verify </td>
 </tr><tr>
@@ -67,6 +67,145 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.heika.test.verify.cases.API.TestGetUserDetail.getUserDetailInfo()'><b>getUserDetailInfo</b><br>Test class: com.heika.test.verify.cases.API.TestGetUserDetail<br>Test method: 审核后台，获取用户详情接口测试。接口： /user/getUserDetail<br>Parameters: 100034758<br/>
+<a href="#Output-2068100669" onClick='toggleBox("Output-2068100669", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2068100669" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2068100669">
+[Testing] [2015-11-03 06:05:41] [Get userDetail from DB: investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+]<br/>
+Response: {"data":{},"message":"Forbid consumer 172.16.2.38 access service com.heika.idcard.service.IdCardService from registry 127.0.0.1:6379 use dubbo version 2.5.3, Please check registry access list (whitelist/blacklist).","status":10101005}
+<br/>
+[Testing] [2015-11-03 06:05:41] [Get userDetail from response: investigateNoteInfo=null
+firstVerifyNote=null
+secondVerify=null
+strategy=null
+youxinBlackListEnum=null
+]<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: There are differences between user detail info from response and from DB expected [investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+] but found [investigateNoteInfo=null
+firstVerifyNote=null
+secondVerify=null
+strategy=null
+youxinBlackListEnum=null
+]
+	at com.heika.test.verify.cases.API.TestGetUserDetail.getUserDetailInfo(TestGetUserDetail.java:31)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2068100669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2068100669'><pre>java.lang.AssertionError: There are differences between user detail info from response and from DB expected [investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+] but found [investigateNoteInfo=null
+firstVerifyNote=null
+secondVerify=null
+strategy=null
+youxinBlackListEnum=null
+]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at com.heika.test.verify.cases.API.TestGetUserDetail.getUserDetailInfo(TestGetUserDetail.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>com.heika.test.verify.cases.API.TestGetUserDetail@234bef66</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,74 +214,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.heika.test.verify.cases.API.TestGetUserDetail.getUserDetailInfo()'><b>getUserDetailInfo</b><br>Test class: com.heika.test.verify.cases.API.TestGetUserDetail<br>Test method: 审核后台，获取用户详情接口测试。接口： /user/getUserDetail<br>Parameters: 100034758<br/>
-<a href="#Output-469643779" onClick='toggleBox("Output-469643779", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-469643779" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-469643779">
-[Testing] [2015-11-03 11:53:58] [Get userDetail from DB: investigateNoteInfo=investigateNote=CES
-investigateUserName=超级管理员
-investigateTime=1440060901000
-
-firstVerifyNote=firstVerifyAmount=1.00
-firstVerifyCardProductName=黑卡五星
-firstVerifyNote=1
-firstVerifyUserName=超级管理员
-firstVerifyTime=1440586843000
-
-secondVerify=secondVerifyAmount=20000.00
-secondVerifyCardProductName=黑卡五星
-secondVerifyNote=42452
-secondVerifyUserName=超级管理员
-secondVerifyTime=1440642093000
-
-strategy=isOld=1
-result=通过审批
-amount=16000.00
-cardProductId=黑卡一星
-
-youxinBlackListEnum=NOT_IN_BLACK_LIST
-]<br/>
-Response: {"data":{"firstVerifyNote":{"firstVerifyAmount":"1.00","firstVerifyCardProductName":"黑卡五星","firstVerifyNote":"1","firstVerifyTime":1440586843000,"firstVerifyUserName":"超级管理员"},"investigateNoteInfo":{"investigateNote":"CES","investigateTime":1440060901000,"investigateUserName":"超级管理员"},"secondVerify":{"secondVerifyAmount":"20000.00","secondVerifyCardProductName":"黑卡五星","secondVerifyNote":"42452","secondVerifyTime":1440642093000,"secondVerifyUserName":"超级管理员"},"strategy":{"amount":"16000.00","cardProductId":"黑卡一星","isOld":"1","result":"通过审批"},"userInfo":{"InvestigateNote":"CES","address":"Hmmm haha","addressInvResult":"VALID","childStatus":"ONE","childStatusInvResult":"VALID","company":"Hjj","companyInvResult":"VALID","graduateYear":"2007","graduateYearInvResult":"VALID","graduation":"UNDERGRADUATE","graduationInvResult":"VALID","hasCar":"1","hasCarInvResult":"VALID","hasHouse":"0","hasHouseInvResult":"VALID","hasReverseIdCardBackPath":"0","hasReverseIdCardFrontPath":"0","hasReverseIdCardPhotoPath":"0","idCardBackPath":"/fd3acc59-d23e-4632-9d0d-e2d1b9a56923.jpg","idCardFrontPath":"/ed5192df-5b2c-4c32-92c7-8d60959c0724.jpg","idCardNo":"320303198810055633","marriageStatus":"WIDOWED","marriageStatusInvResult":"VALID","monthlySalary":"6000","monthlySalaryInvResult":"VALID","monthlySalaryRefine":"6500","pbcReportInvResult":"VALID","phoneInvResult":"VALID","realName":"罗肜","realNameInvResult":"VALID","realNameVerifyStatus":"1","university":"其他大学","universityInvResult":"VALID","urgentMobile":"13718250181","urgentMobileInvResult":"VALID","urgentName":"Uik","urgentNameInvResult":"VALID","urgentRelation":"Know","urgentRelationInvResult":"VALID","workPhoneInvResult":"VALID","workPosition":"高级总监","workPositionInvResult":"VALID"},"youxinBlackListEnum":"NOT_IN_BLACK_LIST"},"message":"","status":0}<br/>
-[Testing] [2015-11-03 11:53:58] [Get userDetail from response: investigateNoteInfo=investigateNote=CES
-investigateUserName=超级管理员
-investigateTime=1440060901000
-
-firstVerifyNote=firstVerifyAmount=1.00
-firstVerifyCardProductName=黑卡五星
-firstVerifyNote=1
-firstVerifyUserName=超级管理员
-firstVerifyTime=1440586843000
-
-secondVerify=secondVerifyAmount=20000.00
-secondVerifyCardProductName=黑卡五星
-secondVerifyNote=42452
-secondVerifyUserName=超级管理员
-secondVerifyTime=1440642093000
-
-strategy=isOld=1
-result=通过审批
-amount=16000.00
-cardProductId=黑卡一星
-
-youxinBlackListEnum=NOT_IN_BLACK_LIST
-]<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>com.heika.test.verify.cases.API.TestGetUserDetail@7ca48474</td></tr>
-<tr>
 <td title='com.heika.test.verify.cases.API.TestGetUserVerifyLog.getUserVerifyLog()'><b>getUserVerifyLog</b><br>Test class: com.heika.test.verify.cases.API.TestGetUserVerifyLog<br>Test method: 审核后台，用户查询页面下获取用户流水的接口测试。 接口： user/getUserVerifyLog<br>Parameters: 100034582</td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestGetUserVerifyLog@6ea12c19</td></tr>
+<td>com.heika.test.verify.cases.API.TestGetUserVerifyLog@39fb3ab6</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_pageNum()'><b>searchUser_by_pageNum</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息<br>Parameters: 10<br/>
-<a href="#Output-1302949823" onClick='toggleBox("Output-1302949823", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-93825099" onClick='toggleBox("Output-93825099", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1302949823" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1302949823">
+<a href="#Output-93825099" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-93825099">
 The element count for page num 1, page size 10
 <br/>
 The element count for page num 2, page size 10
@@ -193,17 +274,25 @@ The element count for page num 24, page size 10
 <br/>
 The element count for page num 25, page size 10
 <br/>
+The element count for page num 26, page size 10
+<br/>
+The element count for page num 27, page size 10
+<br/>
+The element count for page num 28, page size 10
+<br/>
+The element count for page num 29, page size 10
+<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_pageNum()'><b>searchUser_by_pageNum</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息<br>Parameters: 20<br/>
-<a href="#Output-1226352210" onClick='toggleBox("Output-1226352210", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1250254232" onClick='toggleBox("Output-1250254232", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1226352210" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1226352210">
+<a href="#Output-1250254232" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1250254232">
 The element count for page num 1, page size 20
 <br/>
 The element count for page num 2, page size 20
@@ -230,17 +319,21 @@ The element count for page num 12, page size 20
 <br/>
 The element count for page num 13, page size 20
 <br/>
+The element count for page num 14, page size 20
+<br/>
+The element count for page num 15, page size 20
+<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_pageNum()'><b>searchUser_by_pageNum</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息<br>Parameters: 50<br/>
-<a href="#Output-230334884" onClick='toggleBox("Output-230334884", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-214320475" onClick='toggleBox("Output-214320475", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-230334884" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-230334884">
+<a href="#Output-214320475" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-214320475">
 The element count for page num 1, page size 50
 <br/>
 The element count for page num 2, page size 50
@@ -251,17 +344,19 @@ The element count for page num 4, page size 50
 <br/>
 The element count for page num 5, page size 50
 <br/>
+The element count for page num 6, page size 50
+<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_pageNum()'><b>searchUser_by_pageNum</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息<br>Parameters: 100<br/>
-<a href="#Output-373248567" onClick='toggleBox("Output-373248567", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2116070765" onClick='toggleBox("Output-2116070765", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-373248567" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-373248567">
+<a href="#Output-2116070765" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2116070765">
 The element count for page num 1, page size 100
 <br/>
 The element count for page num 2, page size 100
@@ -272,13 +367,13 @@ The element count for page num 3, page size 100
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_pageNum()'><b>searchUser_by_pageNum</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，用户查询的接口测试，根据pageSize获取相应的用户信息<br>Parameters: 200<br/>
-<a href="#Output-495652044" onClick='toggleBox("Output-495652044", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-308496410" onClick='toggleBox("Output-308496410", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-495652044" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-495652044">
+<a href="#Output-308496410" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-308496410">
 The element count for page num 1, page size 200
 <br/>
 The element count for page num 2, page size 200
@@ -287,1075 +382,1075 @@ The element count for page num 2, page size 200
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , UNCOMMIT<br/>
-<a href="#Output-896525545" onClick='toggleBox("Output-896525545", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-583391168" onClick='toggleBox("Output-583391168", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-896525545" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-896525545">
+<a href="#Output-583391168" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-583391168">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , INQUIREING<br/>
-<a href="#Output-398356597" onClick='toggleBox("Output-398356597", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-645432277" onClick='toggleBox("Output-645432277", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-398356597" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-398356597">
+<a href="#Output-645432277" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-645432277">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , VERIFY_FAIL<br/>
-<a href="#Output-1002532612" onClick='toggleBox("Output-1002532612", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1201666745" onClick='toggleBox("Output-1201666745", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1002532612" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1002532612">
+<a href="#Output-1201666745" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1201666745">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , INQUIRE_SUCCESS<br/>
-<a href="#Output-1451739593" onClick='toggleBox("Output-1451739593", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-925066786" onClick='toggleBox("Output-925066786", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1451739593" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1451739593">
+<a href="#Output-925066786" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-925066786">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , FIRST_SEND_BACK<br/>
-<a href="#Output-1190670273" onClick='toggleBox("Output-1190670273", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-299145789" onClick='toggleBox("Output-299145789", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1190670273" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1190670273">
+<a href="#Output-299145789" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-299145789">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-747587739" onClick='toggleBox("Output-747587739", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1262364108" onClick='toggleBox("Output-1262364108", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-747587739" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-747587739">
+<a href="#Output-1262364108" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1262364108">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , SECOND_SEND_BACK<br/>
-<a href="#Output-2076101519" onClick='toggleBox("Output-2076101519", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1553565789" onClick='toggleBox("Output-1553565789", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2076101519" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2076101519">
+<a href="#Output-1553565789" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1553565789">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , VERIFY_REJECT<br/>
-<a href="#Output-167845991" onClick='toggleBox("Output-167845991", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-427403049" onClick='toggleBox("Output-427403049", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-167845991" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-167845991">
+<a href="#Output-427403049" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-427403049">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: , , VERIFY_SUCCESS<br/>
-<a href="#Output-720657523" onClick='toggleBox("Output-720657523", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1300022760" onClick='toggleBox("Output-1300022760", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-720657523" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-720657523">
+<a href="#Output-1300022760" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1300022760">
 Sending request with following params: pageNum=1&pageSize=999&type=&key=&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , UNCOMMIT<br/>
-<a href="#Output-118868009" onClick='toggleBox("Output-118868009", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-774005913" onClick='toggleBox("Output-774005913", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-118868009" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-118868009">
+<a href="#Output-774005913" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-774005913">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , UNCOMMIT<br/>
-<a href="#Output-2036082052" onClick='toggleBox("Output-2036082052", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1848740508" onClick='toggleBox("Output-1848740508", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2036082052" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2036082052">
+<a href="#Output-1848740508" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1848740508">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , UNCOMMIT<br/>
-<a href="#Output-403944581" onClick='toggleBox("Output-403944581", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1733088653" onClick='toggleBox("Output-1733088653", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-403944581" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-403944581">
+<a href="#Output-1733088653" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1733088653">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , UNCOMMIT<br/>
-<a href="#Output-1557617973" onClick='toggleBox("Output-1557617973", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-669892150" onClick='toggleBox("Output-669892150", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1557617973" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1557617973">
+<a href="#Output-669892150" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-669892150">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , INQUIREING<br/>
-<a href="#Output-573912635" onClick='toggleBox("Output-573912635", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-534014471" onClick='toggleBox("Output-534014471", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-573912635" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-573912635">
+<a href="#Output-534014471" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-534014471">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , INQUIREING<br/>
-<a href="#Output-2054639130" onClick='toggleBox("Output-2054639130", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1257528703" onClick='toggleBox("Output-1257528703", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2054639130" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2054639130">
+<a href="#Output-1257528703" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1257528703">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , INQUIREING<br/>
-<a href="#Output-312180726" onClick='toggleBox("Output-312180726", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-764964339" onClick='toggleBox("Output-764964339", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-312180726" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-312180726">
+<a href="#Output-764964339" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-764964339">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , INQUIREING<br/>
-<a href="#Output-846343713" onClick='toggleBox("Output-846343713", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-569065175" onClick='toggleBox("Output-569065175", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-846343713" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-846343713">
+<a href="#Output-569065175" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-569065175">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , VERIFY_FAIL<br/>
-<a href="#Output-1349144549" onClick='toggleBox("Output-1349144549", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1036646620" onClick='toggleBox("Output-1036646620", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1349144549" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1349144549">
+<a href="#Output-1036646620" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1036646620">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , VERIFY_FAIL<br/>
-<a href="#Output-2111090953" onClick='toggleBox("Output-2111090953", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1771309445" onClick='toggleBox("Output-1771309445", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2111090953" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2111090953">
+<a href="#Output-1771309445" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1771309445">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , VERIFY_FAIL<br/>
-<a href="#Output-324588175" onClick='toggleBox("Output-324588175", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1078926439" onClick='toggleBox("Output-1078926439", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-324588175" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-324588175">
+<a href="#Output-1078926439" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1078926439">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , VERIFY_FAIL<br/>
-<a href="#Output-277755109" onClick='toggleBox("Output-277755109", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1448923162" onClick='toggleBox("Output-1448923162", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-277755109" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-277755109">
+<a href="#Output-1448923162" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1448923162">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , INQUIRE_SUCCESS<br/>
-<a href="#Output-1862354037" onClick='toggleBox("Output-1862354037", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-403944581" onClick='toggleBox("Output-403944581", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1862354037" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1862354037">
+<a href="#Output-403944581" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-403944581">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , INQUIRE_SUCCESS<br/>
-<a href="#Output-1642504331" onClick='toggleBox("Output-1642504331", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-630093609" onClick='toggleBox("Output-630093609", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1642504331" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1642504331">
+<a href="#Output-630093609" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-630093609">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , INQUIRE_SUCCESS<br/>
-<a href="#Output-1222765512" onClick='toggleBox("Output-1222765512", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1389961959" onClick='toggleBox("Output-1389961959", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1222765512" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1222765512">
+<a href="#Output-1389961959" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1389961959">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , INQUIRE_SUCCESS<br/>
-<a href="#Output-956280961" onClick='toggleBox("Output-956280961", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1291646432" onClick='toggleBox("Output-1291646432", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-956280961" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-956280961">
+<a href="#Output-1291646432" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1291646432">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , FIRST_SEND_BACK<br/>
-<a href="#Output-347903923" onClick='toggleBox("Output-347903923", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1970811929" onClick='toggleBox("Output-1970811929", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-347903923" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-347903923">
+<a href="#Output-1970811929" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1970811929">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , FIRST_SEND_BACK<br/>
-<a href="#Output-716691430" onClick='toggleBox("Output-716691430", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-237125329" onClick='toggleBox("Output-237125329", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-716691430" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-716691430">
+<a href="#Output-237125329" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-237125329">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , FIRST_SEND_BACK<br/>
-<a href="#Output-790535215" onClick='toggleBox("Output-790535215", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-497807434" onClick='toggleBox("Output-497807434", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-790535215" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-790535215">
+<a href="#Output-497807434" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-497807434">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , FIRST_SEND_BACK<br/>
-<a href="#Output-1068180314" onClick='toggleBox("Output-1068180314", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-894629432" onClick='toggleBox("Output-894629432", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1068180314" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1068180314">
+<a href="#Output-894629432" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-894629432">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-1597239251" onClick='toggleBox("Output-1597239251", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1672568967" onClick='toggleBox("Output-1672568967", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1597239251" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1597239251">
+<a href="#Output-1672568967" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1672568967">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-1629107326" onClick='toggleBox("Output-1629107326", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-324588175" onClick='toggleBox("Output-324588175", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1629107326" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1629107326">
+<a href="#Output-324588175" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-324588175">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-468707972" onClick='toggleBox("Output-468707972", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-277755109" onClick='toggleBox("Output-277755109", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-468707972" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-468707972">
+<a href="#Output-277755109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-277755109">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-2068810608" onClick='toggleBox("Output-2068810608", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1862354037" onClick='toggleBox("Output-1862354037", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2068810608" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2068810608">
+<a href="#Output-1862354037" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1862354037">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , SECOND_SEND_BACK<br/>
-<a href="#Output-1308508469" onClick='toggleBox("Output-1308508469", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-673968" onClick='toggleBox("Output-673968", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1308508469" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1308508469">
+<a href="#Output-673968" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-673968">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , SECOND_SEND_BACK<br/>
-<a href="#Output-342941374" onClick='toggleBox("Output-342941374", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-92140343" onClick='toggleBox("Output-92140343", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-342941374" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-342941374">
+<a href="#Output-92140343" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-92140343">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , SECOND_SEND_BACK<br/>
-<a href="#Output-1474744586" onClick='toggleBox("Output-1474744586", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-838223620" onClick='toggleBox("Output-838223620", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1474744586" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1474744586">
+<a href="#Output-838223620" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-838223620">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , SECOND_SEND_BACK<br/>
-<a href="#Output-290088083" onClick='toggleBox("Output-290088083", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-956280961" onClick='toggleBox("Output-956280961", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-290088083" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-290088083">
+<a href="#Output-956280961" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-956280961">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , VERIFY_REJECT<br/>
-<a href="#Output-788315083" onClick='toggleBox("Output-788315083", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-101788524" onClick='toggleBox("Output-101788524", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-788315083" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-788315083">
+<a href="#Output-101788524" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-101788524">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , VERIFY_REJECT<br/>
-<a href="#Output-1198067049" onClick='toggleBox("Output-1198067049", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-347903923" onClick='toggleBox("Output-347903923", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1198067049" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1198067049">
+<a href="#Output-347903923" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-347903923">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , VERIFY_REJECT<br/>
-<a href="#Output-774574986" onClick='toggleBox("Output-774574986", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1020053235" onClick='toggleBox("Output-1020053235", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-774574986" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-774574986">
+<a href="#Output-1020053235" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1020053235">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , VERIFY_REJECT<br/>
-<a href="#Output-806735118" onClick='toggleBox("Output-806735118", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-547760890" onClick='toggleBox("Output-547760890", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-806735118" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-806735118">
+<a href="#Output-547760890" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-547760890">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , VERIFY_SUCCESS<br/>
-<a href="#Output-1676153043" onClick='toggleBox("Output-1676153043", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-716691430" onClick='toggleBox("Output-716691430", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1676153043" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1676153043">
+<a href="#Output-716691430" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-716691430">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , VERIFY_SUCCESS<br/>
-<a href="#Output-258167475" onClick='toggleBox("Output-258167475", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-188814149" onClick='toggleBox("Output-188814149", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-258167475" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-258167475">
+<a href="#Output-188814149" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-188814149">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , VERIFY_SUCCESS<br/>
-<a href="#Output-1282875939" onClick='toggleBox("Output-1282875939", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-790535215" onClick='toggleBox("Output-790535215", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1282875939" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1282875939">
+<a href="#Output-790535215" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-790535215">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , VERIFY_SUCCESS<br/>
-<a href="#Output-1925643629" onClick='toggleBox("Output-1925643629", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1068180314" onClick='toggleBox("Output-1068180314", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1925643629" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1925643629">
+<a href="#Output-1068180314" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1068180314">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, final_test31, UNCOMMIT<br/>
-<a href="#Output-22432244" onClick='toggleBox("Output-22432244", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-228161720" onClick='toggleBox("Output-228161720", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-22432244" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-22432244">
+<a href="#Output-228161720" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-228161720">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=final_test31&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13612100001, UNCOMMIT<br/>
-<a href="#Output-168905181" onClick='toggleBox("Output-168905181", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1675120104" onClick='toggleBox("Output-1675120104", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-168905181" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-168905181">
+<a href="#Output-1675120104" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1675120104">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13612100001&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, UNCOMMIT<br/>
-<a href="#Output-378546967" onClick='toggleBox("Output-378546967", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2094739192" onClick='toggleBox("Output-2094739192", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-378546967" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-378546967">
+<a href="#Output-2094739192" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2094739192">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 王大1, UNCOMMIT<br/>
-<a href="#Output-1619664019" onClick='toggleBox("Output-1619664019", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-271910362" onClick='toggleBox("Output-271910362", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1619664019" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1619664019">
+<a href="#Output-271910362" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-271910362">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=王大1&verifyStatuses=UNCOMMIT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_111, INQUIREING<br/>
-<a href="#Output-248141344" onClick='toggleBox("Output-248141344", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1511599488" onClick='toggleBox("Output-1511599488", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-248141344" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-248141344">
+<a href="#Output-1511599488" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1511599488">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_111&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200111, INQUIREING<br/>
-<a href="#Output-762155709" onClick='toggleBox("Output-762155709", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1214942373" onClick='toggleBox("Output-1214942373", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-762155709" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-762155709">
+<a href="#Output-1214942373" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1214942373">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200111&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, INQUIREING<br/>
-<a href="#Output-903485000" onClick='toggleBox("Output-903485000", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-774574986" onClick='toggleBox("Output-774574986", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-903485000" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-903485000">
+<a href="#Output-774574986" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-774574986">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试111, INQUIREING<br/>
-<a href="#Output-2117941740" onClick='toggleBox("Output-2117941740", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-806735118" onClick='toggleBox("Output-806735118", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2117941740" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2117941740">
+<a href="#Output-806735118" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-806735118">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试111&verifyStatuses=INQUIREING<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_80, VERIFY_FAIL<br/>
-<a href="#Output-2060654088" onClick='toggleBox("Output-2060654088", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1676153043" onClick='toggleBox("Output-1676153043", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2060654088" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2060654088">
+<a href="#Output-1676153043" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1676153043">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_80&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200080, VERIFY_FAIL<br/>
-<a href="#Output-1220272243" onClick='toggleBox("Output-1220272243", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-276359247" onClick='toggleBox("Output-276359247", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1220272243" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1220272243">
+<a href="#Output-276359247" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-276359247">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200080&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, VERIFY_FAIL<br/>
-<a href="#Output-1673249905" onClick='toggleBox("Output-1673249905", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1218614039" onClick='toggleBox("Output-1218614039", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1673249905" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1673249905">
+<a href="#Output-1218614039" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1218614039">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试80, VERIFY_FAIL<br/>
-<a href="#Output-519912879" onClick='toggleBox("Output-519912879", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1429035581" onClick='toggleBox("Output-1429035581", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-519912879" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-519912879">
+<a href="#Output-1429035581" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1429035581">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试80&verifyStatuses=VERIFY_FAIL<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_92, INQUIRE_SUCCESS<br/>
-<a href="#Output-750136305" onClick='toggleBox("Output-750136305", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-975249654" onClick='toggleBox("Output-975249654", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-750136305" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-750136305">
+<a href="#Output-975249654" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-975249654">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_92&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200092, INQUIRE_SUCCESS<br/>
-<a href="#Output-2047032723" onClick='toggleBox("Output-2047032723", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-168905181" onClick='toggleBox("Output-168905181", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2047032723" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2047032723">
+<a href="#Output-168905181" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-168905181">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200092&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, INQUIRE_SUCCESS<br/>
-<a href="#Output-48443897" onClick='toggleBox("Output-48443897", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1157553098" onClick='toggleBox("Output-1157553098", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-48443897" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-48443897">
+<a href="#Output-1157553098" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1157553098">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试92, INQUIRE_SUCCESS<br/>
-<a href="#Output-1019156036" onClick='toggleBox("Output-1019156036", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2061974221" onClick='toggleBox("Output-2061974221", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1019156036" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1019156036">
+<a href="#Output-2061974221" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2061974221">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试92&verifyStatuses=INQUIRE_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_88, FIRST_SEND_BACK<br/>
-<a href="#Output-1043634787" onClick='toggleBox("Output-1043634787", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2023902689" onClick='toggleBox("Output-2023902689", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1043634787" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1043634787">
+<a href="#Output-2023902689" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2023902689">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_88&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200088, FIRST_SEND_BACK<br/>
-<a href="#Output-1349977003" onClick='toggleBox("Output-1349977003", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1361199650" onClick='toggleBox("Output-1361199650", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1349977003" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1349977003">
+<a href="#Output-1361199650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1361199650">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200088&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, FIRST_SEND_BACK<br/>
-<a href="#Output-2014376619" onClick='toggleBox("Output-2014376619", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-802758844" onClick='toggleBox("Output-802758844", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2014376619" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2014376619">
+<a href="#Output-802758844" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-802758844">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试88, FIRST_SEND_BACK<br/>
-<a href="#Output-166962289" onClick='toggleBox("Output-166962289", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1724863302" onClick='toggleBox("Output-1724863302", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-166962289" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-166962289">
+<a href="#Output-1724863302" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1724863302">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试88&verifyStatuses=FIRST_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_85, FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-210768298" onClick='toggleBox("Output-210768298", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-261057873" onClick='toggleBox("Output-261057873", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-210768298" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-210768298">
+<a href="#Output-261057873" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-261057873">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_85&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200085, FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-1106508990" onClick='toggleBox("Output-1106508990", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1619664019" onClick='toggleBox("Output-1619664019", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1106508990" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1106508990">
+<a href="#Output-1619664019" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1619664019">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200085&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-1241443540" onClick='toggleBox("Output-1241443540", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1057728637" onClick='toggleBox("Output-1057728637", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1241443540" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1241443540">
+<a href="#Output-1057728637" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1057728637">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试85, FIRST_VERIFY_SUCCESS<br/>
-<a href="#Output-1043565604" onClick='toggleBox("Output-1043565604", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-248141344" onClick='toggleBox("Output-248141344", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1043565604" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1043565604">
+<a href="#Output-248141344" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-248141344">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试85&verifyStatuses=FIRST_VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_48, SECOND_SEND_BACK<br/>
-<a href="#Output-1379916521" onClick='toggleBox("Output-1379916521", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-762155709" onClick='toggleBox("Output-762155709", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1379916521" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1379916521">
+<a href="#Output-762155709" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-762155709">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_48&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200048, SECOND_SEND_BACK<br/>
-<a href="#Output-1844529486" onClick='toggleBox("Output-1844529486", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-903485000" onClick='toggleBox("Output-903485000", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1844529486" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1844529486">
+<a href="#Output-903485000" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-903485000">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200048&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, SECOND_SEND_BACK<br/>
-<a href="#Output-1562135296" onClick='toggleBox("Output-1562135296", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2117941740" onClick='toggleBox("Output-2117941740", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1562135296" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1562135296">
+<a href="#Output-2117941740" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2117941740">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试48, SECOND_SEND_BACK<br/>
-<a href="#Output-1413290464" onClick='toggleBox("Output-1413290464", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-432205746" onClick='toggleBox("Output-432205746", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1413290464" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1413290464">
+<a href="#Output-432205746" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-432205746">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试48&verifyStatuses=SECOND_SEND_BACK<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_20, VERIFY_REJECT<br/>
-<a href="#Output-1540367545" onClick='toggleBox("Output-1540367545", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2060654088" onClick='toggleBox("Output-2060654088", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1540367545" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1540367545">
+<a href="#Output-2060654088" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2060654088">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_20&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200020, VERIFY_REJECT<br/>
-<a href="#Output-427426414" onClick='toggleBox("Output-427426414", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1220272243" onClick='toggleBox("Output-1220272243", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-427426414" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-427426414">
+<a href="#Output-1220272243" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1220272243">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200020&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, VERIFY_REJECT<br/>
-<a href="#Output-897345520" onClick='toggleBox("Output-897345520", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1673249905" onClick='toggleBox("Output-1673249905", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-897345520" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-897345520">
+<a href="#Output-1673249905" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1673249905">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试20, VERIFY_REJECT<br/>
-<a href="#Output-526879223" onClick='toggleBox("Output-526879223", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-519912879" onClick='toggleBox("Output-519912879", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-526879223" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-526879223">
+<a href="#Output-519912879" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-519912879">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试20&verifyStatuses=VERIFY_REJECT<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, rrd_69, VERIFY_SUCCESS<br/>
-<a href="#Output-1958434186" onClick='toggleBox("Output-1958434186", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-750136305" onClick='toggleBox("Output-750136305", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1958434186" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1958434186">
+<a href="#Output-750136305" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-750136305">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=rrd_69&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 13812200069, VERIFY_SUCCESS<br/>
-<a href="#Output-827939077" onClick='toggleBox("Output-827939077", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2047032723" onClick='toggleBox("Output-2047032723", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-827939077" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-827939077">
+<a href="#Output-2047032723" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2047032723">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=13812200069&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 620600198111148628, VERIFY_SUCCESS<br/>
-<a href="#Output-213507110" onClick='toggleBox("Output-213507110", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1019156036" onClick='toggleBox("Output-1019156036", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-213507110" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-213507110">
+<a href="#Output-1019156036" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1019156036">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=620600198111148628&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 测试69, VERIFY_SUCCESS<br/>
-<a href="#Output-1481608517" onClick='toggleBox("Output-1481608517", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1043634787" onClick='toggleBox("Output-1043634787", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1481608517" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1481608517">
+<a href="#Output-1043634787" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1043634787">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=测试69&verifyStatuses=VERIFY_SUCCESS<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, shenshuo111, <br/>
-<a href="#Output-41402791" onClick='toggleBox("Output-41402791", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1349977003" onClick='toggleBox("Output-1349977003", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-41402791" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-41402791">
+<a href="#Output-1349977003" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1349977003">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=shenshuo111&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, 15911027605, <br/>
-<a href="#Output-1090403648" onClick='toggleBox("Output-1090403648", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1241443540" onClick='toggleBox("Output-1241443540", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1090403648" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1090403648">
+<a href="#Output-1241443540" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1241443540">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=15911027605&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, 610830198212012014, <br/>
-<a href="#Output-1990595729" onClick='toggleBox("Output-1990595729", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-526879223" onClick='toggleBox("Output-526879223", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1990595729" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1990595729">
+<a href="#Output-526879223" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-526879223">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=610830198212012014&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, 史良万, <br/>
-<a href="#Output-1310633173" onClick='toggleBox("Output-1310633173", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1423824467" onClick='toggleBox("Output-1423824467", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1310633173" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1310633173">
+<a href="#Output-1423824467" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1423824467">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=史良万&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: NICKNAME, , <br/>
-<a href="#Output-1873709567" onClick='toggleBox("Output-1873709567", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-827939077" onClick='toggleBox("Output-827939077", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1873709567" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1873709567">
+<a href="#Output-827939077" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-827939077">
 Sending request with following params: pageNum=1&pageSize=999&type=NICKNAME&key=&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: MOBILE, , <br/>
-<a href="#Output-2139361861" onClick='toggleBox("Output-2139361861", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1481608517" onClick='toggleBox("Output-1481608517", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2139361861" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2139361861">
+<a href="#Output-1481608517" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1481608517">
 Sending request with following params: pageNum=1&pageSize=999&type=MOBILE&key=&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: IDCARD, , <br/>
-<a href="#Output-740224837" onClick='toggleBox("Output-740224837", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1643745407" onClick='toggleBox("Output-1643745407", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-740224837" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-740224837">
+<a href="#Output-1643745407" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1643745407">
 Sending request with following params: pageNum=1&pageSize=999&type=IDCARD&key=&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 <tr>
 <td title='com.heika.test.verify.cases.API.TestSearchUser.searchUser_by_verifyStatus()'><b>searchUser_by_verifyStatus</b><br>Test class: com.heika.test.verify.cases.API.TestSearchUser<br>Test method: 审核后台，按照type、key与verifyStatus进行用户信息的查询<br>Parameters: USERNAME, , <br/>
-<a href="#Output-753043151" onClick='toggleBox("Output-753043151", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1527590459" onClick='toggleBox("Output-1527590459", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-753043151" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-753043151">
+<a href="#Output-1527590459" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1527590459">
 Sending request with following params: pageNum=1&pageSize=999&type=USERNAME&key=&verifyStatuses=<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>com.heika.test.verify.cases.API.TestSearchUser@6a024a67</td></tr>
+<td>com.heika.test.verify.cases.API.TestSearchUser@6276ae34</td></tr>
 </table><p>
 </body>
 </html>

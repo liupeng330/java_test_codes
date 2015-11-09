@@ -31,4 +31,17 @@ public class VerifyUserStatusLogDao extends BaseDaoHibernate4<VerifyUserStatusLo
                 .setParameter("userId", userId);
         return query.list();
     }
+
+    public void deleteLogByUserId(Integer userId)
+    {
+        List<VerifyUserStatusLogEntity> logs = getLogByUserId(userId);
+        if(logs == null || logs.size() == 0)
+        {
+            return;
+        }
+        for(VerifyUserStatusLogEntity log: logs)
+        {
+            this.delete(log);
+        }
+    }
 }

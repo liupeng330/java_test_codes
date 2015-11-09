@@ -31,6 +31,10 @@ public class VerifyUserStatusEntity
     private Integer secondVerifyCardProductId;
     private String inYouxinBackList;
     private Integer version;
+    private String auditUserStatus;
+    private Integer onlineTime;
+    private BigDecimal firstCashDrawRatio;
+    private BigDecimal cashDrawRatio;
 
     @Id
     @Column(name = "id")
@@ -415,5 +419,53 @@ public class VerifyUserStatusEntity
         result = 31 * result + (inYouxinBackList != null ? inYouxinBackList.hashCode() : 0);
         result = 31 * result + (version != null ? version.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "audit_user_status")
+    public String getAuditUserStatus()
+    {
+        return auditUserStatus;
+    }
+
+    public void setAuditUserStatus(String auditUserStatus)
+    {
+        this.auditUserStatus = auditUserStatus;
+    }
+
+    @Basic
+    @Column(name = "online_time")
+    public Integer getOnlineTime()
+    {
+        return onlineTime;
+    }
+
+    public void setOnlineTime(Integer onlineTime)
+    {
+        this.onlineTime = onlineTime;
+    }
+
+    @Basic
+    @Column(name = "first_cash_draw_ratio")
+    public BigDecimal getFirstCashDrawRatio()
+    {
+        return firstCashDrawRatio;
+    }
+
+    public void setFirstCashDrawRatio(BigDecimal firstCashDrawRatio)
+    {
+        this.firstCashDrawRatio = firstCashDrawRatio;
+    }
+
+    @Basic
+    @Column(name = "cash_draw_ratio")
+    public BigDecimal getCashDrawRatio()
+    {
+        return cashDrawRatio;
+    }
+
+    public void setCashDrawRatio(BigDecimal cashDrawRatio)
+    {
+        this.cashDrawRatio = cashDrawRatio;
     }
 }

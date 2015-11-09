@@ -11,4 +11,9 @@ public class VerifyStrategyOutputDao extends BaseDaoHibernate4<VerifyStrategyOut
     {
         return this.get(VerifyStrategyOutputEntity.class, "userId", userId);
     }
+
+    public void deleteByUserId(Integer userId)
+    {
+        this.delete(VerifyStrategyOutputEntity.class, "userId", userId);
+    }
 }

@@ -1,8 +1,8 @@
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/verify/FirstVerifyNote.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/verify/VerifyLogResult.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/user/UserSearchResult.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/common/PageInfo.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/verify/Strategy.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/user/UserDetailResult.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/verify/SecondVerifyNote.java
-/home/peng/test-codes/heika-test/models/src/main/java/com/heika/test/models/verify/InvestigateNoteInfo.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/verify/VerifyLogResult.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/user/UserSearchResult.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/verify/InvestigateNoteInfo.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/verify/Strategy.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/verify/FirstVerifyNote.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/common/PageInfo.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/verify/SecondVerifyNote.java
+/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test/models/src/main/java/com/heika/test/models/user/UserDetailResult.java

@@ -17,5 +17,6 @@ public interface UserService
     Integer addUser(UserEntity userEntity);
     void deleteUser(Integer id);
     UserEntity getUser(Integer id);
+    UserEntity getUser(String nickName);
     UserEntity nextUser();
 }

@@ -51,9 +51,11 @@
        <context:component-scan base-package="com.heika.test.services" />
        <context:component-scan base-package="com.heika.test.dao" />
 
+       <bean id="userService" class="com.heika.test.services.user.impl.UserImpl" />
        <bean id="userSearchService" class="com.heika.test.services.user.impl.UserSearchImpl"/>
        <bean id="userDetailResultService" class="com.heika.test.services.user.impl.UserDetailResultImpl"/>
        <bean id="verifyLogResultService" class="com.heika.test.services.user.impl.VerifyLogResultImpl"/>
+       <bean id="prepareTestDataService" class="com.heika.test.services.user.impl.PrepareTestDataImpl"/>
        <bean id="randomData" class="com.heika.test.utils.RandomData">
               <!-- 设置随机数种子 -->
               <!--<constructor-arg>-->

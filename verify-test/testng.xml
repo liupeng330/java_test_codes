@@ -21,14 +21,17 @@
       <parameter name="verify_getUserVerifyLog" value="100034582"/>
       <parameter name="verify_getUserDetail" value="100034758"/>
 
+      <!-- test data for UI -->
+      <parameter name="verify_ui_url" value="http://172.16.2.38:15081/login/index.html"/>
       <parameter name="verify_ui_login_username" value="admin@renrendai.com"/>
       <parameter name="verify_ui_login_password" value="L123456"/>
+      <parameter name="verify_ui_search_by_nickname" value="后台上线_auto_01(勿动)"/>
 
       <groups>
         <run>
           <!--<include name="verify"/>-->
           <!--<include name="UI"/>-->
-          <include name="verify"/>
+          <include name="UI"/>
         </run>
       </groups>
       <packages>

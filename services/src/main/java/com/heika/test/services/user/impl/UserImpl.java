@@ -67,6 +67,13 @@ public class UserImpl implements UserService
     }
 
     @Override
+    public UserEntity getUser(String nickName)
+    {
+        logHelper.log("获取UserEntry: nickName=" + nickName);
+        return userDao.get(UserEntity.class, "nickName", nickName);
+    }
+
+    @Override
     public UserEntity nextUser()
     {
         UserEntity userEntity = new UserEntity();

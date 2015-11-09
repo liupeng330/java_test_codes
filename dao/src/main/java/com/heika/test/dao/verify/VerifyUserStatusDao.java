@@ -50,4 +50,37 @@ public class VerifyUserStatusDao extends BaseDaoHibernate4<VerifyUserStatusEntit
         this.getList(VerifyUserStatusEntity.class, "verifyUserStatus", status.name()).forEach(i->userIds.put(i.getUserId(), Enum.valueOf(VerifyUserStatus.class, i.getVerifyUserStatus())));
         return userIds;
     }
+
+    public void updateStatusToINQUIREING(Integer userId)
+    {
+        VerifyUserStatusEntity vus = getByUserId(userId);
+        if(vus == null)
+        {
+            return;
+        }
+        vus.setVerifyUserStatus(VerifyUserStatus.INQUIREING.name());
+//        vus.setCommitTime(null);
+        vus.setRejectOperation(null);
+        vus.setInvestigateTime(null);
+        vus.setFirstVerifyTime(null);
+        vus.setSecondVerifyTime(null);
+        vus.setInvestigateUserId(null);
+        vus.setFirstVerifyUserId(null);
+        vus.setSecondVerifyUserId(null);
+        vus.setInvestigateNote(null);
+        vus.setFirstVerifyNote(null);
+        vus.setSecondVerifyNote(null);
+        vus.setFirstVerifyAmount(null);
+        vus.setFirstVerifyCardProductId(null);
+        vus.setSecondVerifyAmount(null);
+        vus.setSecondVerifyCardProductId(null);
+        vus.setInYouxinBackList(null);
+        vus.setVersion(0);
+        vus.setAuditUserStatus(null);
+        vus.setOnlineTime(null);
+        vus.setFirstCashDrawRatio(null);
+        vus.setCashDrawRatio(null);
+
+        this.update(vus);
+    }
 }

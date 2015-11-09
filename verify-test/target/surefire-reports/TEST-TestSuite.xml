@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="2.458" tests="96" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="2.368" tests="96" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
     <property name="java.vm.version" value="25.66-b17"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/peng/test-codes/heika-test"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/peng/test-codes/heika-test"/>
+    <property name="user.dir" value="/home/peng/git_test_codes/heikaautotest/HeikaVerifyAutoTest/heika-test"/>
     <property name="java.runtime.version" value="1.8.0_66-b17"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
@@ -41,7 +41,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -58,100 +58,199 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getUserDetailInfo" classname="com.heika.test.verify.cases.API.TestGetUserDetail" time="1.004"/>
-  <testcase name="getUserVerifyLog" classname="com.heika.test.verify.cases.API.TestGetUserVerifyLog" time="0.074"/>
-  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.74"/>
-  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.46"/>
-  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.365"/>
-  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.381"/>
-  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.406"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.64"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.016"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.113"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.044"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.041"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.038"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.112"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.309"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.451"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.422"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.432"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.439"/>
+  <testcase name="getUserDetailInfo" classname="com.heika.test.verify.cases.API.TestGetUserDetail" time="0.682">
+    <failure message="There are differences between user detail info from response and from DB expected [investigateNoteInfo=investigateNote=CES&#10;investigateUserName=超级管理员&#10;investigateTime=1440060901000&#10;&#10;firstVerifyNote=firstVerifyAmount=1.00&#10;firstVerifyCardProductName=黑卡五星&#10;firstVerifyNote=1&#10;firstVerifyUserName=超级管理员&#10;firstVerifyTime=1440586843000&#10;&#10;secondVerify=secondVerifyAmount=20000.00&#10;secondVerifyCardProductName=黑卡五星&#10;secondVerifyNote=42452&#10;secondVerifyUserName=超级管理员&#10;secondVerifyTime=1440642093000&#10;&#10;strategy=isOld=1&#10;result=通过审批&#10;amount=16000.00&#10;cardProductId=黑卡一星&#10;&#10;youxinBlackListEnum=NOT_IN_BLACK_LIST&#10;] but found [investigateNoteInfo=null&#10;firstVerifyNote=null&#10;secondVerify=null&#10;strategy=null&#10;youxinBlackListEnum=null&#10;]" type="java.lang.AssertionError">java.lang.AssertionError: There are differences between user detail info from response and from DB expected [investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+] but found [investigateNoteInfo=null
+firstVerifyNote=null
+secondVerify=null
+strategy=null
+youxinBlackListEnum=null
+]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at com.heika.test.verify.cases.API.TestGetUserDetail.getUserDetailInfo(TestGetUserDetail.java:31)
+</failure>
+    <system-out><![CDATA[[Testing] [2015-11-03 06:05:41] [Get userDetail from DB: investigateNoteInfo=investigateNote=CES
+investigateUserName=超级管理员
+investigateTime=1440060901000
+
+firstVerifyNote=firstVerifyAmount=1.00
+firstVerifyCardProductName=黑卡五星
+firstVerifyNote=1
+firstVerifyUserName=超级管理员
+firstVerifyTime=1440586843000
+
+secondVerify=secondVerifyAmount=20000.00
+secondVerifyCardProductName=黑卡五星
+secondVerifyNote=42452
+secondVerifyUserName=超级管理员
+secondVerifyTime=1440642093000
+
+strategy=isOld=1
+result=通过审批
+amount=16000.00
+cardProductId=黑卡一星
+
+youxinBlackListEnum=NOT_IN_BLACK_LIST
+]
+Response: {"data":{},"message":"Forbid consumer 172.16.2.38 access service com.heika.idcard.service.IdCardService from registry 127.0.0.1:6379 use dubbo version 2.5.3, Please check registry access list (whitelist/blacklist).","status":10101005}
+
+[Testing] [2015-11-03 06:05:41] [Get userDetail from response: investigateNoteInfo=null
+firstVerifyNote=null
+secondVerify=null
+strategy=null
+youxinBlackListEnum=null
+]
+]]></system-out>
+    <system-err><![CDATA[Nov 03, 2015 6:05:36 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3108bc: startup date [Tue Nov 03 18:05:36 CST 2015]; root of context hierarchy
+Nov 03, 2015 6:05:36 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [main_spring.xml]
+Nov 03, 2015 6:05:37 PM org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor <init>
+INFO: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Nov 03, 2015 6:05:38 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: com.mysql.jdbc.Driver
+Nov 03, 2015 6:05:38 PM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+Nov 03, 2015 6:05:38 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.2.2.Final}
+Nov 03, 2015 6:05:38 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Nov 03, 2015 6:05:38 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Nov 03, 2015 6:05:39 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Nov 03, 2015 6:05:39 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Nov 03, 2015 6:05:39 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Nov 03, 2015 6:05:40 PM org.springframework.orm.hibernate4.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@21680803] of Hibernate SessionFactory for HibernateTransactionManager
+Nov 03, 2015 6:05:41 PM org.hibernate.hql.internal.ast.HqlSqlWalker generatePositionalParameter
+WARN: [DEPRECATION] Encountered positional parameter near line 1, column 79.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+Nov 03, 2015 6:05:41 PM org.hibernate.hql.internal.ast.HqlSqlWalker generatePositionalParameter
+WARN: [DEPRECATION] Encountered positional parameter near line 1, column 69.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+Nov 03, 2015 6:05:41 PM org.hibernate.hql.internal.ast.HqlSqlWalker generatePositionalParameter
+WARN: [DEPRECATION] Encountered positional parameter near line 1, column 68.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+Nov 03, 2015 6:05:41 PM org.hibernate.hql.internal.ast.HqlSqlWalker generatePositionalParameter
+WARN: [DEPRECATION] Encountered positional parameter near line 1, column 83.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+]]></system-err>
+  </testcase>
+  <testcase name="getUserVerifyLog" classname="com.heika.test.verify.cases.API.TestGetUserVerifyLog" time="0.082"/>
+  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.852"/>
+  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.478"/>
+  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.398"/>
+  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.394"/>
+  <testcase name="searchUser_by_pageNum" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.458"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.752"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.017"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.015"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.094"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.095"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.095"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.097"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.038"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.038"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.038"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.039"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.035"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.034"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.033"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.033"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.035"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.035"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.11"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.041"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.037"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.037"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.015"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.015"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.035"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.099"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.107"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.102"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.105"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.289"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.284"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.286"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.294"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.345"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.355"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.358"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.392"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.016"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.312"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.568"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.602"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.597"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.575"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.015"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.02"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.09"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.092"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.09"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.091"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.038"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.037"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.036"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.036"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.031"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.032"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.036"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.033"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.039"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.034"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.034"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.034"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.012"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.012"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.096"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.095"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.094"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.094"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.277"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.279"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.277"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.278"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.481"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.446"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.446"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.447"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.015"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.058"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.058"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.056"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.055"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.025"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.025"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.022"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.023"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.024"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.024"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.023"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.025"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.011"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.06"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.063"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.061"/>
   <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.064"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.061"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.028"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.027"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.029"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.029"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.027"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.03"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.026"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.027"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.028"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.027"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.013"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.015"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.014"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.071"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.068"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.068"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.07"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.211"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.18"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.199"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.192"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.023"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.019"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.019"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.017"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.246"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.234"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.241"/>
-  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.241"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.063"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.197"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.197"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.197"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="0.188"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.164"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.193"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.196"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.17"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.445"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.43"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.425"/>
+  <testcase name="searchUser_by_verifyStatus" classname="com.heika.test.verify.cases.API.TestSearchUser" time="1.449"/>
 </testsuite>
