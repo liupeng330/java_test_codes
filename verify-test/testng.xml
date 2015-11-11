@@ -26,6 +26,7 @@
       <parameter name="verify_ui_login_username" value="admin@renrendai.com"/>
       <parameter name="verify_ui_login_password" value="L123456"/>
       <parameter name="verify_ui_search_by_nickname" value="后台上线_auto_01(勿动)"/>
+      <parameter name="verify_ui_approve_user" value="后台上线_auto_01(勿动)"/>
 
       <groups>
         <run>

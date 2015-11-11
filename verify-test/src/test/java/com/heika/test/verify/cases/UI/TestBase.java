@@ -3,6 +3,7 @@ package com.heika.test.verify.cases.UI;
 import com.heika.test.services.user.PrepareTestDataService;
 import com.heika.test.services.user.UserSearchService;
 import com.heika.test.services.user.UserService;
+import com.heika.test.services.user.VerifyUserInfoResultService;
 import com.heika.test.ui.elements.factory.api.ElementFactory;
 import com.heika.test.ui.verify.page.LoginPage;
 import com.heika.test.utils.LogHelper;
@@ -19,6 +20,8 @@ public class TestBase
     private PrepareTestDataService prepareTestDataService;
     private UserService userService;
     private UserSearchService userSearchService;
+
+    private VerifyUserInfoResultService verifyUserInfoResultService;
     private WebDriver webDriver;
 
     @Parameters({"verify_ui_url", "verify_ui_login_username", "verify_ui_login_password"})
@@ -28,7 +31,8 @@ public class TestBase
         ApplicationContext ctx = new ClassPathXmlApplicationContext("main_spring.xml");
         this.setPrepareTestDataService((PrepareTestDataService) ctx.getBean("prepareTestDataService"));
         this.setUserService((UserService) ctx.getBean("userService"));
-        this.setUserSearchService((UserSearchService)ctx.getBean("userSearchService"));
+        this.setUserSearchService((UserSearchService) ctx.getBean("userSearchService"));
+        this.setVerifyUserInfoResultService((VerifyUserInfoResultService) ctx.getBean("verifyUserInfoResultService"));
         this.setWebDriver(new ChromeDriver());
         this.getWebDriver().manage().window().maximize();
         this.getWebDriver().get(url);
@@ -41,8 +45,8 @@ public class TestBase
     @AfterClass(groups = {"UI"})
     public void cleanup()
     {
-        LogHelper.log("开始清理");
-        this.getWebDriver().close();
+//        LogHelper.log("开始清理");
+//        this.getWebDriver().close();
     }
 
     protected void updateTestDataToINQUIREING(Integer userId) throws Exception
@@ -92,5 +96,15 @@ public class TestBase
     public void setUserSearchService(UserSearchService userSearchService)
     {
         this.userSearchService = userSearchService;
+    }
+
+    public VerifyUserInfoResultService getVerifyUserInfoResultService()
+    {
+        return verifyUserInfoResultService;
+    }
+
+    public void setVerifyUserInfoResultService(VerifyUserInfoResultService verifyUserInfoResultService)
+    {
+        this.verifyUserInfoResultService = verifyUserInfoResultService;
     }
 }

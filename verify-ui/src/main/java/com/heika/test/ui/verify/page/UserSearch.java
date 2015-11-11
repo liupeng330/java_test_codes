@@ -2,7 +2,6 @@ package com.heika.test.ui.verify.page;
 
 import com.heika.test.models.user.UserSearchResult;
 import com.heika.test.ui.elements.widget.*;
-import com.heika.test.utils.LogHelper;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import javax.xml.soap.Text;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -134,31 +132,31 @@ public class UserSearch extends IFramePageBase
 	}
 
     //按姓名点击“审核流水”按钮
-    public void click_getUserVerifyLog_button(String realName) throws Exception
+    public void clickGetUserVerifyLogButtonByRealName(String realName) throws Exception
     {
-        ClickButton("realName", realName, "made");
+        clickButton("realName", realName, "made");
     }
 
     //按行号点击“审核流水”按钮
-    public void click_getUserVerifyLog_button(int rowIndex) throws Exception
+    public void clickGetUserVerifyLogButtonByRealName(int rowIndex) throws Exception
     {
         clickButton(rowIndex, 8);
     }
 
     //按姓名点击“用户详情”按钮
-    public void click_getUserDetail_button(String realName) throws Exception
+    public void clickGetUserDetailButtonByRealName(String realName) throws Exception
     {
-        ClickButton("realName", realName, "linkDetail");
+        clickButton("realName", realName, "linkDetail");
     }
 
     //按行号点击“用户详情”按钮
-    public void click_getUserDetail_button(int rowIndex) throws Exception
+    public void clickGetUserDetailButtonByRealName(int rowIndex) throws Exception
     {
         clickButton(rowIndex, 9);
     }
 
     //按行号点击“征信原件”按钮
-    public void click_getUserPbcReport_button(int rowIndex) throws Exception
+    public void clickGetUserPbcReportButtonByRowIndex(int rowIndex) throws Exception
     {
         clickButton(rowIndex, 10);
     }
@@ -222,7 +220,7 @@ public class UserSearch extends IFramePageBase
 		return this.datagrid.getRows().size();
 	}
 
-    private void ClickButton(String type, String value, String field)
+    private void clickButton(String type, String value, String field)
     {
         this.datagrid.waitForExist();
         retryForStaleElement(() ->

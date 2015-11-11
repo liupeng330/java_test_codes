@@ -4,7 +4,9 @@ import com.heika.test.dao.base.BaseDaoHibernate4;
 import com.heika.test.entities.verify.VerifyUserInfoResultEntity;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class VerifyUserInfoResultDao extends BaseDaoHibernate4<VerifyUserInfoResultEntity>
@@ -26,5 +28,16 @@ public class VerifyUserInfoResultDao extends BaseDaoHibernate4<VerifyUserInfoRes
         {
             vuir.setValue("PENDING");
         }
+    }
+
+    public Map<String, String> getResults(Integer userId)
+    {
+        Map<String, String> results = new HashMap<>();
+        List<VerifyUserInfoResultEntity> entities = getByUserId(userId);
+        for(VerifyUserInfoResultEntity ret: entities)
+        {
+            results.put(ret.getKey(), ret.getValue());
+        }
+        return results;
     }
 }
