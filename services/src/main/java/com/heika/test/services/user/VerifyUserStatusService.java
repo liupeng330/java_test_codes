@@ -23,5 +23,5 @@ public interface VerifyUserStatusService
                                                         Integer investigateUserId,
                                                         Integer firstVerifyUserId,
                                                         Integer secondVerifyUserId);
-
+    Boolean isInquireSuccessStatus(Integer userId, Integer invUserId, String invNote, Integer onlineTime);
 }

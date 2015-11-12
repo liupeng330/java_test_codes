@@ -1,9 +1,6 @@
 package com.heika.test.verify.cases.UI;
 
-import com.heika.test.services.user.PrepareTestDataService;
-import com.heika.test.services.user.UserSearchService;
-import com.heika.test.services.user.UserService;
-import com.heika.test.services.user.VerifyUserInfoResultService;
+import com.heika.test.services.user.*;
 import com.heika.test.ui.elements.factory.api.ElementFactory;
 import com.heika.test.ui.verify.page.LoginPage;
 import com.heika.test.utils.LogHelper;
@@ -21,6 +18,7 @@ public class TestBase
     private UserService userService;
     private UserSearchService userSearchService;
 
+    private VerifyUserStatusService verifyUserStatusService;
     private VerifyUserInfoResultService verifyUserInfoResultService;
     private WebDriver webDriver;
 
@@ -33,6 +31,7 @@ public class TestBase
         this.setUserService((UserService) ctx.getBean("userService"));
         this.setUserSearchService((UserSearchService) ctx.getBean("userSearchService"));
         this.setVerifyUserInfoResultService((VerifyUserInfoResultService) ctx.getBean("verifyUserInfoResultService"));
+        this.setVerifyUserStatusService((VerifyUserStatusService) ctx.getBean("verifyUserStatusService"));
         this.setWebDriver(new ChromeDriver());
         this.getWebDriver().manage().window().maximize();
         this.getWebDriver().get(url);
@@ -107,4 +106,15 @@ public class TestBase
     {
         this.verifyUserInfoResultService = verifyUserInfoResultService;
     }
+
+    public VerifyUserStatusService getVerifyUserStatusService()
+    {
+        return verifyUserStatusService;
+    }
+
+    public void setVerifyUserStatusService(VerifyUserStatusService verifyUserStatusService)
+    {
+        this.verifyUserStatusService = verifyUserStatusService;
+    }
+
 }

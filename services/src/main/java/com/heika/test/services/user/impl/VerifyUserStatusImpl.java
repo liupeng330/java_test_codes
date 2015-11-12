@@ -188,6 +188,33 @@ public class VerifyUserStatusImpl implements VerifyUserStatusService
     }
 
     @Override
+    public Boolean isInquireSuccessStatus(Integer userId, Integer invUserId, String invNote, Integer onlineTime)
+    {
+        VerifyUserStatusEntity vus = this.verifyUserStatusDao.getByUserId(userId);
+        return vus.getVerifyUserStatus().equals(VerifyUserStatus.INQUIRE_SUCCESS.name())
+                && vus.getRejectOperation() == null
+                && vus.getRejectReasonList() == null
+                && vus.getInvestigateTime() != null
+                && vus.getFirstVerifyTime() == null
+                && vus.getSecondVerifyTime() == null
+                && vus.getInvestigateUserId() == invUserId
+                && vus.getFirstVerifyUserId() == null
+                && vus.getSecondVerifyUserId() == null
+                && vus.getInvestigateNote().equals(invNote)
+                && vus.getFirstVerifyNote() == null
+                && vus.getSecondVerifyNote() == null
+                && vus.getFirstVerifyAmount() == null
+                && vus.getSecondVerifyAmount() == null
+                && vus.getFirstVerifyCardProductId() == null
+                && vus.getSecondVerifyCardProductId() == null
+                && vus.getInYouxinBackList() == null
+                && vus.getAuditUserStatus() == null
+                && vus.getOnlineTime() == onlineTime
+                && vus.getFirstCashDrawRatio() == null
+                && vus.getCashDrawRatio() == null;
+    }
+
+    @Override
     public void deleteVerifyUserStatusByUserId(Integer userId)
     {
         verifyUserStatusDao.deleteByUserId(userId);

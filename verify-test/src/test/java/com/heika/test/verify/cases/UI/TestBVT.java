@@ -64,5 +64,6 @@ public class TestBVT extends TestBase
         Map<String, String> invExpectedResult = getVerifyUserInfoResultService().getAllValidResult();
         invExpectedResult.put("CREDIT_REPORT", VerifyUserInvestigateResultEnum.NOTVERIFY.name());
         Assert.assertEquals(invActualResult, invExpectedResult, "通过调查后，结果与数据库中的不符！！");
+        Assert.assertTrue(getVerifyUserStatusService().isInquireSuccessStatus(userId, 1, "调查备注", 123), String.format("数据库中，此用户id为%d的用户，未置为调查通过状态！！", userId));
     }
 }
