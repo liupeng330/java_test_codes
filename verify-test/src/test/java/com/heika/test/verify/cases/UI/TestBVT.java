@@ -52,6 +52,8 @@ public class TestBVT extends TestBase
         userInvestigate.clickByNickName(nickName);
 
         userInvestigate.maxInvestigateWindow();
+        LogHelper.log(userInvestigate.getUserInfoCompany());
+
         userInvestigate.approveAll();
         userInvestigate.setOnlineTimeTextInput(123);
         userInvestigate.setInvestigateNoteTextInput("调查备注");

@@ -53,6 +53,19 @@ public class UserInfoEntity
         this.realName = realName;
     }
 
+    private String creditCardNumber;
+
+    @Basic
+    @javax.persistence.Column(name = "credit_card_number")
+    public String getCreditCardNumber()
+    {
+        return creditCardNumber;
+    }
+
+    public void setCreditCardNumber(String creditCardNumber)
+    {
+        this.creditCardNumber = creditCardNumber;
+    }
     private String avatarPath;
 
     @Basic

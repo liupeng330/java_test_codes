@@ -271,4 +271,96 @@ public class UserInvestigate extends IFramePageBase
         this.messageWindow.waitForExist();
         this.messageWindow.clickOK();
     }
+
+    private String getUserInfoByTitle(String title)
+    {
+        this.investigatePanleWindow.waitForExist();
+        String xpath = String.format("//*[@id=\"auditDialogBox\"]//td[text()='%s']/following-sibling::td[1]", title);
+        return this.investigatePanleWindow.findElement(By.xpath(xpath)).getText();
+    }
+
+    public String getUserInfoCompany()
+    {
+        return getUserInfoByTitle("工作单位");
+    }
+
+    public String getUserInfoPosition()
+    {
+        return getUserInfoByTitle("职位");
+    }
+
+    public String getUserInfoMonthlySalary()
+    {
+        return getUserInfoByTitle("税前月薪");
+    }
+
+    public String getUserInfoWorkPhone()
+    {
+        return getUserInfoByTitle("单位座机");
+    }
+
+    public String getUserInfoGraduation()
+    {
+        return getUserInfoByTitle("教育程度");
+    }
+
+    public String getUserInfoUniversity()
+    {
+        return getUserInfoByTitle("毕业院校");
+    }
+
+    public String getUserInfoGraduateYear()
+    {
+        return getUserInfoByTitle("毕业时间");
+    }
+
+    public String getUserInfoMarriageStatus()
+    {
+        return getUserInfoByTitle("婚姻状况");
+    }
+
+    public String getUserInfoChildStatus()
+    {
+        return getUserInfoByTitle("子女情况");
+    }
+
+    public String getUserInfoAddress()
+    {
+        return getUserInfoByTitle("家庭住址");
+    }
+
+    public String getUserInfoPhone()
+    {
+        return getUserInfoByTitle("固定电话");
+    }
+
+    public String getUserInfoHasCar()
+    {
+        return getUserInfoByTitle("有无车产");
+    }
+
+    public String getUserInfoHasHourse()
+    {
+        return getUserInfoByTitle("有无房产");
+    }
+
+    public String getUserInfoUrgentName()
+    {
+        return getUserInfoByTitle("紧急联系人");
+    }
+
+    public String getUserInfoUrgentRelation()
+    {
+        return getUserInfoByTitle("关系");
+    }
+
+    public String getUserInfoUrgentMobile()
+    {
+        return getUserInfoByTitle("移动电话");
+    }
+
+    public String getUserInfoCreditCardNumber()
+    {
+        return getUserInfoByTitle("信用卡卡号");
+    }
 }

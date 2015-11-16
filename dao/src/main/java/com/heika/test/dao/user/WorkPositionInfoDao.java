@@ -7,5 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class WorkPositionInfoDao extends BaseDaoHibernate4<WorkPositionInfoEntity>
 {
+    public WorkPositionInfoEntity getById(Integer id)
+    {
+        return this.get(WorkPositionInfoEntity.class, "id", id);
+    }
 
 }

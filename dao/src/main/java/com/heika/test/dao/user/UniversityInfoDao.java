@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UniversityInfoDao extends BaseDaoHibernate4<UniversityInfoEntity>
 {
+    public UniversityInfoEntity getById(Integer id)
+    {
+        return this.get(UniversityInfoEntity.class, "id", id);
+    }
 }

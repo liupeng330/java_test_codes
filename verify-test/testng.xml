@@ -20,6 +20,7 @@
       <parameter name="verify_searchuser_by_name" value="史良万"/>
       <parameter name="verify_getUserVerifyLog" value="100034582"/>
       <parameter name="verify_getUserDetail" value="100034758"/>
+      <parameter name="verify_getUserInvDetail" value="100034832"/>
 
       <!-- test data for UI -->
       <parameter name="verify_ui_url" value="http://172.16.2.38:15081/login/index.html"/>
@@ -30,9 +31,9 @@
 
       <groups>
         <run>
-          <!--<include name="verify"/>-->
+          <include name="verify-debug"/>
           <!--<include name="UI"/>-->
-          <include name="UI"/>
+          <!--<include name="UI"/>-->
         </run>
       </groups>
       <packages>

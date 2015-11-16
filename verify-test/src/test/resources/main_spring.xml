@@ -58,6 +58,7 @@
        <bean id="verifyUserStatusService" class="com.heika.test.services.user.impl.VerifyUserStatusImpl"/>
        <bean id="verifyUserInfoResultService" class="com.heika.test.services.user.impl.VerifyUserInfoResultImpl"/>
        <bean id="prepareTestDataService" class="com.heika.test.services.user.impl.PrepareTestDataImpl"/>
+       <bean id="userInvestigateDetailResultService" class="com.heika.test.services.user.impl.UserInvestigateDetailResultImpl"/>
        <bean id="randomData" class="com.heika.test.utils.RandomData">
               <!-- 设置随机数种子 -->
               <!--<constructor-arg>-->
